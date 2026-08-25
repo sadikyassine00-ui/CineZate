@@ -5,7 +5,7 @@ export default function StandPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="hero relative z-10" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '120px 20px 40px' }}>
+    <main className="hero relative z-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '120px 20px 40px' }}>
       
       <div className="page-dividers" style={{ display: 'flex', justifyContent: 'center', zIndex: -1 }}>
         <div style={{ position: 'relative', width: '100%', maxWidth: '1400px', height: '100%' }}>

@@ -3,33 +3,83 @@
 import Link from "next/link";
 import { useLanguage } from "./LanguageProvider";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
   const { lang, toggleLang, t } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="header" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        <Link href="/">
-          <Image src="/assets/logo/CinezateLogo.png" alt="CineZate Logo" width={40} height={40} style={{ filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
-        </Link>
-        <div className="label-badge">{t.badge}</div>
-      </div>
-      
-      <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+    <>
+      <header className="header">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', zIndex: 1000 }}>
+          <Link href="/">
+            <img src="/assets/logo/CinezateLogo.png" alt="CineZate Logo" style={{ height: '40px', width: 'auto', filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
+          </Link>
+        </div>
+
+        <nav className="nav-links desktop-only" style={{ display: 'flex', gap: '32px' }}>
+          <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.about}</a>
+          <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.speakers}</a>
+          <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.agenda}</a>
+        </nav>
+        
+        <div className="desktop-only" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+          <button onClick={toggleLang} className="lang-toggle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '6px' }}>
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            {lang === 'en' ? 'FR' : 'EN'}
+          </button>
+          <Link href="/badge" style={{ textDecoration: 'none' }}>
+            <button className="btn btn-outline">{t.register}</button>
+          </Link>
+        </div>
+
+        {/* Mobile Menu Button */}
         <button 
-          onClick={toggleLang}
-          className="lang-toggle"
+          className="mobile-menu-btn" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '6px' }}>
-            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          {lang === 'en' ? 'FR' : 'EN'}
+          {isMenuOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          ) : (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          )}
         </button>
-        <Link href="/badge" style={{ textDecoration: 'none' }}>
-          <button className="btn btn-outline">{t.register}</button>
-        </Link>
-      </div>
-    </header>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="mobile-menu-overlay">
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '8px' }}
+            aria-label="Close menu"
+          >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+          
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.about}</a>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.speakers}</a>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.agenda}</a>
+          </nav>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', marginTop: '48px', width: '100%', maxWidth: '280px' }}>
+            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '18px', padding: '14px 24px', width: '100%' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
+                <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              {lang === 'en' ? 'Français' : 'English'}
+            </button>
+            <Link href="/badge" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', width: '100%' }}>
+              <button className="btn btn-outline" style={{ width: '100%', fontSize: '18px', padding: '14px 24px' }}>{t.register}</button>
+            </Link>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

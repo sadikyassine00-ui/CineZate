@@ -1,17 +1,21 @@
 export type Locale = 'en' | 'fr';
 
-export type TranslationKey = keyof typeof translations.en;
-
 export const translations = {
   en: {
-    badge: "FICIAI 2026 \u2022 NOV 6-8",
-    title1: "AURA Architecture",
-    title2: "Consensus Explorer",
-    title3: "Initialize {",
-    title4: "Cryptographic Proof",
-    title5: "}",
-    desc: "Secure your digital assets with verifiable truth. Enter the new era of decentralized verification. Utilize our advanced node network to securely store and authenticate your data on-chain.",
+    nav: { about: "About", speakers: "Speakers", agenda: "Agenda" },
     register: "Register Interest",
+    date: "November 6-8, 2026",
+    location: "Ouarzazate, Morocco",
+    heroTitle1: "Where Cinema Meets",
+    heroTitle2: "The Future of AI.",
+    heroDesc: "Join us at FICIAI 2026, the premier international forum uniting visionary filmmakers, tech innovators, and global investors to shape Africa's first cinematic smart city.",
+    getTickets: "Get Tickets",
+    exploreAgenda: "Explore Agenda",
+    timeUntil: "Time Until Event",
+    upcoming: "Upcoming",
+    eventInProgress: "EVENT IN PROGRESS",
+    days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds",
+    progress: "Progress to launch",
     backedBy: "Backed by industry leaders",
     exploreTitle: "Explore the Experience",
     exploreSub: "Dive into dedicated tracks designed to push the boundaries of modern digital creation and artificial intelligence.",
@@ -29,6 +33,11 @@ export const translations = {
     team1Role: "Founder of CineZate & FICIAI",
     team2Role: "High Representative of CineZate, Head of Partnerships, & Advisory Board Member",
     team3Role: "Tech Lead / Digital Systems Specialist",
+    footerCopy: "© 2026 FICIAI Event. All rights reserved.",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    contact: "Contact Us",
+    // Form labels
     nameLabel: "Full Name",
     emailLabel: "Email Address",
     companyLabel: "Company Name",
@@ -40,17 +49,53 @@ export const translations = {
     submitStand: "Submit Request",
     submitBadge: "Request my Badge",
     levels: ["Platinum", "Gold", "Silver", "Startup"],
-    sizes: ["Small (3x3m)", "Medium (6x3m)", "Large (6x6m)", "Custom Size"]
+    sizes: ["Small (3x3m)", "Medium (6x3m)", "Large (6x6m)", "Custom Size"],
+    about: {
+      title: "What is FICIAI?",
+      subtitle: "International Forum on Cinema, AI & Investment",
+      desc1: "Scheduled for November 6-8, 2026 in Ouarzazate, Morocco, FICIAI serves as the flagship event of the broader \"Ouarzazate Smart City of Cinema 2030\" program.",
+      desc2: "Our vision is to transition Ouarzazate into an integrated creative and technological hub. We position AI as a catalyst to augment human creativity, leveraging clean energy and local talent to build Africa's first cinematic smart city.",
+      axesTitle: "Strategic Pillars",
+      axesSubtitle: "The core foundations shaping the future of Ouarzazate.",
+      axes: [
+        { title: "Heritage", desc: "Safeguarding traditional filmmaking memory and artisanal craftsmanship." },
+        { title: "AI Innovation", desc: "Deploying generative AI workflows and virtual production tools." },
+        { title: "Training", desc: "Practical skill transfer and capacity building for youth." },
+        { title: "Investment", desc: "Structuring financing pipelines with international VC funds." },
+        { title: "Diplomacy", desc: "Strengthening transnational artistic and institutional alliances." }
+      ],
+      networkTitle: "Global Network & Governance",
+      promoter: "Promoted by Association CineZate (Pres. Abderrafia Souhali).",
+      honor: "Guest of Honor Country: India.",
+      partners: "Endorsed by UNESCO, UNFPA Morocco, UNACCC, and major global studios."
+    },
+    stats: {
+      title: "Global Impact at a Glance",
+      stat1Value: "66+",
+      stat1Label: "Participating Countries & Regions",
+      stat2Value: "5",
+      stat2Label: "Continents Represented",
+      stat3Value: "India",
+      stat3Label: "Official Country of Honor",
+      stat4Value: "UN / UNESCO",
+      stat4Label: "Institutional Alignment & Endorsement"
+    }
   },
   fr: {
-    badge: "FICIAI 2026 \u2022 6-8 NOV",
-    title1: "Architecture AURA",
-    title2: "Explorateur de Consensus",
-    title3: "Initialiser {",
-    title4: "Preuve Cryptographique",
-    title5: "}",
-    desc: "Sécurisez vos actifs numériques avec une vérité vérifiable. Entrez dans la nouvelle ère de la vérification décentralisée. Utilisez notre réseau de nœuds avancé pour stocker et authentifier vos données.",
-    register: "S'inscrire",
+    nav: { about: "À propos", speakers: "Intervenants", agenda: "Programme" },
+    register: "Manifester son intérêt",
+    date: "6-8 Novembre, 2026",
+    location: "Ouarzazate, Maroc",
+    heroTitle1: "Quand le Cinéma",
+    heroTitle2: "Rencontre l'IA.",
+    heroDesc: "Rejoignez-nous au FICIAI 2026, le forum international réunissant cinéastes visionnaires, innovateurs tech et investisseurs mondiaux pour bâtir la première smart city cinématographique d'Afrique.",
+    getTickets: "Obtenir des Billets",
+    exploreAgenda: "Explorer le Programme",
+    timeUntil: "Temps Restant",
+    upcoming: "À venir",
+    eventInProgress: "ÉVÉNEMENT EN COURS",
+    days: "Jours", hours: "Heures", minutes: "Minutes", seconds: "Secondes",
+    progress: "Progression avant lancement",
     backedBy: "Soutenu par les leaders de l'industrie",
     exploreTitle: "Découvrez l'Expérience",
     exploreSub: "Plongez dans des parcours dédiés, conçus pour repousser les limites de la création numérique moderne et de l'intelligence artificielle.",
@@ -68,6 +113,11 @@ export const translations = {
     team1Role: "Fondateur de CineZate & FICIAI",
     team2Role: "Haut Représentant de l'Association CineZate, Chargé des Partenariats, Membre du Conseil d'Orientation",
     team3Role: "Tech Lead / Spécialiste des Systèmes Numériques",
+    footerCopy: "© 2026 Événement FICIAI. Tous droits réservés.",
+    privacy: "Politique de Confidentialité",
+    terms: "Conditions d'Utilisation",
+    contact: "Nous Contacter",
+    // Form labels
     nameLabel: "Nom Complet",
     emailLabel: "Adresse Email",
     companyLabel: "Nom de l'Entreprise",
@@ -79,6 +129,36 @@ export const translations = {
     submitStand: "Envoyer la demande",
     submitBadge: "Demander mon Badge",
     levels: ["Platine", "Or", "Argent", "Startup"],
-    sizes: ["Petit (3x3m)", "Moyen (6x3m)", "Grand (6x6m)", "Taille sur mesure"]
+    sizes: ["Petit (3x3m)", "Moyen (6x3m)", "Grand (6x6m)", "Taille sur mesure"],
+    about: {
+      title: "Qu'est-ce que le FICIAI ?",
+      subtitle: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement",
+      desc1: "Prévu du 6 au 8 novembre 2026 à Ouarzazate, au Maroc, le FICIAI est l'événement phare du grand programme \"Ouarzazate Smart City of Cinema 2030\".",
+      desc2: "Notre vision est de transformer Ouarzazate en un hub créatif et technologique intégré. L'IA y est positionnée comme un catalyseur pour augmenter la créativité humaine, en s'appuyant sur l'énergie propre et les talents locaux pour bâtir la première smart city cinématographique d'Afrique.",
+      axesTitle: "Piliers Stratégiques",
+      axesSubtitle: "Les fondations au cœur de l'avenir d'Ouarzazate.",
+      axes: [
+        { title: "Héritage", desc: "Sauvegarde de la mémoire cinématographique et du savoir-faire artisanal." },
+        { title: "Innovation IA", desc: "Déploiement de flux de travail génératifs et d'outils de production virtuelle." },
+        { title: "Formation", desc: "Transfert de compétences pratiques pour la jeunesse africaine." },
+        { title: "Investissement", desc: "Structuration de financements avec des fonds d'investissement internationaux." },
+        { title: "Diplomatie", desc: "Renforcement des alliances artistiques et institutionnelles transnationales." }
+      ],
+      networkTitle: "Réseau Global & Gouvernance",
+      promoter: "Promu par l'Association CineZate (Président Abderrafia Souhali).",
+      honor: "Pays Invité d'Honneur : Inde.",
+      partners: "Soutenu par l'UNESCO, UNFPA Maroc, UNACCC, et de grands studios mondiaux."
+    },
+    stats: {
+      title: "Impact Global en un Coup d'Œil",
+      stat1Value: "66+",
+      stat1Label: "Pays & Régions Participants",
+      stat2Value: "5",
+      stat2Label: "Continents Représentés",
+      stat3Value: "Inde",
+      stat3Label: "Pays Invité d'Honneur",
+      stat4Value: "ONU / UNESCO",
+      stat4Label: "Alignement & Soutien Institutionnel"
+    }
   }
 };

@@ -5,7 +5,7 @@ export default function SponsorPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="hero relative z-10" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '120px 20px 40px' }}>
+    <main className="hero relative z-10" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '120px 20px 40px' }}>
       
       {/* Background Architectural Grid purely for aesthetics */}
       <div className="page-dividers" style={{ display: 'flex', justifyContent: 'center', zIndex: -1 }}>

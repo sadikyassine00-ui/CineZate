@@ -1,15 +1,20 @@
 "use client";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
-    <footer style={{ width: '100%', padding: '40px 20px', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)', background: 'var(--surface-color)', position: 'relative', zIndex: 10 }}>
-      <p style={{ fontFamily: 'var(--font-jetbrains)', fontSize: '12px', color: 'var(--text-secondary)' }}>
-        © 2026 CineZate & FICIAI. All rights reserved.
-      </p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '16px' }}>
-        <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Privacy Policy</a>
-        <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Terms of Service</a>
-        <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '14px' }}>Contact</a>
+    <footer className="footer-section relative z-10" style={{ padding: '64px 0', textAlign: 'center' }}>
+      <div className="divider-h" style={{ top: '0' }}></div>
+      <div className="logo" style={{ marginBottom: '16px', display: 'flex', justifyContent: 'center' }}>
+          <img src="/assets/logo/CinezateLogo.png" alt="FICIAI 2026 Logo" style={{ height: '48px', width: 'auto', objectFit: 'contain' }} />
+      </div>
+      <p className="mono-title">{t.footerCopy}</p>
+      <div className="footer-links" style={{ display: 'flex', gap: '32px', justifyContent: 'center', marginTop: '24px' }}>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0 }}>{t.privacy}</a>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0 }}>{t.terms}</a>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0 }}>{t.contact}</a>
       </div>
     </footer>
   );
