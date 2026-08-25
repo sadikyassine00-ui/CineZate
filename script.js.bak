@@ -1,0 +1,127 @@
+// Countdown Logic for November 6, 2026
+const targetDate = new Date('2026-11-06T00:00:00').getTime();
+const startDate = new Date('2024-01-01T00:00:00').getTime(); // Using a fixed start date to calculate progress
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<div class="time-value">EVENT IN PROGRESS</div>';
+        return;
+    }
+
+    // Time calculations
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Update DOM
+    document.getElementById('cd-days').innerText = String(days).padStart(3, '0');
+    document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
+    document.getElementById('cd-minutes').innerText = String(minutes).padStart(2, '0');
+    document.getElementById('cd-seconds').innerText = String(seconds).padStart(2, '0');
+
+    // Update progress bar (simulated total duration vs elapsed)
+    const totalDuration = targetDate - startDate;
+    const elapsed = now - startDate;
+    let progressPct = (elapsed / totalDuration) * 100;
+    if(progressPct < 0) progressPct = 0;
+    if(progressPct > 100) progressPct = 100;
+    
+    document.getElementById('progress-bar').style.width = progressPct + '%';
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Ambient WebGL/Canvas Effect (Simple Particles/Gradients)
+const canvas = document.getElementById('ambient-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+class Particle {
+    constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.size = Math.random() * 2 + 0.5;
+        this.alpha = Math.random() * 0.4 + 0.1;
+    }
+    
+    update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        
+        if(this.x < 0) this.x = canvas.width;
+        if(this.x > canvas.width) this.x = 0;
+        if(this.y < 0) this.y = canvas.height;
+        if(this.y > canvas.height) this.y = 0;
+    }
+    
+    draw() {
+        // Dark subtle particles against light background
+        ctx.fillStyle = `rgba(20, 20, 20, ${this.alpha})`; 
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function initParticles() {
+    particles = [];
+    const numParticles = Math.floor(window.innerWidth / 15);
+    for(let i=0; i<numParticles; i++) {
+        particles.push(new Particle());
+    }
+}
+initParticles();
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Draw subtle gradient matching the background color
+    const gradient = ctx.createRadialGradient(canvas.width/2, canvas.height/2, 0, canvas.width/2, canvas.height/2, Math.max(canvas.width, canvas.height));
+    gradient.addColorStop(0, 'rgba(230, 230, 235, 0)');
+    gradient.addColorStop(1, 'rgba(215, 215, 220, 0.3)');
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+        p.update();
+        p.draw();
+    });
+    
+    requestAnimationFrame(animate);
+}
+animate();
+
+// Subtle hover parallax for the countdown card
+const card = document.querySelector('.countdown-card');
+let animationFinished = false;
+
+// Wait for initial entrance animation to finish before applying parallax
+setTimeout(() => {
+    animationFinished = true;
+}, 1600);
+
+document.addEventListener('mousemove', (e) => {
+    if (!animationFinished) return;
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 80;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 80;
+    card.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+
+card.addEventListener('mouseleave', () => {
+    if (!animationFinished) return;
+    card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+});

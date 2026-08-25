@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FICIAI 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient effects container -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <main class="hero">
+    <header class="hero-nav">
+      <div class="logo">FICIAI <span class="mono-badge">2026</span></div>
+      <nav class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Speakers</a>
+        <a href="#">Agenda</a>
+      </nav>
+      <button class="btn btn-outline">Register Interest</button>
+    </header>
+
+    <div class="hero-content">
+      <div class="content-wrapper">
+        <div class="badge-reveal">
+          <span class="label-badge">November 6-8, 2026</span>
+        </div>
+        
+        <h1 class="display-title">
+          <span class="line-reveal">Welcome to the Future</span>
+          <span class="line-reveal">of Artificial Intelligence.</span>
+        </h1>
+        
+        <p class="body-text">
+          Join the world's leading minds at FICIAI 2026. Enter the new era of decentralized verification and advanced AI architectures. Secure your digital assets with verifiable truth.
+        </p>
+
+        <div class="cta-group">
+          <button class="btn btn-primary">Get Tickets</button>
+          <button class="btn btn-secondary">Explore Agenda</button>
+        </div>
+      </div>
+
+      <div class="countdown-card">
+        <div class="card-header">
+          <span class="mono-title">Initialize { Event_Launch }</span>
+          <div class="status-indicator">
+            <span class="dot"></span>
+            System Ready
+          </div>
+        </div>
+        
+        <div class="countdown-grid" id="countdown">
+          <div class="time-block">
+            <span class="time-value" id="cd-days">000</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="time-divider">:</div>
+          <div class="time-block">
+            <span class="time-value" id="cd-hours">00</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="time-divider">:</div>
+          <div class="time-block">
+            <span class="time-value" id="cd-minutes">00</span>
+            <span class="time-label">Minutes</span>
+          </div>
+          <div class="time-divider">:</div>
+          <div class="time-block">
+            <span class="time-value" id="cd-seconds">00</span>
+            <span class="time-label">Seconds</span>
+          </div>
+        </div>
+        
+        <div class="card-footer">
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="progress-text">Awaiting synchronization...</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="script.js"></script>
+</body>
+</html>
