@@ -21,7 +21,7 @@ export default function Header() {
               style={{ 
                 height: '40px', 
                 width: 'auto', 
-                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))',
+                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.06))',
                 marginLeft: '8px'
               }} 
             />

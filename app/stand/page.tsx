@@ -42,7 +42,7 @@ export default function StandPage() {
           <div className="form-group">
             <label className="form-label">{t.sizeLabel}</label>
             <select className="input-field" required>
-              {t.sizes.map((sz, i) => <option key={i} value={sz} style={{background: '#141414'}}>{sz}</option>)}
+              {t.sizes.map((sz, i) => <option key={i} value={sz}>{sz}</option>)}
             </select>
           </div>
 
