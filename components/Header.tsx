@@ -13,8 +13,18 @@ export default function Header() {
     <>
       <header className="header">
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', zIndex: 1000 }}>
-          <Link href="/">
-            <img src="/assets/logo/CinezateLogo.png" alt="CineZate Logo" style={{ height: '40px', width: 'auto', filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))' }} />
+          <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
+            <img 
+              src="/assets/logo/CinezateLogo.png" 
+              alt="CineZate Logo" 
+              className="header-logo-img"
+              style={{ 
+                height: '40px', 
+                width: 'auto', 
+                filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))',
+                marginLeft: '8px'
+              }} 
+            />
           </Link>
         </div>
 
@@ -31,8 +41,8 @@ export default function Header() {
             </svg>
             {lang === 'en' ? 'FR' : 'EN'}
           </button>
-          <Link href="/badge" style={{ textDecoration: 'none' }}>
-            <button className="btn btn-outline">{t.register}</button>
+          <Link href="/sponsor" style={{ textDecoration: 'none' }}>
+            <button className="btn btn-outline">{t.track1Btn}</button>
           </Link>
         </div>
 
@@ -74,8 +84,8 @@ export default function Header() {
               </svg>
               {lang === 'en' ? 'Français' : 'English'}
             </button>
-            <Link href="/badge" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', width: '100%' }}>
-              <button className="btn btn-outline" style={{ width: '100%', fontSize: '18px', padding: '14px 24px' }}>{t.register}</button>
+            <Link href="/sponsor" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', width: '100%' }}>
+              <button className="btn btn-outline" style={{ width: '100%', fontSize: '18px', padding: '14px 24px' }}>{t.track1Btn}</button>
             </Link>
           </div>
         </div>

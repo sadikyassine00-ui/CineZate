@@ -59,7 +59,7 @@ export default function Home() {
     <>
       {/* Chill Architectural Grid */}
       <div className="page-dividers" style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ position: 'relative', width: '100%', maxWidth: '1400px', height: '100%' }}>
+        <div style={{ position: 'relative', width: 'calc(100% - 64px)', maxWidth: '1200px', height: '100%' }}>
           {/* Outer bounds only, preventing intersections with centered text */}
           <div className="divider-v" style={{ left: '0' }} />
           <div className="divider-v" style={{ right: '0' }} />
@@ -284,42 +284,42 @@ export default function Home() {
         <div className="team-grid relative" style={{ width: '100%', display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap' }}>
           <div className="divider-h absolute" style={{ top: '50%', left: '0', right: '0', zIndex: 0 }}></div>
           
-          <div className="feature-card relative z-10" style={{ padding: '40px 32px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '350px', background: 'rgba(22, 22, 24, 0.7)' }}>
+          <div className="feature-card relative z-10" style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '280px', background: 'rgba(22, 22, 24, 0.7)' }}>
             <img 
               src="/assets/team/abdouPic.png" 
               alt="Abderafia Souhali" 
-              style={{ width: '140px', height: '140px', borderRadius: '50%', objectFit: 'cover', marginBottom: '24px', border: '2px solid rgba(255,255,255,0.1)' }} 
+              style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', marginBottom: '20px', border: '2px solid rgba(255,255,255,0.1)' }} 
             />
-            <h3 className="feature-title" style={{ fontSize: '22px', marginBottom: '4px' }}>Abderafia Souhali</h3>
-            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '24px', textAlign: 'center' }}>{t.team1Role}</p>
+            <h3 className="feature-title" style={{ fontSize: '20px', marginBottom: '4px' }}>Abderafia Souhali</h3>
+            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '20px', textAlign: 'center', fontSize: '13px' }}>{t.team1Role}</p>
             
             <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', color: 'var(--text-primary)', border: '1px solid rgba(255,255,255,0.1)', transition: 'background 0.3s ease' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
           </div>
 
-          <div className="feature-card relative z-10" style={{ padding: '40px 32px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '350px', background: 'rgba(22, 22, 24, 0.7)' }}>
+          <div className="feature-card relative z-10" style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '280px', background: 'rgba(22, 22, 24, 0.7)' }}>
             <img 
               src="/assets/team/najib.png" 
               alt="Najib Bredaa" 
-              style={{ width: '140px', height: '140px', borderRadius: '50%', objectFit: 'cover', marginBottom: '24px', border: '2px solid rgba(255,255,255,0.1)' }} 
+              style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', marginBottom: '20px', border: '2px solid rgba(255,255,255,0.1)' }} 
             />
-            <h3 className="feature-title" style={{ fontSize: '22px', marginBottom: '4px' }}>Najib Bredaa</h3>
-            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '24px', textAlign: 'center', fontSize: '14px', lineHeight: '1.4' }}>{t.team2Role}</p>
+            <h3 className="feature-title" style={{ fontSize: '20px', marginBottom: '4px' }}>Najib Bredaa</h3>
+            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '20px', textAlign: 'center', fontSize: '13px', lineHeight: '1.4' }}>{t.team2Role}</p>
             
             <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', color: 'var(--text-primary)', border: '1px solid rgba(255,255,255,0.1)', transition: 'background 0.3s ease' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
           </div>
 
-          <div className="feature-card relative z-10" style={{ padding: '40px 32px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '350px', background: 'rgba(22, 22, 24, 0.7)' }}>
+          <div className="feature-card relative z-10" style={{ padding: '24px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '280px', background: 'rgba(22, 22, 24, 0.7)' }}>
             <img 
               src="/assets/team/Yassine.png" 
               alt="Yassine Sadik" 
-              style={{ width: '140px', height: '140px', borderRadius: '50%', objectFit: 'cover', marginBottom: '24px', border: '2px solid rgba(255,255,255,0.1)' }} 
+              style={{ width: '100px', height: '100px', borderRadius: '50%', objectFit: 'cover', marginBottom: '20px', border: '2px solid rgba(255,255,255,0.1)' }} 
             />
-            <h3 className="feature-title" style={{ fontSize: '22px', marginBottom: '4px' }}>Yassine Sadik</h3>
-            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '24px', textAlign: 'center', fontSize: '14px', lineHeight: '1.4' }}>{t.team3Role}</p>
+            <h3 className="feature-title" style={{ fontSize: '20px', marginBottom: '4px' }}>Yassine Sadik</h3>
+            <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '20px', textAlign: 'center', fontSize: '13px', lineHeight: '1.4' }}>{t.team3Role}</p>
             
             <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '50%', background: 'rgba(255,255,255,0.05)', color: 'var(--text-primary)', border: '1px solid rgba(255,255,255,0.1)', transition: 'background 0.3s ease' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
