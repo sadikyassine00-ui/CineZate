@@ -5,8 +5,50 @@ import { useLanguage } from '../../components/LanguageProvider';
 
 export default function SponsorPage() {
   const [selectedTier, setSelectedTier] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
   const { t } = useLanguage();
   const ts = t.sponsor;
+
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      organisation: formData.get('organisation'),
+      contact: formData.get('contact'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      tier: selectedTier,
+      goals: formData.get('goals'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setSubmitMessage('Votre demande a été envoyée avec succès. Nous vous contacterons bientôt.');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        const errorData = await response.json();
+        setSubmitStatus('error');
+        setSubmitMessage(errorData.error || 'Une erreur est survenue.');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setSubmitMessage('Erreur de connexion. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div style={{ paddingBottom: '64px' }}>
@@ -280,7 +322,6 @@ export default function SponsorPage() {
             </p>
           </div>
         </FadeIn>
-
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '48px', alignItems: 'start' }}>
           
           {/* Enhanced Form Card */}
@@ -291,7 +332,17 @@ export default function SponsorPage() {
                 <p className="body-text" style={{ color: 'var(--text-secondary)', fontSize: '13px' }}>{ts.formAppReq}</p>
               </div>
               
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '48px' }} onSubmit={(e) => { e.preventDefault(); alert(ts.formSuccess); }}>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '48px' }} onSubmit={handleFormSubmit}>
+                {submitStatus === 'success' && (
+                  <div style={{ padding: '16px', background: 'rgba(0, 255, 0, 0.1)', color: '#4ADE80', borderRadius: '8px', textAlign: 'center' }}>
+                    {submitMessage}
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div style={{ padding: '16px', background: 'rgba(255, 0, 0, 0.1)', color: '#F87171', borderRadius: '8px', textAlign: 'center' }}>
+                    {submitMessage}
+                  </div>
+                )}
                 
                 {/* Section 1: Identity */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -301,11 +352,11 @@ export default function SponsorPage() {
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formOrg}</label>
-                      <input type="text" className="input-field body-text" placeholder={ts.formOrgPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
+                      <input name="organisation" type="text" className="input-field body-text" placeholder={ts.formOrgPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
                     </div>
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formContact}</label>
-                      <input type="text" className="input-field body-text" placeholder={ts.formContactPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
+                      <input name="contact" type="text" className="input-field body-text" placeholder={ts.formContactPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
                     </div>
                   </div>
                 </div>
@@ -318,11 +369,11 @@ export default function SponsorPage() {
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formEmail}</label>
-                      <input type="email" className="input-field body-text" placeholder={ts.formEmailPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
+                      <input name="email" type="email" className="input-field body-text" placeholder={ts.formEmailPlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
                     </div>
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formPhone}</label>
-                      <input type="tel" className="input-field body-text" placeholder={ts.formPhonePlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
+                      <input name="phone" type="tel" className="input-field body-text" placeholder={ts.formPhonePlaceholder} required style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none' }} />
                     </div>
                   </div>
                 </div>
@@ -335,6 +386,7 @@ export default function SponsorPage() {
                   <div className="form-group">
                     <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formTier}</label>
                     <select 
+                      name="tier"
                       className="input-field body-text" 
                       value={selectedTier}
                       onChange={(e) => setSelectedTier(e.target.value)}
@@ -350,11 +402,11 @@ export default function SponsorPage() {
                   
                   <div className="form-group">
                     <label className="mono-title" style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px', display: 'block' }}>{ts.formGoals}</label>
-                    <textarea className="input-field body-text" placeholder={ts.formGoalsPlaceholder} rows={2} style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none', resize: 'vertical' }}></textarea>
+                    <textarea name="goals" className="input-field body-text" placeholder={ts.formGoalsPlaceholder} rows={2} style={{ width: '100%', boxSizing: 'border-box', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px', padding: '10px 12px', fontSize: '14px', color: '#FFF', outline: 'none', resize: 'vertical' }}></textarea>
                   </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary" style={{ 
+                <button type="submit" disabled={isSubmitting} className="btn btn-primary" style={{ 
                   width: '100%', 
                   justifyContent: 'center', 
                   padding: '12px', 
