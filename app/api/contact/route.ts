@@ -29,11 +29,13 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      return NextResponse.json({ error }, { status: 500 });
+      console.error('Resend API error:', error);
+      return NextResponse.json({ error: error.message || 'Erreur lors de l\'envoi de l\'email.' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true, data: emailData });
-  } catch (error) {
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  } catch (error: any) {
+    console.error('API catch error:', error);
+    return NextResponse.json({ error: error.message || 'Erreur interne du serveur' }, { status: 500 });
   }
 }

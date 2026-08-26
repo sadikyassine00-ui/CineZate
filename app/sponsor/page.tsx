@@ -39,12 +39,15 @@ export default function SponsorPage() {
         (e.target as HTMLFormElement).reset();
       } else {
         const errorData = await response.json();
+        const msg = typeof errorData.error === 'string' 
+          ? errorData.error 
+          : (errorData.error?.message || 'Une erreur est survenue lors de l\'envoi.');
         setSubmitStatus('error');
-        setSubmitMessage(errorData.error || 'Une erreur est survenue.');
+        setSubmitMessage(msg);
       }
-    } catch (error) {
+    } catch (error: any) {
       setSubmitStatus('error');
-      setSubmitMessage('Erreur de connexion. Veuillez réessayer.');
+      setSubmitMessage(error?.message || 'Erreur de connexion. Veuillez réessayer.');
     } finally {
       setIsSubmitting(false);
     }
