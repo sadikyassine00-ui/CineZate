@@ -5,18 +5,31 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="footer-section relative z-10" style={{ padding: '24px 0', textAlign: 'center' }}>
+    <footer className="footer-section relative z-10" style={{ padding: '36px 0', textAlign: 'center' }}>
       <div className="divider-h" style={{ top: '0' }}></div>
-      <div className="logo" style={{ marginBottom: '8px', display: 'flex', justifyContent: 'center' }}>
-        <img src="/assets/logo/CinezateLogo.png" alt="FICIAI 2026 Logo" style={{ height: '22px', width: 'auto', objectFit: 'contain' }} />
+      
+      <div className="logo" style={{ marginBottom: '14px', display: 'flex', justifyContent: 'center' }}>
+        <img 
+          src="/assets/logo/CinezateLogo.png" 
+          alt="CineZate Logo" 
+          style={{ 
+            height: '40px', 
+            width: 'auto', 
+            objectFit: 'contain',
+            filter: 'drop-shadow(0 3px 10px rgba(0,0,0,0.1))',
+            display: 'block'
+          }} 
+        />
       </div>
-      <p style={{ fontFamily: 'var(--font-jetbrains)', fontSize: '9px', color: 'var(--text-secondary)', letterSpacing: '0.5px', textTransform: 'uppercase', margin: '0 0 8px 0' }}>
+
+      <p className="mono-title" style={{ fontSize: '11px', color: 'var(--text-secondary)', margin: '0 0 12px 0' }}>
         {t.footerCopy}
       </p>
-      <div className="footer-links" style={{ display: 'flex', gap: '14px', justifyContent: 'center', marginTop: '6px' }}>
-        <a href="#" style={{ fontFamily: 'var(--font-jetbrains)', color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{t.privacy}</a>
-        <a href="#" style={{ fontFamily: 'var(--font-jetbrains)', color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{t.terms}</a>
-        <a href="#" style={{ fontFamily: 'var(--font-jetbrains)', color: 'var(--text-secondary)', textDecoration: 'none', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>{t.contact}</a>
+
+      <div className="footer-links" style={{ display: 'flex', gap: '20px', justifyContent: 'center', marginTop: '8px' }}>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0, fontSize: '10.5px', color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.privacy}</a>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0, fontSize: '10.5px', color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.terms}</a>
+        <a href="#" className="label-badge" style={{ background: 'transparent', border: 'none', padding: 0, fontSize: '10.5px', color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.contact}</a>
       </div>
     </footer>
   );
