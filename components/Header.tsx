@@ -12,31 +12,31 @@ export default function Header() {
   return (
     <>
       <header className="header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', zIndex: 1000 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', zIndex: 1000 }}>
           <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img 
               src="/assets/logo/CinezateLogo.png" 
               alt="CineZate Logo" 
               className="header-logo-img"
               style={{ 
-                height: '40px', 
+                height: '32px', 
                 width: 'auto', 
-                filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.06))',
-                marginLeft: '8px'
+                filter: 'drop-shadow(0 2px 6px rgba(0,0,0,0.05))',
+                marginLeft: '4px'
               }} 
             />
           </Link>
         </div>
 
-        <nav className="nav-links desktop-only" style={{ display: 'flex', gap: '32px' }}>
+        <nav className="nav-links desktop-only" style={{ display: 'flex', gap: '24px' }}>
           <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.about}</a>
           <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.speakers}</a>
           <a href="#" style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}>{t.nav.agenda}</a>
         </nav>
         
-        <div className="desktop-only" style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
+        <div className="desktop-only" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <button onClick={toggleLang} className="lang-toggle">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '6px' }}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
               <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
             {lang === 'en' ? 'FR' : 'EN'}
@@ -53,9 +53,9 @@ export default function Header() {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
           )}
         </button>
       </header>
@@ -65,27 +65,27 @@ export default function Header() {
         <div className="mobile-menu-overlay">
           <button 
             onClick={() => setIsMenuOpen(false)}
-            style={{ position: 'absolute', top: '24px', right: '24px', background: 'transparent', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '8px' }}
+            style={{ position: 'absolute', top: '16px', right: '16px', background: 'transparent', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', padding: '6px' }}
             aria-label="Close menu"
           >
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
           
-          <nav style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center' }}>
-            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.about}</a>
-            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.speakers}</a>
-            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '28px' }}>{t.nav.agenda}</a>
+          <nav style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '20px' }}>{t.nav.about}</a>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '20px' }}>{t.nav.speakers}</a>
+            <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '20px' }}>{t.nav.agenda}</a>
           </nav>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center', marginTop: '48px', width: '100%', maxWidth: '280px' }}>
-            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '18px', padding: '14px 24px', width: '100%' }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '8px' }}>
-                <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center', marginTop: '24px', width: '100%', maxWidth: '240px' }}>
+            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '14px', padding: '10px 18px', width: '100%' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '6px' }}>
+                <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
               {lang === 'en' ? 'Français' : 'English'}
             </button>
             <Link href="/sponsor" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', width: '100%' }}>
-              <button className="btn btn-outline" style={{ width: '100%', fontSize: '18px', padding: '14px 24px' }}>{t.track1Btn}</button>
+              <button className="btn btn-outline" style={{ width: '100%', fontSize: '14px', padding: '10px 18px' }}>{t.track1Btn}</button>
             </Link>
           </div>
         </div>
