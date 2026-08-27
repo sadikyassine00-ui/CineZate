@@ -357,7 +357,7 @@ export default function SponsorPage() {
                   <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '4px' }}>
                     <span className="mono-title" style={{ fontSize: '10px', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.formS1}</span>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div className="form-row-2">
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formOrg}</label>
                       <input name="organisation" type="text" className="input-field" placeholder={ts.formOrgPlaceholder} required />
@@ -374,7 +374,7 @@ export default function SponsorPage() {
                   <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '4px' }}>
                     <span className="mono-title" style={{ fontSize: '10px', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.formS2}</span>
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                  <div className="form-row-2">
                     <div className="form-group">
                       <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formEmail}</label>
                       <input name="email" type="email" className="input-field" placeholder={ts.formEmailPlaceholder} required />

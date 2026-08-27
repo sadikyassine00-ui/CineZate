@@ -77,15 +77,15 @@ export default function Header() {
             <a href="#" onClick={() => setIsMenuOpen(false)} style={{ fontFamily: 'var(--font-inter)', fontWeight: 500, color: 'var(--text-primary)', textDecoration: 'none', fontSize: '20px' }}>{t.nav.agenda}</a>
           </nav>
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', alignItems: 'center', marginTop: '24px', width: '100%', maxWidth: '240px' }}>
-            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '14px', padding: '10px 18px', width: '100%' }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '6px' }}>
-                <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', marginTop: '20px', width: '100%', maxWidth: '200px' }}>
+            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '11px', padding: '6px 12px', width: '100%' }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
+                <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
               {lang === 'en' ? 'Français' : 'English'}
             </button>
             <Link href="/sponsor" onClick={() => setIsMenuOpen(false)} style={{ textDecoration: 'none', width: '100%' }}>
-              <button className="btn btn-outline" style={{ width: '100%', fontSize: '14px', padding: '10px 18px' }}>{t.track1Btn}</button>
+              <button className="btn btn-outline" style={{ width: '100%', fontSize: '11px', padding: '6px 12px' }}>{t.track1Btn}</button>
             </Link>
           </div>
         </div>
