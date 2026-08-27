@@ -37,10 +37,10 @@ export default function Header() {
         
         <div className="desktop-only" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
           <button onClick={toggleLang} className="lang-toggle" aria-label="Toggle language">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '3px' }}>
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
             </svg>
-            {lang === 'en' ? 'FR' : 'EN'}
+            <span>{lang === 'en' ? 'FR' : 'EN'}</span>
           </button>
           <Link href="/sponsor" style={{ textDecoration: 'none' }}>
             <button className="btn btn-outline">{t.track1Btn}</button>
@@ -79,8 +79,8 @@ export default function Header() {
           </nav>
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', marginTop: '20px', width: '100%', maxWidth: '200px' }}>
-            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '10px !important', padding: '5px 12px !important', width: '100%' }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
+            <button onClick={() => { toggleLang(); setIsMenuOpen(false); }} className="lang-toggle" style={{ fontSize: '8.5px !important', padding: '8px 18px !important', width: '100%', borderRadius: '9999px' }}>
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '4px' }}>
                 <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/>
               </svg>
               {lang === 'en' ? 'Français' : 'English'}

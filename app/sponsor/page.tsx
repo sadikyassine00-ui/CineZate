@@ -18,8 +18,10 @@ export default function SponsorPage() {
 
     const formData = new FormData(e.currentTarget);
     const data = {
+      type: 'sponsor',
       organisation: formData.get('organisation'),
-      contact: formData.get('contact'),
+      jobTitle: formData.get('jobTitle'),
+      fullName: formData.get('fullName'),
       email: formData.get('email'),
       phone: formData.get('phone'),
       tier: selectedTier,
@@ -58,13 +60,6 @@ export default function SponsorPage() {
       
       {/* 1. HERO SECTION */}
       <section className="hero relative z-10" style={{ minHeight: 'auto', padding: '20px 16px 0 16px', justifyContent: 'center' }}>
-        <div className="page-dividers" style={{ display: 'flex', justifyContent: 'center', pointerEvents: 'none' }}>
-          <div style={{ position: 'relative', width: 'calc(100% - 32px)', maxWidth: '1080px', minHeight: '100%' }}>
-            <div className="divider-v" style={{ left: '0' }} />
-            <div className="divider-v" style={{ right: '0' }} />
-          </div>
-        </div>
-
         <FadeIn>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', paddingTop: '12px' }}>
             <div className="label-badge" style={{ marginBottom: '10px', display: 'inline-block' }}>
@@ -108,16 +103,16 @@ export default function SponsorPage() {
         </FadeIn>
       </section>
 
-      {/* 2. VALUE PROPOSITION */}
-      <section className="relative z-10" style={{ maxWidth: '1080px', margin: '48px auto 0', padding: '0 16px' }}>
+      {/* 2. VALUE PROPOSITIONS */}
+      <section className="relative z-10" style={{ maxWidth: '1080px', margin: '56px auto 0', padding: '0 16px' }}>
         <FadeIn>
           <h2 className="section-title text-center" style={{ textAlign: 'center' }}>{ts.whyTitle}</h2>
         </FadeIn>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '20px', marginTop: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', gap: '32px 24px', marginTop: '24px' }}>
           {ts.vpCards.map((vp, i) => (
-            <FadeIn key={i} delay={0.1 * i} style={{ minHeight: '100%' }}>
-              <div className="feature-card" style={{ minHeight: '100%', display: 'flex', flexDirection: 'column', padding: '18px 16px' }}>
+            <FadeIn key={i} delay={0.1 * i} style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: '100%' }}>
+              <div className="feature-card" style={{ height: '100%', flex: 1, minHeight: '100%', display: 'flex', flexDirection: 'column', padding: '22px 20px', boxSizing: 'border-box' }}>
                 <h3 className="feature-title" style={{ marginBottom: '8px', fontSize: '15px' }}>{vp.title}</h3>
                 <p className="body-text" style={{ flex: 1, color: 'var(--text-secondary)', fontSize: '12px' }}>{vp.desc}</p>
               </div>
@@ -127,34 +122,37 @@ export default function SponsorPage() {
       </section>
 
       {/* 3. PRICING CARDS */}
-      <section id="sponsor-tiers" className="relative z-10" style={{ maxWidth: '1080px', margin: '48px auto 0', padding: '0 16px' }}>
+      <section id="sponsor-tiers" className="relative z-10" style={{ maxWidth: '1080px', margin: '56px auto 0', padding: '0 16px' }}>
         <FadeIn>
           <h2 className="section-title text-center" style={{ textAlign: 'center' }}>{ts.tiersTitle}</h2>
         </FadeIn>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: '20px', marginTop: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(230px, 100%), 1fr))', gap: '36px 24px', marginTop: '24px' }}>
           {ts.tiers.map((tier, i) => {
             const isSelected = selectedTier === tier.id;
             const isHighlighted = tier.highlight || isSelected;
             
             return (
-              <FadeIn key={i} delay={0.1 * i} style={{ minHeight: '100%' }}>
+              <FadeIn key={i} delay={0.1 * i} style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: '100%' }}>
                 <div className="feature-card" style={{ 
+                  height: '100%',
+                  flex: 1,
                   minHeight: '100%', 
                   display: 'flex', 
-                  flexDirection: 'column',
-                  padding: '18px 16px',
-                  border: isHighlighted ? '2px solid #D97706' : '1px solid var(--border)',
-                  background: isHighlighted ? '#FFFBEB' : 'var(--surface)',
-                  boxShadow: isHighlighted ? '0 8px 20px rgba(217, 119, 6, 0.1)' : '0 2px 10px rgba(0,0,0,0.02)',
+                  flexDirection: 'column', 
+                  padding: '22px 20px',
+                  boxSizing: 'border-box',
+                  border: isHighlighted ? '2px solid #B8432F' : '1px solid var(--border)',
+                  background: isHighlighted ? '#FFF8F6' : 'var(--surface)',
+                  boxShadow: isHighlighted ? '0 8px 20px rgba(184, 67, 47, 0.12)' : '0 2px 10px rgba(0,0,0,0.02)',
                   transition: 'all 0.25s ease',
                   transform: isSelected ? 'translateY(-2px)' : 'none'
                 }}>
-                  <h3 className="feature-title" style={{ fontSize: '15px', color: isHighlighted ? '#B45309' : 'var(--text-primary)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <h3 className="feature-title" style={{ fontSize: '15px', color: isHighlighted ? '#B8432F' : 'var(--text-primary)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     {tier.title}
-                    {isSelected && <span style={{ fontSize: '9px', backgroundColor: '#FEF3C7', padding: '2px 6px', borderRadius: '4px', border: '1px solid #FCD34D', color: '#B45309', letterSpacing: '0.8px', textTransform: 'uppercase' }}>{ts.tierSelectedBtn}</span>}
+                    {isSelected && <span style={{ fontSize: '8px', backgroundColor: '#FDECE7', padding: '6px 14px', borderRadius: '9999px', border: '1px solid #F5C6BA', color: '#B8432F', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: 700, lineHeight: 1 }}>{ts.tierSelectedBtn}</span>}
                   </h3>
-                  <div className="time-value" style={{ fontSize: '22px', marginBottom: '14px', color: isHighlighted ? '#B45309' : 'var(--text-primary)' }}>{tier.price}</div>
+                  <div className="time-value" style={{ fontSize: '22px', marginBottom: '14px', color: isHighlighted ? '#B8432F' : 'var(--text-primary)' }}>{tier.price}</div>
                   <ul className="body-text" style={{ paddingLeft: '16px', margin: 0, color: 'var(--text-secondary)', fontSize: '12px', flex: 1 }}>
                     {tier.perks.map((perk, j) => (
                       <li key={j} style={{ marginBottom: '8px' }}>{perk}</li>
@@ -173,9 +171,9 @@ export default function SponsorPage() {
                         justifyContent: 'center', 
                         padding: '8px 12px',
                         fontSize: '12px',
-                        border: isSelected ? 'none' : (isHighlighted ? '1px solid #D97706' : '1px solid #D1D5DB'), 
-                        color: isSelected ? '#FFFFFF' : (isHighlighted ? '#B45309' : 'var(--text-primary)'),
-                        background: isSelected ? '#111827' : (isHighlighted ? '#FEF3C7' : 'transparent'),
+                        border: isSelected ? 'none' : (isHighlighted ? '1px solid #B8432F' : '1px solid #D1D5DB'), 
+                        color: isSelected ? '#FFFFFF' : (isHighlighted ? '#B8432F' : 'var(--text-primary)'),
+                        background: isSelected ? '#B8432F' : (isHighlighted ? '#FDECE7' : 'transparent'),
                         fontWeight: 600
                       }}>
                       {isSelected ? ts.tierSelectedBtn : ts.tierSelectBtn}
@@ -211,7 +209,7 @@ export default function SponsorPage() {
               <thead>
                 <tr style={{ background: '#F9FAFB' }}>
                   <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.8px', fontSize: '10px' }}>{ts.matrixDeliverable}</th>
-                  <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: '#B45309', background: '#FEF3C7', fontSize: '10px' }}>PRESTIGE</th>
+                  <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: '#B8432F', background: '#FDECE7', fontSize: '10px' }}>PRESTIGE</th>
                   <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: 'var(--text-primary)', fontSize: '10px' }}>OFFICIEL</th>
                   <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: 'var(--text-primary)', fontSize: '10px' }}>GOLD</th>
                   <th className="mono-title" style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', color: 'var(--text-primary)', fontSize: '10px' }}>SILVER</th>
@@ -228,8 +226,8 @@ export default function SponsorPage() {
                     {item.vals.map((v, j) => (
                       <td key={j} className="body-text" style={{ 
                         padding: '12px 16px', 
-                        color: j === 0 ? '#B45309' : 'var(--text-secondary)',
-                        background: j === 0 ? '#FFFDF5' : 'transparent',
+                        color: j === 0 ? '#B8432F' : 'var(--text-secondary)',
+                        background: j === 0 ? '#FFF8F6' : 'transparent',
                         fontWeight: j === 0 ? 600 : 400,
                         fontSize: '12px'
                       }}>
@@ -321,78 +319,83 @@ export default function SponsorPage() {
       </section>
 
       {/* 7. CONTACT & FORM */}
-      <section id="sponsor-form" className="relative z-10" style={{ maxWidth: '1080px', margin: '48px auto 0', padding: '0 16px' }}>
+      <section id="sponsor-form" className="form-section-container relative z-10" style={{ maxWidth: '1080px' }}>
         <FadeIn>
-          <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2 className="section-title">{ts.formTitle}</h2>
-            <p className="body-text" style={{ maxWidth: '500px', margin: '8px auto 0', color: 'var(--text-secondary)', fontSize: '12px' }}>
+            <p className="body-text" style={{ maxWidth: '520px', margin: '8px auto 0', color: 'var(--text-secondary)', fontSize: '12.5px' }}>
               {ts.formDesc}
             </p>
           </div>
         </FadeIn>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: '24px', alignItems: 'start' }}>
+        
+        <div className="sponsor-contact-grid">
           
           {/* Enhanced Form Card */}
-          <FadeIn delay={0.2}>
-            <div className="feature-card" style={{ padding: '20px 18px' }}>
-              <div style={{ marginBottom: '16px' }}>
-                <h3 className="feature-title" style={{ fontSize: '16px', marginBottom: '2px' }}>{ts.formAppTitle}</h3>
+          <FadeIn delay={0.2} style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+            <div className="form-card-container">
+              <div style={{ textAlign: 'center', marginBottom: '22px' }}>
+                <h3 className="feature-title" style={{ fontSize: '17px', marginBottom: '4px', fontWeight: 700 }}>{ts.formAppTitle}</h3>
                 <p className="body-text" style={{ color: 'var(--text-secondary)', fontSize: '12px' }}>{ts.formAppReq}</p>
               </div>
               
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '16px' }} onSubmit={handleFormSubmit}>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%' }} onSubmit={handleFormSubmit}>
                 {submitStatus === 'success' && (
-                  <div style={{ padding: '10px 14px', background: '#ECFDF5', color: '#047857', border: '1px solid #A7F3D0', borderRadius: '6px', textAlign: 'center', fontSize: '12px' }}>
+                  <div style={{ padding: '12px 16px', background: '#ECFDF5', color: '#065F46', border: '1px solid #A7F3D0', borderRadius: '8px', textAlign: 'center', fontSize: '12.5px' }}>
                     {submitMessage}
                   </div>
                 )}
                 {submitStatus === 'error' && (
-                  <div style={{ padding: '10px 14px', background: '#FEF2F2', color: '#B91C1C', border: '1px solid #FECACA', borderRadius: '6px', textAlign: 'center', fontSize: '12px' }}>
+                  <div style={{ padding: '12px 16px', background: '#FEF2F2', color: '#991B1B', border: '1px solid #FECACA', borderRadius: '8px', textAlign: 'center', fontSize: '12.5px' }}>
                     {submitMessage}
                   </div>
                 )}
                 
-                {/* Section 1: Identity */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '4px' }}>
-                    <span className="mono-title" style={{ fontSize: '10px', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.formS1}</span>
+                {/* Section 1: Organisation & Identité */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '6px' }}>
+                    <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>{ts.formS1}</span>
                   </div>
                   <div className="form-row-2">
                     <div className="form-group">
-                      <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formOrg}</label>
+                      <label className="form-label">{ts.formOrg} <span style={{ color: '#B8432F' }}>*</span></label>
                       <input name="organisation" type="text" className="input-field" placeholder={ts.formOrgPlaceholder} required />
                     </div>
                     <div className="form-group">
-                      <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formContact}</label>
-                      <input name="contact" type="text" className="input-field" placeholder={ts.formContactPlaceholder} required />
+                      <label className="form-label">{ts.formJob} <span style={{ color: '#B8432F' }}>*</span></label>
+                      <input name="jobTitle" type="text" className="input-field" placeholder={ts.formJobPlaceholder} required />
                     </div>
                   </div>
                 </div>
 
-                {/* Section 2: Contact */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '4px' }}>
-                    <span className="mono-title" style={{ fontSize: '10px', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.formS2}</span>
+                {/* Section 2: Coordonnées du Contact */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '6px' }}>
+                    <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>{ts.formS2}</span>
                   </div>
                   <div className="form-row-2">
                     <div className="form-group">
-                      <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formEmail}</label>
-                      <input name="email" type="email" className="input-field" placeholder={ts.formEmailPlaceholder} required />
+                      <label className="form-label">{ts.formFullName} <span style={{ color: '#B8432F' }}>*</span></label>
+                      <input name="fullName" type="text" className="input-field" placeholder={ts.formFullNamePlaceholder} required />
                     </div>
                     <div className="form-group">
-                      <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formPhone}</label>
-                      <input name="phone" type="tel" className="input-field" placeholder={ts.formPhonePlaceholder} required />
+                      <label className="form-label">{ts.formEmail} <span style={{ color: '#B8432F' }}>*</span></label>
+                      <input name="email" type="email" className="input-field" placeholder={ts.formEmailPlaceholder} required />
                     </div>
+                  </div>
+                  <div className="form-group">
+                    <label className="form-label">{ts.formPhone} <span style={{ color: '#B8432F' }}>*</span></label>
+                    <input name="phone" type="tel" className="input-field" placeholder={ts.formPhonePlaceholder} required />
                   </div>
                 </div>
 
-                {/* Section 3: Partnership */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '4px' }}>
-                    <span className="mono-title" style={{ fontSize: '10px', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.formS3}</span>
+                {/* Section 3: Formule & Précisions */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+                  <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '6px' }}>
+                    <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>{ts.formS3}</span>
                   </div>
                   <div className="form-group">
-                    <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formTier}</label>
+                    <label className="form-label">{ts.formTier} <span style={{ color: '#B8432F' }}>*</span></label>
                     <select 
                       name="tier"
                       className="input-field" 
@@ -408,66 +411,74 @@ export default function SponsorPage() {
                   </div>
                   
                   <div className="form-group">
-                    <label className="mono-title" style={{ fontSize: '10px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.6px', marginBottom: '2px', display: 'block' }}>{ts.formGoals}</label>
-                    <textarea name="goals" className="input-field" placeholder={ts.formGoalsPlaceholder} rows={2} style={{ resize: 'vertical' }}></textarea>
+                    <label className="form-label">{ts.formGoals} <span style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: 400 }}>(Optionnel)</span></label>
+                    <textarea name="goals" className="input-field" placeholder={ts.formGoalsPlaceholder} rows={3} style={{ resize: 'vertical' }}></textarea>
                   </div>
                 </div>
 
-                <button type="submit" disabled={isSubmitting} className="btn btn-primary" style={{ 
-                  width: '100%', 
-                  justifyContent: 'center', 
-                  padding: '10px', 
-                  fontSize: '12px', 
-                  marginTop: '4px', 
-                  fontWeight: 600,
-                  opacity: isSubmitting ? 0.7 : 1
-                }}>
-                  {isSubmitting ? 'ENVOI EN COURS...' : ts.formSubmit}
-                </button>
+                <div style={{ paddingTop: '8px', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <button type="submit" disabled={isSubmitting} className="btn btn-primary btn-submit-main" style={{ 
+                    width: '100%', 
+                    justifyContent: 'center', 
+                    padding: '12px 18px', 
+                    fontSize: '13px', 
+                    fontWeight: 600,
+                    opacity: isSubmitting ? 0.7 : 1,
+                    borderRadius: '8px',
+                    whiteSpace: 'normal',
+                    lineHeight: 1.35,
+                    textAlign: 'center'
+                  }}>
+                    {isSubmitting ? 'Envoi en cours...' : ts.formSubmit}
+                  </button>
+                  <p style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', marginTop: '10px', marginBottom: 0 }}>
+                    {ts.formDisclaimer}
+                  </p>
+                </div>
               </form>
             </div>
           </FadeIn>
 
           {/* Sleek Administrative Info */}
-          <FadeIn delay={0.4}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', position: 'sticky', top: '80px' }}>
+          <FadeIn delay={0.4} style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+            <div className="sticky-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '20px', position: 'sticky', top: '80px', width: '100%' }}>
               
-              <div className="feature-card" style={{ padding: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
+              <div className="feature-card" style={{ padding: '24px 22px', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <img src="/assets/logo/CinezateLogo.png" alt="CineZate Logo" style={{ height: '54px', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.04))' }} />
+                    <img src="/assets/logo/CinezateLogo.png" alt="CineZate Logo" style={{ height: '52px', width: 'auto', objectFit: 'contain' }} />
                   </div>
                   <div>
-                    <h3 className="feature-title" style={{ margin: 0, fontSize: '14px' }}>{ts.adminOrgTitle}</h3>
+                    <h3 className="feature-title" style={{ margin: 0, fontSize: '15px', fontWeight: 700 }}>{ts.adminOrgTitle}</h3>
                     <p className="body-text" style={{ margin: '2px 0 0', color: 'var(--text-secondary)', fontSize: '12px' }}>{ts.adminOrgVal}</p>
                   </div>
                 </div>
                 
-                <div className="mono-title" style={{ padding: '8px 10px', background: '#F9FAFB', borderRadius: '6px', border: '1px solid var(--border)', color: 'var(--text-secondary)' }}>
-                  <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminAuth}</span><br/>
-                  <span className="feature-title" style={{ color: 'var(--text-primary)', marginTop: '2px', display: 'block', fontSize: '15px' }}>653270</span>
+                <div className="mono-title" style={{ padding: '10px 14px', background: '#FAFAF9', borderRadius: '8px', border: '1px solid var(--border)', color: 'var(--text-secondary)', textAlign: 'center' }}>
+                  <span style={{ fontSize: '9.5px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminAuth}</span><br/>
+                  <span className="feature-title" style={{ color: 'var(--text-primary)', marginTop: '4px', display: 'block', fontSize: '16px', fontWeight: 700 }}>653270</span>
                 </div>
               </div>
 
-              <div className="feature-card" style={{ padding: '16px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
-                  <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#111827', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FFFFFF', flexShrink: 0 }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+              <div className="feature-card" style={{ padding: '24px 22px', display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
+                  <div style={{ width: '38px', height: '38px', borderRadius: '8px', background: 'var(--accent-subtle)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#B8432F', flexShrink: 0, border: '1px solid var(--accent-border)' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
                   </div>
                   <div>
-                    <h3 className="feature-title" style={{ margin: 0, fontSize: '14px' }}>{ts.adminWireTitle}</h3>
+                    <h3 className="feature-title" style={{ margin: 0, fontSize: '15px', fontWeight: 700 }}>{ts.adminWireTitle}</h3>
                     <p className="body-text" style={{ margin: '2px 0 0', color: 'var(--text-secondary)', fontSize: '12px' }}>{ts.adminBank}</p>
                   </div>
                 </div>
                 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'space-between', padding: '8px 10px', background: '#F9FAFB', borderRadius: '6px', border: '1px solid var(--border)' }}>
-                    <span className="mono-title" style={{ color: 'var(--text-secondary)', fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminAccount}</span>
-                    <span className="mono-title" style={{ color: 'var(--text-primary)', fontSize: '11px', fontWeight: 600 }}>0/00013832270</span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '100%' }}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px', background: '#FAFAF9', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                    <span className="mono-title" style={{ color: 'var(--text-secondary)', fontSize: '9.5px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminAccount}</span>
+                    <span className="mono-title" style={{ color: 'var(--text-primary)', fontSize: '12px', fontWeight: 700 }}>0/00013832270</span>
                   </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'space-between', padding: '8px 10px', background: '#F9FAFB', borderRadius: '6px', border: '1px solid var(--border)' }}>
-                    <span className="mono-title" style={{ color: 'var(--text-secondary)', fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminRib}</span>
-                    <span className="mono-title" style={{ color: 'var(--text-primary)', fontSize: '11px', fontWeight: 600 }}>350810000000001383227060</span>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', justifyContent: 'space-between', alignItems: 'center', padding: '10px 14px', background: '#FAFAF9', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                    <span className="mono-title" style={{ color: 'var(--text-secondary)', fontSize: '9.5px', textTransform: 'uppercase', letterSpacing: '0.8px' }}>{ts.adminRib}</span>
+                    <span className="mono-title" style={{ color: 'var(--text-primary)', fontSize: '12px', fontWeight: 700 }}>350810000000001383227060</span>
                   </div>
                 </div>
               </div>
