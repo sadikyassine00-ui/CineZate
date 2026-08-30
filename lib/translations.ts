@@ -2,13 +2,22 @@ export type Locale = 'en' | 'fr';
 
 export const translations = {
   en: {
-    nav: { about: "About", speakers: "Speakers", agenda: "Agenda" },
+    nav: { 
+      home: "Home", 
+      stands: "Cinema Village", 
+      program: "Program", 
+      speakers: "Speakers", 
+      sponsoring: "Sponsorship", 
+      badges: "Passes & Badges", 
+      backHome: "Back to Home", 
+      breadcrumbHome: "Home" 
+    },
     register: "Register Interest",
     date: "November 6-8, 2026",
     location: "Ouarzazate, Morocco",
-    heroTitle1: "Where Cinema Meets",
-    heroTitle2: "The Future of AI.",
-    heroDesc: "Join us at FICIAI 2026, the premier international forum uniting visionary filmmakers, tech innovators, and global investors to shape Africa's first cinematic smart city.",
+    heroTitle1: "OUARZAZATE 2030,",
+    heroTitle2: "CINEMA AT THE HEART OF A CREATIVE & SMART CITY",
+    heroDesc: "Where heritage meets innovation, artificial intelligence, and human creativity to build the cinema of tomorrow.",
     getTickets: "Get Tickets",
     exploreAgenda: "Explore Agenda",
     timeUntil: "Time Until Event",
@@ -22,7 +31,7 @@ export const translations = {
     track1Title: "Partnership & Sponsoring",
     track1Sub: "Associate your brand with the premier digital innovation event.",
     track1Btn: "Become a Sponsor",
-    track2Title: "Exhibition Space",
+    track2Title: "Cinema Village",
     track2Sub: "Book your booth to showcase your products to industry leaders.",
     track2Btn: "Book a Booth",
     track3Title: "Visitor Access",
@@ -37,6 +46,11 @@ export const translations = {
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     contact: "Contact Us",
+    directContact: {
+      label: "Direct Contact & Assistance:",
+      phone: "+212 665658959",
+      email: "contact@cinezate.com",
+    },
     // Form labels
     nameLabel: "Full Name",
     emailLabel: "Email Address",
@@ -76,9 +90,9 @@ export const translations = {
       stat2Value: "5",
       stat2Label: "Continents Represented",
       stat3Value: "India",
-      stat3Label: "Official Country of Honor",
-      stat4Value: "UN / UNESCO",
-      stat4Label: "Institutional Alignment & Endorsement"
+      stat3Label: "Guest of Honor",
+      stat4Value: "UN Status",
+      stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
       badge: "Ouarzazate Smart City of Cinema 2030 • Nov 6–8, 2026 • Ouarzazate, Morocco",
@@ -89,8 +103,8 @@ export const translations = {
       stats: [
         { val: "66+", label: "Countries" },
         { val: "5", label: "Continents" },
-        { val: "India", label: "Country of Honor" },
-        { val: "60+", label: "Confirmed VIPs/Speakers" },
+        { val: "India", label: "Guest of Honor" },
+        { val: "+110", label: "Confirmed VIPs/Speakers" },
         { val: "UN Status", label: "ECOSOC (via UNACCC + GPEN)" }
       ],
       whyTitle: "Why Sponsor FICIAI 2026?",
@@ -101,13 +115,84 @@ export const translations = {
         { title: "Industry & Cultural Legacy", desc: "Support youth training and film artisans ('Héros de l'Ombre')." }
       ],
       tiersTitle: "Official Sponsoring Tiers",
+      rateLabel: "Sponsorship Investment",
       tierSelectBtn: "Select Tier",
       tierSelectedBtn: "Selected",
       tiers: [
-        { id: "Prestige", title: "Pack PRESTIGE", price: "250,000 MAD", highlight: true, perks: ["Stand Village du Cinéma: 18 m²", "Main Logo Placement: Dominant", "Stage & Main Screen Display: Reinforced", "Red Carpet Backdrop & Catalogue: Premium", "Brand Video Broadcast: Yes", "Speaking Opportunities: Opening Ceremony", "VIP Invitations: 8", "Forum Delegate Passes: 16", "Targeted B2B Matchmaking: Priority", "Digital & Online Visibility: Reinforced"] },
-        { id: "Officiel", title: "Pack OFFICIEL", price: "200,000 MAD", highlight: false, perks: ["Stand Village du Cinéma: 12 m²", "Main Logo Placement: 1st row", "Stage & Main Screen Display: Yes", "Red Carpet Backdrop & Catalogue: Premium", "Brand Video Broadcast: Yes", "Speaking Opportunities: Panel / Short Talk", "VIP Invitations: 6", "Forum Delegate Passes: 12", "Targeted B2B Matchmaking: Yes", "Digital & Online Visibility: Yes"] },
-        { id: "Gold", title: "Pack GOLD", price: "150,000 MAD", highlight: false, perks: ["Stand Village du Cinéma: 9 m²", "Main Logo Placement: Gold", "Stage & Main Screen Display: Selective", "Red Carpet Backdrop & Catalogue: Yes", "Brand Video Broadcast: Option", "Speaking Opportunities: Sponsorship attribution", "VIP Invitations: 4", "Forum Delegate Passes: 8", "Targeted B2B Matchmaking: Yes", "Digital & Online Visibility: Yes"] },
-        { id: "Silver", title: "Pack SILVER", price: "100,000 MAD", highlight: false, perks: ["Main Logo Placement: Silver", "Stage & Main Screen Display: Partners", "Red Carpet Backdrop & Catalogue: Yes", "VIP Invitations: 2", "Forum Delegate Passes: 4", "Targeted B2B Matchmaking: Networking", "Digital & Online Visibility: Yes"] }
+        { 
+          id: "Prestige", 
+          title: "Pack PRESTIGE", 
+          badge: "Tier 1 • Maximum Impact",
+          price: "250,000 MAD", 
+          highlight: true, 
+          tag: "Exclusive",
+          perks: [
+            "Stand Village du Cinéma: 18 m² prime booth", 
+            "Main Logo Placement: Dominant visibility", 
+            "Stage & Main Screen Display: Reinforced rotation", 
+            "Red Carpet Backdrop & Official Catalogue: Premium", 
+            "Brand Video Broadcast on main stage: Included", 
+            "Speaking Opportunities: Opening Ceremony key address", 
+            "VIP Invitations: 8 Passes", 
+            "Forum Delegate Passes: 16 Badges", 
+            "Targeted B2B Matchmaking: Priority access", 
+            "Digital & Social Media Visibility: Reinforced campaign"
+          ] 
+        },
+        { 
+          id: "Officiel", 
+          title: "Pack OFFICIEL", 
+          badge: "Tier 2 • Major Partner",
+          price: "200,000 MAD", 
+          highlight: false, 
+          perks: [
+            "Stand Village du Cinéma: 12 m² equipped booth", 
+            "Main Logo Placement: 1st row co-branding", 
+            "Stage & Main Screen Display: Regular rotation", 
+            "Red Carpet Backdrop & Official Catalogue: Premium", 
+            "Brand Video Broadcast: Included", 
+            "Speaking Opportunities: Panelist / Short Talk", 
+            "VIP Invitations: 6 Passes", 
+            "Forum Delegate Passes: 12 Badges", 
+            "Targeted B2B Matchmaking: Included", 
+            "Digital & Online Visibility: Multi-channel"
+          ] 
+        },
+        { 
+          id: "Gold", 
+          title: "Pack GOLD", 
+          badge: "Tier 3 • Gold Partner",
+          price: "150,000 MAD", 
+          highlight: false, 
+          perks: [
+            "Stand Village du Cinéma: 9 m² equipped booth", 
+            "Main Logo Placement: Gold category placement", 
+            "Stage & Main Screen Display: Selective mentions", 
+            "Red Carpet Backdrop & Official Catalogue: Included", 
+            "Brand Video Broadcast: Optional add-on", 
+            "Speaking Opportunities: Sponsorship attribution", 
+            "VIP Invitations: 4 Passes", 
+            "Forum Delegate Passes: 8 Badges", 
+            "Targeted B2B Matchmaking: Access included", 
+            "Digital & Online Visibility: Active branding"
+          ] 
+        },
+        { 
+          id: "Silver", 
+          title: "Pack SILVER", 
+          badge: "Tier 4 • Supporting Partner",
+          price: "100,000 MAD", 
+          highlight: false, 
+          perks: [
+            "Main Logo Placement: Silver category placement", 
+            "Stage & Main Screen Display: Partner roll screen", 
+            "Red Carpet Backdrop & Official Catalogue: Included", 
+            "VIP Invitations: 2 Passes", 
+            "Forum Delegate Passes: 4 Badges", 
+            "Targeted B2B Matchmaking: Networking lounge", 
+            "Digital & Online Visibility: Official partner listing"
+          ] 
+        }
       ],
       matrixTitle: "Feature-Comparison Matrix",
       matrixDesc: "A detailed breakdown of all premium benefits and deliverables included across our official partnership tiers.",
@@ -125,7 +210,7 @@ export const translations = {
         { row: "Digital & Online Visibility", vals: ["Reinforced", "Yes", "Yes", "Yes"] }
       ],
       ecoTitle: "Confirmed Strategic & Institutional Ecosystem",
-      ecoText: "Republic of India (Country of Honor) • Yash Raj Films • Annapurna Studios • ORWO Studios • 7 Media LLC • Spacelight Studios • UNACCC • UNFPA • UNESCO/IRCAI • AI in Africa • FEWACCI • Eurasia Afro Chamber of Commerce • Club des Dirigeants",
+      ecoText: "Republic of India (Guest of Honor) • Yash Raj Films • Annapurna Studios • ORWO Studios • 7 Media LLC • Spacelight Studios • UNACCC • UNFPA • UNESCO/IRCAI • AI in Africa • FEWACCI • Eurasia Afro Chamber of Commerce • Club des Dirigeants",
       workflowTitle: "Sponsor Activation Workflow",
       workflowSteps: [
         { step: "1", title: "Tier Selection" }, { step: "2", title: "Convention Signing" }, { step: "3", title: "Brand Kit & Proofs" }, { step: "4", title: "Production & Staging" }, { step: "5", title: "Event Execution" }, { step: "6", title: "Post-Event White Paper & Impact Report" }
@@ -192,10 +277,11 @@ export const translations = {
           id: "vip",
           title: "VIP PASS",
           badge: "Premium Access",
-          price: "2,500.00 MAD HT",
+          price: "2,000.00 MAD HT",
           highlight: true,
           tag: "Recommended",
           perks: [
+            "VIP Cinema Heritage Tour on Nov 6 included (1,500 MAD value)",
             "Priority access to all keynotes and masterclasses",
             "Access to the VIP Lounge & exclusive networking room",
             "Networking lunches included (Nov 7 & 8)",
@@ -275,14 +361,62 @@ export const translations = {
       formEmailPlaceholder: "e.g. sophia@domain.com",
       formPhone: "Phone / WhatsApp",
       formPhonePlaceholder: "e.g. +212 6 00 00 00 00",
-      formS3: "03. Pass Selection & Remarks",
+      formS3: "03. Pass Selection & Options",
       formBadgeSelect: "Selected Pass / Badge",
+      formTourAddonTitle: "Exclusive Option • VIP Cinema Heritage & Culture Tour (Nov 6)",
+      formTourIncludedVip: "✅ Included automatically with your VIP Pass (1,500 MAD Value — No extra cost)",
+      formTourAddonLabel: "Add the VIP Cinema Heritage & Culture Tour (+1,500 MAD)",
+      formTourAddonSub: "Full-day VIP guided journey: Atlas Studios, CLA Studios, Kasbah Taourirt, Aït Ben Haddou (UNESCO), traditional lunch & private VIP transfers.",
+      formTotalPriceLabel: "Total Calculated Rate:",
       formMessage: "Message / Specific Requirements (Optional)",
       formMessagePlaceholder: "Special assistance, networking goals, press credentials...",
       formSubmit: "Submit my Registration",
       formSubmitting: "Registering...",
       formDisclaimer: "Your information is treated confidentially and used solely for issuing your FICIAI 2026 accreditation.",
-      formSuccess: "Your badge request has been successfully submitted! A confirmation receipt has been sent to your email."
+      formSuccess: "Your badge request has been successfully submitted! A confirmation receipt has been sent to your email.",
+      vipHeritageProgram: {
+        badge: "Exclusive VIP Experience • Nov 6, 2026",
+        title: "VIP Program — Cinema Heritage & Culture",
+        subtitle: "An immersive journey across Ouarzazate's legendary movie studios, historic kasbahs, and UNESCO World Heritage sites.",
+        dateLabel: "Date",
+        dateVal: "November 6, 2026",
+        priceLabel: "Tariff",
+        priceVal: "1,500 MAD",
+        priceNote: "Included for VIP Pass holders • Optional at 1,500 MAD for Visitor & Speaker passes",
+        bookVipAllInclusive: "Book Full VIP Pass (2,000 MAD — All Included)",
+        bookVisitorWithTour: "Book Visitor Pass + VIP Tour (1,500 MAD)",
+        locationLabel: "Location",
+        locationVal: "Ouarzazate, City of Studios",
+        sitesTitle: "Visited Landmark Sites",
+        sites: [
+          { name: "Kasbah Taourirt", desc: "Historic residence and architectural masterpiece" },
+          { name: "Musée du Cinéma", desc: "Permanent cinematic archives and artifacts" },
+          { name: "Atlas Studios", desc: "Legendary film sets (Egyptian, Roman, Biblical)" },
+          { name: "CLA Studios", desc: "Production soundstages and technical film backlots" },
+          { name: "Kasbah Aït Ben Haddou", desc: "Iconic UNESCO World Heritage earthen ksar" }
+        ],
+        inclusionsTitle: "Inclusions & What to Bring",
+        inclusionsLabel: "Included:",
+        inclusionsText: "Round-trip VIP private transport and dedicated bilingual guide (French / English) throughout the entire tour.",
+        bringLabel: "What to Bring:",
+        bringText: "Comfortable attire and footwear, sun hat, sunglasses.",
+        scheduleTitle: "Full Day Itinerary",
+        scheduleSubtitle: "A meticulously curated timeline with comprehensive VIP assistance and logistics.",
+        schedule: [
+          { time: "09:00", title: "VIP Guest Welcome & Check-in", desc: "Welcome coffee at Palais des Congrès / Cinema Museum, badge issuance, and heritage discovery guidebook." },
+          { time: "10:15", title: "VIP Departure", desc: "Departure in air-conditioned VIP convoy towards Kasbah Taourirt with dedicated guide." },
+          { time: "10:45", title: "Kasbah Taourirt & Cinema Museum", desc: "Guided tour of the former Glaoui residence and the curated exhibition on the 7th art history in Ouarzazate." },
+          { time: "12:15", title: "Atlas Studios", desc: "Private access and guided walk across monumental sets (Egyptian temples, Roman arenas, biblical cities)." },
+          { time: "13:30", title: "CLA Studios (Ciné-Studios)", desc: "Behind-the-scenes exploration of technical filmmaking, soundstages, and active production facilities." },
+          { time: "14:30", title: "Scenic Transfer to Aït Ben Haddou", desc: "Panoramic scenic drive (approx. 30 min) through the foothills of the High Atlas to the UNESCO site." },
+          { time: "15:00", title: "Traditional Gastronomic Lunch", desc: "Authentic Moroccan meal served in a boutique riad terrace with panoramic views overlooking the Kasbah." },
+          { time: "16:30", title: "Kasbah Aït Ben Haddou Guided Tour", desc: "Guided exploration of the fortified ksar, backdrop of Gladiator, Game of Thrones, and Lawrence of Arabia." },
+          { time: "18:00", title: "Free Time & Sunset Photography", desc: "Stroll through artisanal alleys, local craft workshops, and golden hour sunset vistas." },
+          { time: "19:00", title: "Return to Ouarzazate", desc: "Comfortable VIP convoy transfer back to Ouarzazate. Program wrap-up and free evening." }
+        ],
+        shuttleNote: "Special shuttle service for guest pick-up directly from their accommodation.",
+        bookBtn: "Book the VIP Heritage Tour"
+      }
     },
     standPage: {
       heroBadge: "Cinema Village • FICIAI 2026 • Nov 6–8, 2026 • Palais des Congrès, Ouarzazate",
@@ -374,16 +508,70 @@ export const translations = {
       formSubmitting: "Submitting...",
       formDisclaimer: "Your reservation request will be validated by the FICIAI 2026 organizing committee. An official placement agreement will be issued.",
       formSuccess: "Your booth reservation has been registered successfully! Our team will contact you shortly to confirm your location."
+    },
+    programPage: {
+      heroBadge: "Official Schedule • FICIAI 2026 • Nov 6–8, 2026",
+      heroTitle: "Forum Program & Master Schedule",
+      heroSubtitle: "Discover the 3-day schedule blending international high-level keynotes, AI masterclasses, Cinema Village showcases, and the exclusive Heritage & Studios tour.",
+      daysTab: [
+        { id: "day1", title: "Day 1 — Nov 6", subtitle: "Heritage, Studios & VIP Welcome", badge: "Special Heritage Day" },
+        { id: "day2", title: "Day 2 — Nov 7", subtitle: "Conferences, GenAI & Masterclasses", badge: "Innovation & Tech" },
+        { id: "day3", title: "Day 3 — Nov 8", subtitle: "Cinema Village, Pitch Sessions & Closing Gala", badge: "Business & Gala" }
+      ],
+      day2Schedule: [
+        { time: "09:00", title: "Official Opening Ceremony", desc: "Keynote speeches by institutional partners, UNESCO delegates, and CineZate board." },
+        { time: "10:30", title: "Panel 1: Artificial Intelligence in Filmmaking", desc: "Generative AI, procedural worlds, and real-time virtual production revolution." },
+        { time: "12:30", title: "Networking Lunch & B2B Matchmaking", desc: "Business meetings between investors, studio executives, and tech startups." },
+        { time: "14:30", title: "Masterclass: Virtual Production & VFX", desc: "Hands-on demonstration of next-generation camera tracking and LED volume pipelines." },
+        { time: "16:30", title: "Panel 2: Cinema Smart Cities & African Investment", desc: "Financing modern infrastructure and creative clusters across Africa and MENA." },
+        { time: "18:30", title: "Evening Networking Cocktail", desc: "Informal exchange with international delegations and producers." }
+      ],
+      day3Schedule: [
+        { time: "09:30", title: "Cinema Village Open Exhibition & Demos", desc: "Public and professional access to 2,000 m² of technological and cinematic booths." },
+        { time: "11:00", title: "Startup Pitch Arena", desc: "Emerging startups presenting AI tools, creative software, and immersive media solutions." },
+        { time: "13:00", title: "VIP Networking Lunch", desc: "Curated networking in dedicated VIP lounges with industry leaders." },
+        { time: "15:00", title: "Policy Roundtables & Declaration of Ouarzazate", desc: "Signing of strategic memorandums and recommendations for digital cinema." },
+        { time: "19:00", title: "Official Closing Gala & Awards Ceremony", desc: "Celebration dinner, artistic performances, and honorary awards." }
+      ],
+      ctaTitle: "Join us at the Forefront of Cinema & Technology",
+      ctaSub: "Book your pass or turnkey exhibition space to participate in all three days.",
+      ctaBtn: "Book my Badge"
+    },
+    speakersPage: {
+      heroBadge: "Distinguished Speakers • 110+ Visionaries & Experts",
+      heroTitle: "Meet the Speakers & Leaders",
+      heroSubtitle: "Explore the filmmakers, AI engineers, studio chiefs, and global dignitaries taking the stage at FICIAI 2026.",
+      categoriesTitle: "Thematic Speaker Tracks",
+      categories: [
+        { title: "Cinema & Directing", count: "35+ Speakers", desc: "Internationally acclaimed directors, cinematographers, and line producers." },
+        { title: "AI & Virtual Production", count: "40+ Experts", desc: "AI researchers, Unreal Engine artists, and VFX studio leaders." },
+        { title: "Institutions & Investment", count: "35+ Leaders", desc: "Ministers, UN ECOSOC delegates, film fund executives, and smart city architects." }
+      ],
+      featuredTitle: "Organizing Leadership & Visionaries",
+      guestHonourTitle: "Guest of Honour Delegation",
+      guestHonourDesc: "India — Celebrating international creative exchanges, Bollywood-Ouarzazate co-productions, and next-gen VFX collaboration.",
+      callTitle: "Call for Speakers & Panelists",
+      callSub: "Are you a filmmaker, researcher, or tech innovator eager to present at FICIAI 2026?",
+      callBtn: "Apply for Speaker Accreditation"
     }
   },
   fr: {
-    nav: { about: "À propos", speakers: "Intervenants", agenda: "Programme" },
+    nav: { 
+      home: "Accueil", 
+      stands: "Village du Cinéma", 
+      program: "Programme", 
+      speakers: "Intervenants", 
+      sponsoring: "Sponsoring", 
+      badges: "Billetterie & Badges", 
+      backHome: "Retour à l'accueil", 
+      breadcrumbHome: "Accueil" 
+    },
     register: "Manifester son intérêt",
     date: "6-8 Novembre, 2026",
     location: "Ouarzazate, Maroc",
-    heroTitle1: "Quand le Cinéma",
-    heroTitle2: "Rencontre l'IA.",
-    heroDesc: "Rejoignez-nous au FICIAI 2026, le forum international réunissant cinéastes visionnaires, innovateurs tech et investisseurs mondiaux pour bâtir la première smart city cinématographique d'Afrique.",
+    heroTitle1: "OUARZAZATE 2030,",
+    heroTitle2: "LE CINÉMA AU CŒUR D’UNE VILLE CRÉATIVE ET INTELLIGENTE",
+    heroDesc: "Là où le patrimoine rencontre l’innovation, l’intelligence artificielle et la créativité humaine pour construire le cinéma de demain.",
     getTickets: "Obtenir des Billets",
     exploreAgenda: "Explorer le Programme",
     timeUntil: "Temps Restant",
@@ -397,7 +585,7 @@ export const translations = {
     track1Title: "Partenariat & Sponsoring",
     track1Sub: "Associez votre marque à l'événement phare de l'innovation numérique.",
     track1Btn: "Devenir Sponsor",
-    track2Title: "Espace d'Exposition",
+    track2Title: "Village du Cinéma",
     track2Sub: "Réservez votre stand pour présenter vos produits aux leaders de l'industrie.",
     track2Btn: "Réserver un Stand",
     track3Title: "Accès Visiteur",
@@ -412,6 +600,11 @@ export const translations = {
     privacy: "Politique de Confidentialité",
     terms: "Conditions d'Utilisation",
     contact: "Nous Contacter",
+    directContact: {
+      label: "Assistance Directe & Contact :",
+      phone: "+212 665658959",
+      email: "contact@cinezate.com",
+    },
     // Form labels
     nameLabel: "Nom Complet",
     emailLabel: "Adresse Email",
@@ -441,7 +634,7 @@ export const translations = {
       ],
       networkTitle: "Réseau Global & Gouvernance",
       promoter: "Promu par l'Association CineZate (Président Abderrafia Souhali).",
-      honor: "Pays Invité d'Honneur : Inde.",
+      honor: "Invité d'Honneur : Inde.",
       partners: "Soutenu par l'UNESCO, UNFPA Maroc, UNACCC, et de grands studios mondiaux."
     },
     stats: {
@@ -451,9 +644,9 @@ export const translations = {
       stat2Value: "5",
       stat2Label: "Continents Représentés",
       stat3Value: "Inde",
-      stat3Label: "Pays Invité d'Honneur",
-      stat4Value: "ONU / UNESCO",
-      stat4Label: "Alignement & Soutien Institutionnel"
+      stat3Label: "Invité d'Honneur",
+      stat4Value: "Statut ONU",
+      stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
       badge: "Ouarzazate Smart City of Cinema 2030 • 6–8 Nov, 2026 • Ouarzazate, Maroc",
@@ -464,8 +657,8 @@ export const translations = {
       stats: [
         { val: "66+", label: "Pays" },
         { val: "5", label: "Continents" },
-        { val: "Inde", label: "Pays d'Honneur" },
-        { val: "60+", label: "VIPs/Intervenants Confirmés" },
+        { val: "Inde", label: "Invité d'Honneur" },
+        { val: "+110", label: "VIPs/Intervenants Confirmés" },
         { val: "Statut ONU", label: "ECOSOC (via UNACCC + GPEN)" }
       ],
       whyTitle: "Pourquoi Sponsoriser le FICIAI 2026 ?",
@@ -476,13 +669,84 @@ export const translations = {
         { title: "Héritage Industriel & Culturel", desc: "Soutenez la formation des jeunes et les artisans du cinéma ('Héros de l'Ombre')." }
       ],
       tiersTitle: "Niveaux de Sponsoring Officiels",
+      rateLabel: "Montant du Partenariat",
       tierSelectBtn: "Sélectionner le Pack",
       tierSelectedBtn: "Sélectionné",
       tiers: [
-        { id: "Prestige", title: "Pack PRESTIGE", price: "250,000 MAD", highlight: true, perks: ["Stand Village du Cinéma : 18 m²", "Logo supports principaux : Dominant", "Scène / écrans : Renforcé", "Photocall & catalogue : Premium", "Vidéo de marque : Oui", "Prise de parole : Ouverture", "Invitations VIP : 8", "Accès Forum : 16", "B2B ciblé : Prioritaire", "Visibilité digitale : Renforcée"] },
-        { id: "Officiel", title: "Pack OFFICIEL", price: "200,000 MAD", highlight: false, perks: ["Stand Village du Cinéma : 12 m²", "Logo supports principaux : 1er rang", "Scène / écrans : Oui", "Photocall & catalogue : Premium", "Vidéo de marque : Oui", "Prise de parole : Panel / courte", "Invitations VIP : 6", "Accès Forum : 12", "B2B ciblé : Oui", "Visibilité digitale : Oui"] },
-        { id: "Gold", title: "Pack GOLD", price: "150,000 MAD", highlight: false, perks: ["Stand Village du Cinéma : 9 m²", "Logo supports principaux : Gold", "Scène / écrans : Sélectif", "Photocall & catalogue : Oui", "Vidéo de marque : Option", "Prise de parole : Parrainage", "Invitations VIP : 4", "Accès Forum : 8", "B2B ciblé : Oui", "Visibilité digitale : Oui"] },
-        { id: "Silver", title: "Pack SILVER", price: "100,000 MAD", highlight: false, perks: ["Logo supports principaux : Silver", "Scène / écrans : Partenaires", "Photocall & catalogue : Oui", "Invitations VIP : 2", "Accès Forum : 4", "B2B ciblé : Networking", "Visibilité digitale : Oui"] }
+        { 
+          id: "Prestige", 
+          title: "Pack PRESTIGE", 
+          badge: "Niveau 1 • Impact Majeur",
+          price: "250 000 MAD", 
+          highlight: true, 
+          tag: "Exclusif",
+          perks: [
+            "Stand Village du Cinéma : 18 m² emplacement premium", 
+            "Logo supports principaux : Visibilité dominante", 
+            "Scène / écrans principaux : Diffusion renforcée", 
+            "Photocall tapis rouge & catalogue officiel : Premium", 
+            "Vidéo promotionnelle de marque : Diffusion scène", 
+            "Prise de parole : Cérémonie d'ouverture", 
+            "Invitations VIP : 8 Pass", 
+            "Accès Forum Délégués : 16 Badges", 
+            "Mise en relation B2B ciblée : Accès prioritaire", 
+            "Campagne digitale & réseaux sociaux : Renforcée"
+          ] 
+        },
+        { 
+          id: "Officiel", 
+          title: "Pack OFFICIEL", 
+          badge: "Niveau 2 • Partenaire Officiel",
+          price: "200 000 MAD", 
+          highlight: false, 
+          perks: [
+            "Stand Village du Cinéma : 12 m² équipé", 
+            "Logo supports principaux : 1er rang", 
+            "Scène / écrans principaux : Diffusion régulière", 
+            "Photocall tapis rouge & catalogue officiel : Premium", 
+            "Vidéo promotionnelle de marque : Incluse", 
+            "Prise de parole : Panéliste / Talk dédié", 
+            "Invitations VIP : 6 Pass", 
+            "Accès Forum Délégués : 12 Badges", 
+            "Mise en relation B2B ciblée : Incluse", 
+            "Visibilité digitale & plateformes : Multi-canaux"
+          ] 
+        },
+        { 
+          id: "Gold", 
+          title: "Pack GOLD", 
+          badge: "Niveau 3 • Partenaire Gold",
+          price: "150 000 MAD", 
+          highlight: false, 
+          perks: [
+            "Stand Village du Cinéma : 9 m² équipé", 
+            "Logo supports principaux : Rang Gold", 
+            "Scène / écrans : Mentions sélectives", 
+            "Photocall tapis rouge & catalogue : Inclus", 
+            "Vidéo de marque : Option disponible", 
+            "Prise de parole : Attribution de parrainage", 
+            "Invitations VIP : 4 Pass", 
+            "Accès Forum Délégués : 8 Badges", 
+            "Mise en relation B2B ciblée : Salon networking", 
+            "Visibilité digitale : Référencement officiel"
+          ] 
+        },
+        { 
+          id: "Silver", 
+          title: "Pack SILVER", 
+          badge: "Niveau 4 • Partenaire Silver",
+          price: "100 000 MAD", 
+          highlight: false, 
+          perks: [
+            "Logo supports principaux : Rang Silver", 
+            "Scène / écrans : Défilement partenaires", 
+            "Photocall tapis rouge & catalogue : Inclus", 
+            "Invitations VIP : 2 Pass", 
+            "Accès Forum Délégués : 4 Badges", 
+            "Mise en relation B2B ciblée : Espace networking", 
+            "Visibilité digitale : Référencement officiel"
+          ] 
+        }
       ],
       matrixTitle: "Matrice de Comparaison des Fonctionnalités",
       matrixDesc: "Une répartition détaillée de tous les avantages premium et livrables inclus dans nos niveaux de partenariat officiels.",
@@ -500,7 +764,7 @@ export const translations = {
         { row: "Visibilité digitale", vals: ["Renforcée", "Oui", "Oui", "Oui"] }
       ],
       ecoTitle: "Écosystème Stratégique & Institutionnel Confirmé",
-      ecoText: "République de l'Inde (Pays d'Honneur) • Yash Raj Films • Annapurna Studios • ORWO Studios • 7 Media LLC • Spacelight Studios • UNACCC • UNFPA • UNESCO/IRCAI • AI in Africa • FEWACCI • Chambre de Commerce Eurasie Afro • Club des Dirigeants",
+      ecoText: "République de l'Inde (Invité d'Honneur) • Yash Raj Films • Annapurna Studios • ORWO Studios • 7 Media LLC • Spacelight Studios • UNACCC • UNFPA • UNESCO/IRCAI • AI in Africa • FEWACCI • Chambre de Commerce Eurasie Afro • Club des Dirigeants",
       workflowTitle: "Processus d'Activation Sponsor",
       workflowSteps: [
         { step: "1", title: "Sélection du Pack" }, { step: "2", title: "Signature de Convention" }, { step: "3", title: "Kit Marque & Épreuves" }, { step: "4", title: "Production & Mise en Scène" }, { step: "5", title: "Exécution de l'Événement" }, { step: "6", title: "Livre Blanc Post-Événement & Rapport d'Impact" }
@@ -567,10 +831,11 @@ export const translations = {
           id: "vip",
           title: "VIP",
           badge: "Accès Premium",
-          price: "2 500,00 MAD HT",
+          price: "2 000,00 MAD HT",
           highlight: true,
           tag: "Recommandé",
           perks: [
+            "Programme VIP Patrimoine & Studios du 6 nov. inclus (valeur 1 500 MAD)",
             "Accès prioritaire à toutes les conférences et masterclasses",
             "Accès à l'Espace VIP & salon de networking exclusif",
             "Déjeuners networking inclus (7 & 8 novembre)",
@@ -650,14 +915,62 @@ export const translations = {
       formEmailPlaceholder: "ex. sophia@production.com",
       formPhone: "Numéro de Téléphone / WhatsApp",
       formPhonePlaceholder: "ex. +212 6 00 00 00 00",
-      formS3: "03. Choix du Badge & Remarques",
+      formS3: "03. Choix du Badge & Options",
       formBadgeSelect: "Pass / Badge Sélectionné",
+      formTourAddonTitle: "Option Exclusive • Programme VIP Patrimoine Cinéma & Culture (6 Nov)",
+      formTourIncludedVip: "✅ Inclus d'office avec votre Pass VIP (Valeur 1 500 MAD — Sans supplément)",
+      formTourAddonLabel: "Ajouter le Programme VIP Patrimoine Cinéma & Culture (+1 500 MAD)",
+      formTourAddonSub: "Journée VIP guidée : Studios Atlas, Studios CLA, Kasbah Taourirt, Aït Ben Haddou (UNESCO), déjeuner gastronomique & transferts privés VIP.",
+      formTotalPriceLabel: "Montant Total Estimé :",
       formMessage: "Message / Précisions complémentaires (Optionnel)",
       formMessagePlaceholder: "Besoins spécifiques, objectifs de networking, accréditation presse...",
       formSubmit: "Valider mon Inscription",
       formSubmitting: "Enregistrement en cours...",
       formDisclaimer: "Vos informations sont traitées de manière confidentielle et utilisées uniquement dans le cadre de l'organisation du FICIAI 2026.",
-      formSuccess: "Votre demande de badge a été enregistrée avec succès ! Un récapitulatif a été envoyé à votre adresse email."
+      formSuccess: "Votre demande de badge a été enregistrée avec succès ! Un récapitulatif a été envoyé à votre adresse email.",
+      vipHeritageProgram: {
+        badge: "Expérience Exclusive • 6 Nov 2026",
+        title: "Programme VIP — Patrimoine Cinéma & Culture",
+        subtitle: "Une immersion VIP d'exception au cœur des studios mythiques, kasbahs historiques et sites classés UNESCO de Ouarzazate.",
+        dateLabel: "Date",
+        dateVal: "6 Novembre 2026",
+        priceLabel: "Tarif",
+        priceVal: "1 500 MAD",
+        priceNote: "Inclus d'office avec le Pass VIP • Optionnel à 1 500 MAD pour les Pass Visiteurs & Intervenants",
+        bookVipAllInclusive: "Réserver le Pass VIP Complet (2 000 MAD — Tout Inclus)",
+        bookVisitorWithTour: "Prendre le Pass Visiteur + Option Tour (1 500 MAD)",
+        locationLabel: "Localisation",
+        locationVal: "Ouarzazate, Ville des Studios",
+        sitesTitle: "Sites Visités",
+        sites: [
+          { name: "Kasbah Taourirt", desc: "Résidence historique des Glaoui et chef-d'œuvre architectural" },
+          { name: "Musée du Cinéma", desc: "Collection patrimoniale et mémoire vivante du 7e art" },
+          { name: "Atlas Studios", desc: "Plateaux de tournage mythiques (décors égyptiens, romains, orientaux)" },
+          { name: "CLA Studios", desc: "Coulisses techniques et plateaux de production cinématographique" },
+          { name: "Kasbah Aït Ben Haddou", desc: "Ksar emblématique classé au patrimoine mondial de l'UNESCO" }
+        ],
+        inclusionsTitle: "Inclusions & À Prévoir",
+        inclusionsLabel: "Inclus :",
+        inclusionsText: "Transferts VIP aller-retour et guide dédié francophone/anglophone pour l'ensemble du parcours.",
+        bringLabel: "À prévoir :",
+        bringText: "Tenue confortable, chapeau, lunettes de soleil.",
+        scheduleTitle: "Déroulé de la Journée",
+        scheduleSubtitle: "Une organisation millimétrée avec prise en charge logistique complète.",
+        schedule: [
+          { time: "09h00", title: "Accueil des invités VIP", desc: "Café d'accueil au Palais des Congrès / Musée du Cinéma, remise des badges et du carnet du parcours patrimoine." },
+          { time: "10h15", title: "Départ VIP", desc: "Départ en convoi VIP vers la Kasbah Taourirt avec guide dédié." },
+          { time: "10h45", title: "Kasbah Taourirt & Musée du Cinéma", desc: "Visite guidée de l'ancienne résidence des Glaoui et de la collection consacrée à l'histoire du 7e art à Ouarzazate." },
+          { time: "12h15", title: "Atlas Studios", desc: "Visite des plateaux de tournage mythiques (décors égyptiens, romains, orientaux)." },
+          { time: "13h30", title: "CLA Studios (Ciné-Studios)", desc: "Découverte des installations de production et des coulisses techniques du cinéma." },
+          { time: "14h30", title: "Transfert vers Aït Ben Haddou", desc: "Route panoramique (environ 30 min) vers le site classé UNESCO." },
+          { time: "15h00", title: "Déjeuner à Aït Ben Haddou", desc: "Repas traditionnel servi dans un riad ou une terrasse avec vue sur la Kasbah." },
+          { time: "16h30", title: "Kasbah Aït Ben Haddou", desc: "Visite guidée du ksar, décor emblématique de grandes productions internationales." },
+          { time: "18h00", title: "Moment libre & photo souvenir", desc: "Balade dans les ruelles du ksar, ateliers d'artisans et coucher de soleil." },
+          { time: "19h00", title: "Retour vers Ouarzazate", desc: "Fin du programme et soirée libre." }
+        ],
+        shuttleNote: "Navette spéciale pour la prise en charge des invités à partir de leur hébergement.",
+        bookBtn: "Réserver le Programme VIP Patrimoine"
+      }
     },
     standPage: {
       heroBadge: "Village du Cinéma • FICIAI 2026 • 6–8 Nov 2026 • Palais des Congrès, Ouarzazate",
@@ -749,6 +1062,51 @@ export const translations = {
       formSubmitting: "Envoi en cours...",
       formDisclaimer: "Votre demande sera instruite par le comité d'organisation du FICIAI 2026. Une convention d'emplacement vous sera transmise après validation.",
       formSuccess: "Votre demande d'espace d'exposition a été enregistrée avec succès ! Notre équipe vous contactera très rapidement pour valider votre emplacement."
+    },
+    programPage: {
+      heroBadge: "Programme Officiel • FICIAI 2026 • 6–8 Nov 2026",
+      heroTitle: "Programme & Déroulé du Forum",
+      heroSubtitle: "Découvrez le planning complet des 3 journées mêlant conférences internationales, masterclasses IA, Village du Cinéma et parcours d'exception Patrimoine & Studios.",
+      daysTab: [
+        { id: "day1", title: "Jour 1 — 6 Nov", subtitle: "Patrimoine, Studios & Accueil VIP", badge: "Journée Patrimoine" },
+        { id: "day2", title: "Jour 2 — 7 Nov", subtitle: "Conférences, IA Générative & Masterclasses", badge: "Innovation & Tech" },
+        { id: "day3", title: "Jour 3 — 8 Nov", subtitle: "Village du Cinéma, Pitching & Soirée de Clôture", badge: "Business & Gala" }
+      ],
+      day2Schedule: [
+        { time: "09h00", title: "Cérémonie d'Ouverture Officielle", desc: "Allocutions inaugurales des partenaires institutionnels, délégués UNESCO et du conseil CineZate." },
+        { time: "10h30", title: "Panel 1 : L'Intelligence Artificielle au Service du Cinéma", desc: "Génération procédurale, scénarisation assistée par IA et production virtuelle temps réel." },
+        { time: "12h30", title: "Déjeuner Networking & Rencontres B2B", desc: "Échanges ciblés entre investisseurs, producteurs de cinéma et startups technologiques." },
+        { time: "14h30", title: "Masterclass : Production Virtuelle & VFX", desc: "Démonstrations pratiques sur les nouveaux pipelines de tournage sur écrans LED et caméra tracking." },
+        { time: "16h30", title: "Panel 2 : Smart Cities Cinématographiques & Investissement Africain", desc: "Financement des infrastructures modernes et écosystèmes créatifs en Afrique et région MENA." },
+        { time: "18h30", title: "Cocktail Networking du Soir", desc: "Moments d'échange conviviaux avec les délégations internationales et producteurs." }
+      ],
+      day3Schedule: [
+        { time: "09h30", title: "Ouverture de l'Espace Exposition & Village du Cinéma", desc: "Accès public et professionnel aux 2 000 m² de stands technologiques et cinéma." },
+        { time: "11h00", title: "Pitch Sessions des Startups Tech & Cinéma", desc: "Présentations de projets novateurs devant un jury d'investisseurs et de producteurs mondiaux." },
+        { time: "13h00", title: "Déjeuner VIP Networking", desc: "Networking exclusif dans les espaces VIP avec les intervenants et délégations." },
+        { time: "15h00", title: "Tables Rondes Stratégiques & Déclaration de Ouarzazate", desc: "Signature de protocoles d'accord et publication des recommandations pour le cinéma numérique." },
+        { time: "19h00", title: "Dîner de Gala de Clôture & Remise des Prix", desc: "Dîner officiel, performances artistiques et remise des distinctions honorifiques." }
+      ],
+      ctaTitle: "Participez au Grand Rendez-vous du Cinéma & de la Tech",
+      ctaSub: "Réservez votre pass visiteur, pass VIP ou stand d'exposition dès aujourd'hui.",
+      ctaBtn: "Réserver mon Badge"
+    },
+    speakersPage: {
+      heroBadge: "Intervenants Confirmés • +110 Visionnaires & Experts",
+      heroTitle: "Intervenants & Visionnaires",
+      heroSubtitle: "Découvrez les cinéastes, chercheurs en IA, dirigeants de studios et personnalités institutionnelles qui interviennent au FICIAI 2026.",
+      categoriesTitle: "Pôles thématiques des intervenants",
+      categories: [
+        { title: "Cinéma & Réalisation", count: "+35 Intervenants", desc: "Réalisateurs internationaux, directeurs de la photographie et producteurs de renom." },
+        { title: "IA & Production Virtuelle", count: "+40 Experts", desc: "Chercheurs en intelligence artificielle, créateurs Unreal Engine et superviseurs VFX." },
+        { title: "Institutions & Économie", count: "+35 Décideurs", desc: "Ministères, délégués ONU ECOSOC, fonds de soutien et architectes de smart cities." }
+      ],
+      featuredTitle: "Conseil de Direction & Visionnaires",
+      guestHonourTitle: "Délégation Invité d'Honneur",
+      guestHonourDesc: "Inde — Mise à l'honneur des coopérations cinématographiques internationales, co-productions et technologies VFX de pointe.",
+      callTitle: "Appel à Interventions & Conférenciers",
+      callSub: "Vous êtes cinéaste, chercheur, entrepreneur ou innovateur tech et souhaitez intervenir au FICIAI 2026 ?",
+      callBtn: "Demander une accréditation Intervenant"
     }
   }
 };

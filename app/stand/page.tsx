@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import FadeIn from '../../components/FadeIn';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { useLanguage } from '../../components/LanguageProvider';
 
 const STAND_ICONS: Record<string, (color: string) => React.ReactNode> = {
@@ -127,6 +128,7 @@ export default function StandPage() {
 
   return (
     <div style={{ paddingBottom: '60px' }}>
+      <Breadcrumbs currentPage={sp.heroTitle} />
       
       {/* 1. HERO SECTION */}
       <section className="hero relative z-10" style={{ minHeight: 'auto', padding: '32px 16px 0 16px', justifyContent: 'center' }}>
@@ -455,6 +457,68 @@ export default function StandPage() {
                 <span>{submitMessage}</span>
               </div>
             )}
+
+            {/* Direct Contact Banner */}
+            <div style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px',
+              padding: '14px 18px',
+              background: '#FFF8F6',
+              border: '1px solid rgba(184, 67, 47, 0.2)',
+              borderRadius: '12px',
+              marginBottom: '24px',
+              width: '100%',
+              boxSizing: 'border-box'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#B8432F', display: 'inline-block' }}></span>
+                <span style={{ fontSize: '11.5px', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.6px', fontFamily: 'var(--font-jetbrains)' }}>
+                  {t.directContact?.label || "Direct Contact:"}
+                </span>
+              </div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '16px' }}>
+                <a 
+                  href="tel:+212665658959" 
+                  style={{ 
+                    display: 'inline-flex', 
+                    alignItems: 'center', 
+                    gap: '6px', 
+                    color: '#B8432F', 
+                    fontSize: '12px', 
+                    fontWeight: 700, 
+                    textDecoration: 'none',
+                    fontFamily: 'var(--font-jetbrains)'
+                  }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>+212 665658959</span>
+                </a>
+                <a 
+                  href="mailto:contact@cinezate.com" 
+                  style={{ 
+                    display: 'inline-flex', 
+                    alignItems: 'center', 
+                    gap: '6px', 
+                    color: '#B8432F', 
+                    fontSize: '12px', 
+                    fontWeight: 700, 
+                    textDecoration: 'none',
+                    fontFamily: 'var(--font-jetbrains)'
+                  }}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                  <span>contact@cinezate.com</span>
+                </a>
+              </div>
+            </div>
 
             <form style={{ display: 'flex', flexDirection: 'column', gap: '24px', width: '100%' }} onSubmit={handleFormSubmit}>
               

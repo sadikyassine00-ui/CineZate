@@ -70,16 +70,16 @@ export default function Home() {
 
             <h1 className="display-title">
               <span className="line-reveal">{t.heroTitle1}</span>
-              <span className="line-reveal">{t.heroTitle2}</span>
+              <span className="line-reveal hero-accent-gradient">{t.heroTitle2}</span>
             </h1>
 
-            <p className="body-text">
+            <p className="body-text hero-description">
               {t.heroDesc}
             </p>
 
             <div className="cta-group">
-              <Link href="/badge" className="btn btn-primary">{t.getTickets}</Link>
-              <button className="btn btn-secondary">{t.exploreAgenda}</button>
+              <Link href="/badge" className="btn btn-primary btn-hero-primary">{t.getTickets}</Link>
+              <Link href="/sponsor" className="btn btn-secondary btn-hero-secondary">{t.track1Btn || "Devenir Sponsor"}</Link>
             </div>
           </div>
 
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* 3. DÉCOUVREZ L'EXPÉRIENCE (DARK MODE SHOWCASE SECTION) */}
-      <section className="dark-showcase-section">
+      <section id="experience" className="dark-showcase-section">
         <div className="dark-showcase-grid-bg" />
         
         <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
@@ -363,10 +363,10 @@ export default function Home() {
           ].map((stat, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="stat-card-light">
-                <div style={{ fontFamily: 'var(--font-jetbrains)', fontSize: 'clamp(26px, 2.8vw, 36px)', fontWeight: 700, color: '#B8432F', letterSpacing: '-0.8px', lineHeight: 1.1, marginBottom: '8px' }}>
+                <div style={{ fontFamily: 'var(--font-jetbrains)', fontSize: 'clamp(20px, 2.4vw, 32px)', fontWeight: 700, color: '#B8432F', letterSpacing: '-0.5px', lineHeight: 1.15, marginBottom: '8px' }}>
                   {stat.value}
                 </div>
-                <div style={{ fontFamily: 'var(--font-jetbrains)', fontSize: '10.5px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.8px', maxWidth: '190px', lineHeight: 1.35 }}>
+                <div style={{ fontFamily: 'var(--font-jetbrains)', fontSize: '10.5px', color: 'var(--text-secondary)', textTransform: 'uppercase', letterSpacing: '0.8px', maxWidth: '200px', lineHeight: 1.4 }}>
                   {stat.label}
                 </div>
               </div>
@@ -375,7 +375,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about-section relative z-10" style={{ padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <section id="about" className="about-section relative z-10" style={{ padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         
         <FadeIn>
           <div className="section-header relative" style={{ marginBottom: '24px', padding: '0 20px' }}>
@@ -403,8 +403,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TEAM SECTION */}
-      <section className="team-section relative z-10" style={{ padding: '52px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      {/* TEAM / VISIONARIES (CREATORS OF FICIAI) */}
+      <section id="visionnaires" className="team-section relative z-10" style={{ padding: '52px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className="section-header relative" style={{ marginBottom: '32px' }}>
           <h2 className="section-title text-center">{t.teamTitle}</h2>
           <p className="section-subtitle text-center">{t.teamSub}</p>
