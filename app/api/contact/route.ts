@@ -19,6 +19,7 @@ export async function POST(request: Request) {
       formula, 
       jobTitle, 
       role, 
+      configuration,
       goals, 
       message, 
       remarks,
@@ -31,6 +32,7 @@ export async function POST(request: Request) {
     const applicantPhone = phone || 'N/A';
     const applicantJob = jobTitle || role || 'N/A';
     const selectedFormula = tier || formula || 'N/A';
+    const selectedConfig = configuration ? String(configuration) : '';
     const notes = message || goals || remarks || '';
 
     if (!applicantEmail) {
@@ -107,6 +109,11 @@ export async function POST(request: Request) {
                   <td class="label">Formule / Pack :</td>
                   <td class="val" style="color: #B8432F; font-weight: 700;">${selectedFormula}</td>
                 </tr>
+                ${selectedConfig ? `
+                <tr>
+                  <td class="label">Configuration :</td>
+                  <td class="val">${selectedConfig}</td>
+                </tr>` : ''}
               </table>
 
               <div>
@@ -170,6 +177,7 @@ export async function POST(request: Request) {
                     <li><strong>Organisation :</strong> ${applicantOrg}</li>
                     <li><strong>Fonction :</strong> ${applicantJob}</li>
                     <li><strong>Formule / Pack :</strong> ${selectedFormula}</li>
+                    ${selectedConfig ? `<li><strong>Configuration :</strong> ${selectedConfig}</li>` : ''}
                   </ul>
                 </div>
 

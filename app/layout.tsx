@@ -3,6 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "../components/LanguageProvider";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import AmbientBackground from "../components/AmbientBackground";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${inter.variable} ${playfair.variable} ${jetBrainsMono.variable} antialiased`}
         suppressHydrationWarning
       >
+        <AmbientBackground />
         <LanguageProvider>
           <Header />
           {children}

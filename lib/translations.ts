@@ -161,6 +161,219 @@ export const translations = {
       adminBank: "Al Barid Bank",
       adminAccount: "Account",
       adminRib: "RIB"
+    },
+    badgePage: {
+      heroBadge: "Official Accreditation & Ticketing • FICIAI 2026 • Nov 6–8, 2026 • Ouarzazate, Morocco",
+      heroTitle: "Reserve your Badge & Accreditation for FICIAI 2026",
+      heroSubtitle: "Access cutting-edge conferences, international masterclasses, the Cinema Village, and high-level B2B networking in Ouarzazate.",
+      btnChoose: "Choose my Pass",
+      btnForm: "Registration Form",
+      passesTitle: "Official Passes & Accreditations",
+      passesSubtitle: "Select the pass tailored to your role and directly activate your registration form.",
+      selectedBadge: "Selected",
+      recommendedTag: "Recommended",
+      freePrice: "Free Access",
+      perksTitle: "Included Privileges",
+      tiers: [
+        {
+          id: "visiteur",
+          title: "VISITOR PASS",
+          badge: "General Access",
+          price: "Free Access (0 MAD)",
+          perks: [
+            "Full access to public keynote conferences & panels",
+            "Access to the exhibition area (Cinema Village)",
+            "Access to open technology demos and AI showcases",
+            "Digital nominal badge / Entry QR Code"
+          ],
+          btnText: "Order my Free Pass"
+        },
+        {
+          id: "vip",
+          title: "VIP PASS",
+          badge: "Premium Access",
+          price: "2,500.00 MAD HT",
+          highlight: true,
+          tag: "Recommended",
+          perks: [
+            "Priority access to all keynotes and masterclasses",
+            "Access to the VIP Lounge & exclusive networking room",
+            "Networking lunches included (Nov 7 & 8)",
+            "Invitation to Gala Dinner & Cinema Legacy Awards",
+            "Reserved front-row seating across all auditoriums",
+            "Direct B2B Matchmaking on the FICIAI 2026 mobile app"
+          ],
+          btnText: "Book my VIP Pass"
+        },
+        {
+          id: "intervenant",
+          title: "SPEAKER BADGE",
+          badge: "Speakers & Panelists",
+          price: "Official Accreditation (0 MAD)",
+          perks: [
+            "Reserved for official speakers, lecturers & panelists",
+            "Full backstage & speakers lounge access",
+            "Invitation to official VIP & Speakers dinner",
+            "Dedicated logistical support and stage technical management"
+          ],
+          btnText: "Confirm my Speaker Badge"
+        },
+        {
+          id: "exposant_9m",
+          title: "EXHIBITOR (9 m² Booth)",
+          badge: "Start-Up Package",
+          price: "9,000.00 MAD HT",
+          perks: [
+            "Start-Up Package: 9 m² equipped booth at the Cinema Village",
+            "Carpet flooring, modular panels, LED lighting & 220V power",
+            "Standard entity nameplate signage",
+            "2 Exhibitor Badges with full networking lounge access",
+            "Official catalogue & mobile app directory listing"
+          ],
+          btnText: "Book a 9 m² Booth"
+        },
+        {
+          id: "exposant_12m",
+          title: "EXHIBITOR (12 m² Booth)",
+          badge: "Standard Package",
+          price: "12,000.00 MAD HT",
+          perks: [
+            "Standard Package: 12 m² equipped booth at the Cinema Village",
+            "Optimized location with panels, carpet, power & LED spots",
+            "Standard nameplate signage with personalized branding",
+            "3 Exhibitor Badges with full networking lounge access",
+            "Enhanced catalogue & mobile app directory listing"
+          ],
+          btnText: "Book a 12 m² Booth"
+        },
+        {
+          id: "exposant_18m",
+          title: "EXHIBITOR (18 m² Booth)",
+          badge: "Premium Package",
+          price: "18,000.00 MAD HT",
+          perks: [
+            "Premium Package: 18 m² prime booth at the Cinema Village",
+            "Prominent entrance corner or central aisle placement",
+            "Reinforced LED lighting, custom power setup & branded fascia",
+            "4 Exhibitor Badges with VIP networking lounge access",
+            "Priority catalogue listing & targeted B2B matchmaking"
+          ],
+          btnText: "Book an 18 m² Booth"
+        }
+      ],
+      formSectionTitle: "Badge & Accreditation Registration",
+      formSectionSubtitle: "Fill out the registration form below. Your nominal badge will be issued upon team validation.",
+      formS1: "01. Organization & Identity",
+      formOrg: "Organization / Company / School",
+      formOrgPlaceholder: "e.g. Atlas Studios / University / Independent",
+      formJob: "Job Title / Role",
+      formJobPlaceholder: "e.g. Producer / Director / AI Researcher / Student",
+      formS2: "02. Contact Information",
+      formFullName: "Full Name",
+      formFullNamePlaceholder: "e.g. Sophia Bennani",
+      formEmail: "Email Address",
+      formEmailPlaceholder: "e.g. sophia@domain.com",
+      formPhone: "Phone / WhatsApp",
+      formPhonePlaceholder: "e.g. +212 6 00 00 00 00",
+      formS3: "03. Pass Selection & Remarks",
+      formBadgeSelect: "Selected Pass / Badge",
+      formMessage: "Message / Specific Requirements (Optional)",
+      formMessagePlaceholder: "Special assistance, networking goals, press credentials...",
+      formSubmit: "Submit my Registration",
+      formSubmitting: "Registering...",
+      formDisclaimer: "Your information is treated confidentially and used solely for issuing your FICIAI 2026 accreditation.",
+      formSuccess: "Your badge request has been successfully submitted! A confirmation receipt has been sent to your email."
+    },
+    standPage: {
+      heroBadge: "Cinema Village • FICIAI 2026 • Nov 6–8, 2026 • Palais des Congrès, Ouarzazate",
+      heroTitle: "Book your Exhibition Space at the Cinema Village",
+      heroSubtitle: "Showcase your innovations, products, and services at the premier international gathering of cinema, artificial intelligence, and investment in Africa.",
+      btnChoose: "Choose my Booth",
+      tiersTitle: "Turnkey Exhibition Packages",
+      tiersSubtitle: "Choose the surface tailored to your demos and directly activate your reservation form.",
+      rateLabel: "Exhibition Rate",
+      surfaceDim: "Surface & Dimensions :",
+      equipmentLabel: "Included Equipment :",
+      accessLabel: "Access & Visibility :",
+      recommendedTag: "Recommended",
+      selectedTag: "Selected",
+      tiers: [
+        {
+          id: "startup_9m",
+          title: "START-UP PACKAGE",
+          badge: "9 m² Turnkey",
+          price: "9,000.00 MAD HT",
+          surface: "9 m²",
+          dimensions: "3 m × 3 m",
+          equipment: "Modular partitions, needle-punched carpet, LED spotlights, 220V power outlets, entity nameplate",
+          access: "2 Exhibitor Badges included + official catalogue & mobile app directory listing",
+          btnText: "Select 9 m² Package"
+        },
+        {
+          id: "standard_12m",
+          title: "STANDARD PACKAGE",
+          badge: "12 m² Turnkey",
+          price: "12,000.00 MAD HT",
+          surface: "12 m²",
+          dimensions: "3 m × 4 m",
+          highlight: true,
+          tag: "Recommended",
+          equipment: "Modular partitions, needle-punched carpet, LED spotlights, 220V power outlets, entity nameplate",
+          access: "3 Exhibitor Badges included + enhanced catalogue & mobile app directory listing",
+          btnText: "Select 12 m² Package"
+        },
+        {
+          id: "premium_18m",
+          title: "PREMIUM PACKAGE",
+          badge: "18 m² Turnkey",
+          price: "18,000.00 MAD HT",
+          surface: "18 m²",
+          dimensions: "3 m × 6 m / 6 m × 3 m",
+          equipment: "Strategic corner/island placement, modular partitions, carpet, reinforced LED lighting, 220V power, custom branded fascia",
+          access: "4 Exhibitor Badges included + priority directory listing & B2B networking matchmaking",
+          btnText: "Select 18 m² Package"
+        }
+      ],
+      inclusionsTitle: "Included Equipment & Layout Configurations",
+      inclusionsSubtitle: "Each booth is delivered turnkey, fully equipped and ready for your teams upon arrival on setup day.",
+      inclusions: [
+        { title: "Carpet & Flooring", desc: "High-quality needle-punched carpet installed across the entire booth surface." },
+        { title: "Structure & Partitions", desc: "White melamine modular partitions with a height of 2.40 m." },
+        { title: "Dedicated Electricity", desc: "Individual electrical distribution box with circuit breaker and 220V power sockets." },
+        { title: "LED Lighting", desc: "Energy-efficient adjustable LED spotlights (1 spotlight per 3 m²)." },
+        { title: "Signage & Nameplate", desc: "Standard fascia nameplate with custom lettering showing your entity name." }
+      ],
+      configurationsTitle: "Booth Layouts & Modularity",
+      configurationsSubtitle: "Specify your preferred orientation in the booking form.",
+      configurations: [
+        { id: "inline", title: "Inline (Standard)", badge: "1 Open Aisle", desc: "Standard linear booth open on one main walkway. Ideal for wall displays and presentations." },
+        { id: "corner", title: "Corner (Angle)", badge: "2 Open Aisles", desc: "Corner booth open on 2 intersecting aisles. Provides doubled visitor visibility." },
+        { id: "peninsula", title: "Peninsula (Head)", badge: "3 Open Aisles", desc: "End-of-row booth open on 3 sides. Excellent 270° traffic flow for interactive demos." },
+        { id: "island", title: "Island (Island)", badge: "4 Open Aisles", desc: "Freestanding island open on all 4 aisles. Maximum prestigious impact (Reserved for 18m²+)." }
+      ],
+      formSectionTitle: "Exhibition Space Booking — Cinema Village",
+      formSectionSubtitle: "Submit your reservation request. Our technical team will review your dossier and confirm your location.",
+      formS1: "01. Organization & Company",
+      formOrg: "Company / Organization Name",
+      formOrgPlaceholder: "e.g. Atlas Virtual Production Studios",
+      formJob: "Job Title / Role",
+      formJobPlaceholder: "e.g. Managing Director / Head of Marketing",
+      formS2: "02. Contact Officer Details",
+      formFullName: "Full Name",
+      formFullNamePlaceholder: "e.g. Sophia Bennani",
+      formEmail: "Corporate Email Address",
+      formEmailPlaceholder: "e.g. sophia@company.com",
+      formPhone: "Phone Number / WhatsApp",
+      formPhonePlaceholder: "e.g. +212 6 00 00 00 00",
+      formS3: "03. Package, Layout & Technical Requirements",
+      formTierSelect: "Selected Exhibition Package",
+      formConfigSelect: "Preferred Booth Configuration",
+      formMessage: "Message / Specific Technical Requirements",
+      formMessagePlaceholder: "Custom power wattage, screen installations, virtual production gear...",
+      formSubmit: "Submit Exhibition Request",
+      formSubmitting: "Submitting...",
+      formDisclaimer: "Your reservation request will be validated by the FICIAI 2026 organizing committee. An official placement agreement will be issued.",
+      formSuccess: "Your booth reservation has been registered successfully! Our team will contact you shortly to confirm your location."
     }
   },
   fr: {
@@ -323,6 +536,219 @@ export const translations = {
       adminBank: "Al Barid Bank",
       adminAccount: "Compte",
       adminRib: "RIB"
+    },
+    badgePage: {
+      heroBadge: "Accréditations & Billetterie Officielle • FICIAI 2026 • 6–8 Nov 2026 • Ouarzazate, Maroc",
+      heroTitle: "Réservez votre Badge & Accréditation FICIAI 2026",
+      heroSubtitle: "Accédez aux conférences de pointe, masterclasses internationales, au Village du Cinéma et aux opportunités de networking B2B à Ouarzazate.",
+      btnChoose: "Choisir ma Formule",
+      btnForm: "Formulaire d'Enregistrement",
+      passesTitle: "Pass & Accréditations Disponibles",
+      passesSubtitle: "Sélectionnez le pass adapté à votre statut et activez directement votre formulaire d'enregistrement.",
+      selectedBadge: "Sélectionné",
+      recommendedTag: "Recommandé",
+      freePrice: "Accès Gratuit",
+      perksTitle: "Privilèges Inclus",
+      tiers: [
+        {
+          id: "visiteur",
+          title: "VISITEUR",
+          badge: "Accès Général",
+          price: "0,00 MAD HT",
+          perks: [
+            "Accès complet aux conférences publiques & panels",
+            "Accès à l'espace d'exposition (Village du Cinéma)",
+            "Accès aux démonstrations technologiques ouvertes",
+            "Badge nominatif digital / QR Code d'entrée"
+          ],
+          btnText: "Commander mon Pass Gratuit"
+        },
+        {
+          id: "vip",
+          title: "VIP",
+          badge: "Accès Premium",
+          price: "2 500,00 MAD HT",
+          highlight: true,
+          tag: "Recommandé",
+          perks: [
+            "Accès prioritaire à toutes les conférences et masterclasses",
+            "Accès à l'Espace VIP & salon de networking exclusif",
+            "Déjeuners networking inclus (7 & 8 novembre)",
+            "Invitation à la Soirée de Gala & Cinema Legacy Awards",
+            "Placement réservé aux premiers rangs des auditoriums",
+            "Matchmaking B2B via l'application mobile FICIAI 2026"
+          ],
+          btnText: "Réserver mon Pass VIP"
+        },
+        {
+          id: "intervenant",
+          title: "INTERVENANT",
+          badge: "Speakers & Panélistes",
+          price: "0,00 MAD HT",
+          perks: [
+            "Réservé aux speakers, conférenciers et panélistes officiels",
+            "Accès complet coulisses & salon des intervenants",
+            "Invitation au dîner officiel des speakers et VIPs",
+            "Prise en charge logistique et assistance technique régie"
+          ],
+          btnText: "Confirmer mon Badge Speaker"
+        },
+        {
+          id: "exposant_9m",
+          title: "EXPOSANT (Stand 9 m²)",
+          badge: "Formule Start-Up",
+          price: "9 000,00 MAD HT",
+          perks: [
+            "Formule Start-Up : Espace stand équipé de 9 m² au Village du Cinéma",
+            "Sol moquette, cloisons modulaires, éclairage LED & prises électriques",
+            "Enseigne standard au nom de l'entreprise",
+            "2 Badges Exposants avec accès complet aux espaces networking",
+            "Référencement catalogue et application mobile"
+          ],
+          btnText: "Réserver un Stand 9 m²"
+        },
+        {
+          id: "exposant_12m",
+          title: "EXPOSANT (Stand 12 m²)",
+          badge: "Formule Standard",
+          price: "12 000,00 MAD HT",
+          perks: [
+            "Formule Standard : Stand équipé de 12 m² au Village du Cinéma",
+            "Emplacement optimisé avec cloisons, sol moquette, prises & spots LED",
+            "Enseigne bandeau standard avec lettrage personnalisé",
+            "3 Badges Exposants avec accès complet aux espaces networking",
+            "Référencement catalogue & visibilité digitale renforcée"
+          ],
+          btnText: "Réserver un Stand 12 m²"
+        },
+        {
+          id: "exposant_18m",
+          title: "EXPOSANT (Stand 18 m²)",
+          badge: "Formule Premium",
+          price: "18 000,00 MAD HT",
+          perks: [
+            "Formule Premium : Espace d'exposition majeur de 18 m²",
+            "Emplacement d'angle ou tête d'îlot à fort passage",
+            "Éclairage LED renforcé, puissance électrique dédiée & enseigne sur mesure",
+            "4 Badges Exposants avec accès salon VIP & networking",
+            "Référencement prioritaire & mise en relation B2B ciblée"
+          ],
+          btnText: "Réserver un Stand 18 m²"
+        }
+      ],
+      formSectionTitle: "Formulaire d'Enregistrement de Badge",
+      formSectionSubtitle: "Remplissez le formulaire ci-dessous pour valider votre demande. Votre pass nominatif sera émis après confirmation de notre équipe.",
+      formS1: "01. Organisation & Statut",
+      formOrg: "Nom de l'Organisation / Établissement",
+      formOrgPlaceholder: "ex. Atlas Studios / Université / Indépendant",
+      formJob: "Fonction / Rôle",
+      formJobPlaceholder: "ex. Producteur / Réalisateur / Chercheur IA / Étudiant",
+      formS2: "02. Informations Personnelles",
+      formFullName: "Nom & Prénom",
+      formFullNamePlaceholder: "ex. Sophia Bennani",
+      formEmail: "Adresse Email",
+      formEmailPlaceholder: "ex. sophia@production.com",
+      formPhone: "Numéro de Téléphone / WhatsApp",
+      formPhonePlaceholder: "ex. +212 6 00 00 00 00",
+      formS3: "03. Choix du Badge & Remarques",
+      formBadgeSelect: "Pass / Badge Sélectionné",
+      formMessage: "Message / Précisions complémentaires (Optionnel)",
+      formMessagePlaceholder: "Besoins spécifiques, objectifs de networking, accréditation presse...",
+      formSubmit: "Valider mon Inscription",
+      formSubmitting: "Enregistrement en cours...",
+      formDisclaimer: "Vos informations sont traitées de manière confidentielle et utilisées uniquement dans le cadre de l'organisation du FICIAI 2026.",
+      formSuccess: "Votre demande de badge a été enregistrée avec succès ! Un récapitulatif a été envoyé à votre adresse email."
+    },
+    standPage: {
+      heroBadge: "Village du Cinéma • FICIAI 2026 • 6–8 Nov 2026 • Palais des Congrès, Ouarzazate",
+      heroTitle: "Réservez votre Espace d'Exposition au Village du Cinéma",
+      heroSubtitle: "Exposez vos innovations, produits et services au cœur du plus grand rassemblement international du cinéma, de l'intelligence artificielle et de l'investissement en Afrique.",
+      btnChoose: "Choisir mon Stand",
+      tiersTitle: "Formules d'Exposition Clé en Main",
+      tiersSubtitle: "Choisissez la superficie adaptée à vos démonstrations et activez directement votre formulaire de réservation.",
+      rateLabel: "Tarif d'exposition",
+      surfaceDim: "Surface & Dimensions :",
+      equipmentLabel: "Équipements inclus :",
+      accessLabel: "Accès & Visibilité :",
+      recommendedTag: "Recommandé",
+      selectedTag: "Sélectionné",
+      tiers: [
+        {
+          id: "startup_9m",
+          title: "FORMULE START-UP",
+          badge: "9 m² Clé en Main",
+          price: "9 000,00 MAD HT",
+          surface: "9 m²",
+          dimensions: "3 m × 3 m",
+          equipment: "Cloisons modulaires, sol moquetté, éclairage LED, prises électriques, enseigne standard",
+          access: "2 Badges exposants inclus + référencement dans le catalogue officiel",
+          btnText: "Sélectionner la Formule 9 m²"
+        },
+        {
+          id: "standard_12m",
+          title: "FORMULE STANDARD",
+          badge: "12 m² Clé en Main",
+          price: "12 000,00 MAD HT",
+          surface: "12 m²",
+          dimensions: "3 m × 4 m",
+          highlight: true,
+          tag: "Recommandé",
+          equipment: "Cloisons modulaires, sol moquetté, éclairage LED, prises électriques, enseigne standard",
+          access: "3 Badges exposants inclus + référencement catalogue & app FICIAI 2026",
+          btnText: "Sélectionner la Formule 12 m²"
+        },
+        {
+          id: "premium_18m",
+          title: "FORMULE PREMIUM",
+          badge: "18 m² Clé en Main",
+          price: "18 000,00 MAD HT",
+          surface: "18 m²",
+          dimensions: "3 m × 6 m / 6 m × 3 m",
+          equipment: "Emplacement stratégique, cloisons modulaires, sol moquetté, éclairage LED renforcé, prises électriques, enseigne personnalisée",
+          access: "4 Badges exposants inclus + référencement prioritaire & networking B2B",
+          btnText: "Sélectionner la Formule 18 m²"
+        }
+      ],
+      inclusionsTitle: "Équipements Inclus & Configurations",
+      inclusionsSubtitle: "Chaque stand est livré clé en main, prêt à accueillir vos équipes et votre matériel dès la veille de l'ouverture officielle.",
+      inclusions: [
+        { title: "Sol & Moquette", desc: "Moquette aiguilletée de haute qualité posée sur l'ensemble de la surface." },
+        { title: "Structure & Cloisons", desc: "Cloisons modulaires blanches mélaminées de 2,40 m de hauteur." },
+        { title: "Électricité Dédiée", desc: "Coffret électrique individuel avec disjoncteur différentiel et prises 220V." },
+        { title: "Éclairage LED", desc: "Spots projecteurs LED basse consommation orientables (1 spot par 3 m²)." },
+        { title: "Signalétique & Enseigne", desc: "Bandeau d'enseigne standard avec lettrage personnalisé au nom de votre entité." }
+      ],
+      configurationsTitle: "Configurations & Modularité des Emplacements",
+      configurationsSubtitle: "Précisez votre préférence d'orientation lors de votre demande de réservation.",
+      configurations: [
+        { id: "inline", title: "Inline (Standard)", badge: "1 Allée", desc: "Stand en ligne ouvert sur une allée principale. Idéal pour maximiser l'espace d'affichage mural." },
+        { id: "corner", title: "Corner (Angle)", badge: "2 Allées", desc: "Stand d'angle ouvert sur 2 allées perpendiculaires. Offre une double visibilité et fluidifie l'accueil." },
+        { id: "peninsula", title: "Peninsula (Tête d'îlot)", badge: "3 Allées", desc: "Stand en tête d'îlot ouvert sur 3 côtés. Idéal pour des présentations et démonstrations immersives." },
+        { id: "island", title: "Island (Îlot complet)", badge: "4 Allées", desc: "Stand îlot totalement ouvert sur 4 allées. Impact visuel et prestige maximal (Réservé 18m²+)." }
+      ],
+      formSectionTitle: "Réservation d'Espace Exposant — Village du Cinéma",
+      formSectionSubtitle: "Soumettez votre demande d'emplacement. Notre équipe technique examinera votre dossier et vous contactera pour valider votre plan.",
+      formS1: "01. Organisation & Entreprise",
+      formOrg: "Nom de l'Entreprise / Organisation",
+      formOrgPlaceholder: "ex. Atlas Virtual Production Studios",
+      formJob: "Fonction du Responsable",
+      formJobPlaceholder: "ex. Directeur Général / Responsable Marketing",
+      formS2: "02. Coordonnées du Responsable",
+      formFullName: "Nom & Prénom",
+      formFullNamePlaceholder: "ex. Sophia Bennani",
+      formEmail: "Email Professionnel",
+      formEmailPlaceholder: "ex. sophia@production.com",
+      formPhone: "Numéro de Téléphone / WhatsApp",
+      formPhonePlaceholder: "ex. +212 6 00 00 00 00",
+      formS3: "03. Formule, Configuration & Besoins",
+      formTierSelect: "Formule de Stand Sélectionnée",
+      formConfigSelect: "Configuration de Stand Souhaitée",
+      formMessage: "Message & Besoins Techniques Particuliers",
+      formMessagePlaceholder: "Puissance électrique supplémentaire, installation d'écrans, matériel spécifique...",
+      formSubmit: "Envoyer ma Demande de Stand",
+      formSubmitting: "Envoi en cours...",
+      formDisclaimer: "Votre demande sera instruite par le comité d'organisation du FICIAI 2026. Une convention d'emplacement vous sera transmise après validation.",
+      formSuccess: "Votre demande d'espace d'exposition a été enregistrée avec succès ! Notre équipe vous contactera très rapidement pour valider votre emplacement."
     }
   }
 };

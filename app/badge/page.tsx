@@ -4,146 +4,49 @@ import React, { useState } from 'react';
 import FadeIn from '../../components/FadeIn';
 import { useLanguage } from '../../components/LanguageProvider';
 
-interface BadgeTier {
-  id: string;
-  title: string;
-  badge: string;
-  price: string;
-  highlight?: boolean;
-  tag?: string;
-  icon: (color: string) => React.ReactNode;
-  perks: string[];
-  btnText: string;
-}
-
-const BADGE_TIERS: BadgeTier[] = [
-  {
-    id: "visiteur",
-    title: "VISITEUR",
-    badge: "Accès Général",
-    price: "0,00 MAD HT",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-        <line x1="16" y1="2" x2="16" y2="6"/>
-        <line x1="8" y1="2" x2="8" y2="6"/>
-        <circle cx="12" cy="11" r="3"/>
-        <rect x="9" y="16" width="6" height="2" rx="1"/>
-      </svg>
-    ),
-    perks: [
-      "Accès complet aux conférences publiques & panels",
-      "Accès à l'espace d'exposition (Village du Cinéma)",
-      "Accès aux démonstrations technologiques ouvertes",
-      "Badge nominatif digital / QR Code d'entrée"
-    ],
-    btnText: "Commander mon Pass Gratuit"
-  },
-  {
-    id: "vip",
-    title: "VIP",
-    badge: "Accès Premium",
-    price: "2 500,00 MAD HT",
-    highlight: true,
-    tag: "Recommandé",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-      </svg>
-    ),
-    perks: [
-      "Accès prioritaire à toutes les conférences et masterclasses",
-      "Accès à l'Espace VIP & salon de networking exclusif",
-      "Déjeuners networking inclus (7 & 8 novembre)",
-      "Invitation à la Soirée de Gala & Cinema Legacy Awards",
-      "Placement réservé aux premiers rangs des auditoriums",
-      "Matchmaking B2B via l'application mobile FICIAI 2026"
-    ],
-    btnText: "Réserver mon Pass VIP"
-  },
-  {
-    id: "intervenant",
-    title: "INTERVENANT",
-    badge: "Speakers & Panélistes",
-    price: "0,00 MAD HT",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-        <line x1="12" y1="19" x2="12" y2="23"/>
-        <line x1="8" y1="23" x2="16" y2="23"/>
-      </svg>
-    ),
-    perks: [
-      "Réservé aux speakers, conférenciers et panélistes officiels",
-      "Accès complet coulisses & salon des intervenants",
-      "Invitation au dîner officiel des speakers et VIPs",
-      "Prise en charge logistique et assistance technique régie"
-    ],
-    btnText: "Confirmer mon Badge Speaker"
-  },
-  {
-    id: "exposant_9m",
-    title: "EXPOSANT (Stand 9 m²)",
-    badge: "Formule Start-Up",
-    price: "9 000,00 MAD HT",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-        <line x1="12" y1="22.08" x2="12" y2="12"/>
-      </svg>
-    ),
-    perks: [
-      "Formule Start-Up : Espace stand équipé de 9 m² au Village du Cinéma",
-      "Sol moquette, cloisons modulaires, éclairage LED & prises électriques",
-      "Enseigne standard au nom de l'entreprise",
-      "2 Badges Exposants avec accès complet aux espaces networking",
-      "Référencement catalogue et application mobile"
-    ],
-    btnText: "Réserver un Stand 9 m²"
-  },
-  {
-    id: "exposant_12m",
-    title: "EXPOSANT (Stand 12 m²)",
-    badge: "Formule Standard",
-    price: "12 000,00 MAD HT",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-        <line x1="3" y1="9" x2="21" y2="9"/>
-        <line x1="9" y1="21" x2="9" y2="9"/>
-      </svg>
-    ),
-    perks: [
-      "Formule Standard : Stand équipé de 12 m² au Village du Cinéma",
-      "Emplacement optimisé avec cloisons, sol moquette, prises & spots LED",
-      "Enseigne standard personnalisée",
-      "3 Badges Exposants avec accès networking & événements",
-      "Référencement prioritaire dans le catalogue exposants"
-    ],
-    btnText: "Réserver un Stand 12 m²"
-  },
-  {
-    id: "exposant_18m",
-    title: "EXPOSANT (Stand 18 m²)",
-    badge: "Formule Premium",
-    price: "18 000,00 MAD HT",
-    icon: (color: string) => (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-      </svg>
-    ),
-    perks: [
-      "Formule Premium : Stand équipé de 18 m² au Village du Cinéma",
-      "Emplacement stratégique à fort passage (allée centrale / angle)",
-      "Équipement complet (moquette, électricité, enseigne, éclairage renforcé)",
-      "4 Badges Exposants & accès B2B match",
-      "Visibilité renforcée sur les supports digitaux du Forum"
-    ],
-    btnText: "Réserver un Stand 18 m²"
-  }
-];
+const BADGE_ICONS: Record<string, (color: string) => React.ReactNode> = {
+  visiteur: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <circle cx="12" cy="11" r="3"/>
+      <rect x="9" y="16" width="6" height="2" rx="1"/>
+    </svg>
+  ),
+  vip: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </svg>
+  ),
+  intervenant: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" y1="19" x2="12" y2="23"/>
+      <line x1="8" y1="23" x2="16" y2="23"/>
+    </svg>
+  ),
+  exposant_9m: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+      <line x1="12" y1="22.08" x2="12" y2="12"/>
+    </svg>
+  ),
+  exposant_12m: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+      <line x1="3" y1="9" x2="21" y2="9"/>
+      <line x1="9" y1="21" x2="9" y2="9"/>
+    </svg>
+  ),
+  exposant_18m: (color: string) => (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  )
+};
 
 export default function BadgePage() {
   const [selectedTier, setSelectedTier] = useState<string>('vip');
@@ -151,6 +54,7 @@ export default function BadgePage() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [submitMessage, setSubmitMessage] = useState('');
   const { t } = useLanguage();
+  const bp = t.badgePage;
 
   const handleSelectTier = (tierId: string) => {
     setSelectedTier(tierId);
@@ -166,7 +70,7 @@ export default function BadgePage() {
     setSubmitStatus('idle');
 
     const formData = new FormData(e.currentTarget);
-    const currentTierObj = BADGE_TIERS.find(t => t.id === selectedTier);
+    const currentTierObj = bp.tiers.find(t => t.id === selectedTier);
 
     const payload = {
       type: 'badge',
@@ -188,19 +92,19 @@ export default function BadgePage() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage('Votre demande d\'accréditation / badge a été enregistrée avec succès. Notre équipe vous contactera très rapidement.');
+        setSubmitMessage(bp.formSuccess);
         (e.target as HTMLFormElement).reset();
       } else {
         const errorData = await response.json();
         const msg = typeof errorData.error === 'string' 
           ? errorData.error 
-          : (errorData.error?.message || 'Une erreur est survenue lors de l\'envoi.');
+          : (errorData.error?.message || 'Error sending request.');
         setSubmitStatus('error');
         setSubmitMessage(msg);
       }
     } catch (error: any) {
       setSubmitStatus('error');
-      setSubmitMessage(error?.message || 'Erreur de connexion. Veuillez vérifier votre connexion et réessayer.');
+      setSubmitMessage(error?.message || 'Connection error. Please check your connection and retry.');
     } finally {
       setIsSubmitting(false);
     }
@@ -214,27 +118,23 @@ export default function BadgePage() {
         <FadeIn>
           <div style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center', paddingTop: '12px' }}>
             <div className="label-badge" style={{ marginBottom: '14px' }}>
-              <span>Accréditations & Espaces Exposants</span>
-              <span style={{ margin: '0 6px', opacity: 0.5 }}>•</span>
-              <span>Ouarzazate, Maroc</span>
-              <span style={{ margin: '0 6px', opacity: 0.5 }}>•</span>
-              <span>6–8 Nov 2026</span>
+              <span>{bp.heroBadge}</span>
             </div>
             
             <h1 className="display-title" style={{ fontSize: 'clamp(22px, 3.2vw, 36px)', marginBottom: '14px', lineHeight: 1.15 }}>
-              Demander mon Badge / Pass FICIAI 2026
+              {bp.heroTitle}
             </h1>
 
             <p className="body-text" style={{ maxWidth: '640px', margin: '0 auto 22px', fontSize: '13px', color: 'var(--text-secondary)' }}>
-              Rejoignez les décideurs, créateurs, investisseurs et innovateurs de l'industrie cinématographique et de l'intelligence artificielle. Choisissez la formule adaptée à vos objectifs.
+              {bp.heroSubtitle}
             </p>
 
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href="#badge-tiers" className="btn btn-primary" style={{ textDecoration: 'none' }}>
-                Voir les Formules & Tarifs
+                {bp.btnChoose}
               </a>
               <a href="#badge-registration-form" className="btn btn-outline" style={{ textDecoration: 'none' }}>
-                Formulaire d'Inscription
+                {bp.btnForm}
               </a>
             </div>
           </div>
@@ -245,9 +145,9 @@ export default function BadgePage() {
       <section id="badge-tiers" className="relative z-10" style={{ maxWidth: '1100px', margin: '56px auto 0', padding: '0 16px' }}>
         <FadeIn>
           <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-            <h2 className="section-title">Formules d'Accès & Espaces Exposants</h2>
+            <h2 className="section-title">{bp.passesTitle}</h2>
             <p className="body-text" style={{ maxWidth: '520px', margin: '6px auto 0', color: 'var(--text-secondary)', fontSize: '12px' }}>
-              Sélectionnez votre pass ou stand pour pré-remplir instantanément le formulaire d'accréditation.
+              {bp.passesSubtitle}
             </p>
           </div>
         </FadeIn>
@@ -259,10 +159,11 @@ export default function BadgePage() {
           marginTop: '24px',
           alignItems: 'stretch'
         }}>
-          {BADGE_TIERS.map((tier, i) => {
+          {bp.tiers.map((tier, i) => {
             const isSelected = selectedTier === tier.id;
             const isHighlighted = tier.highlight || isSelected;
             const iconColor = isSelected || isHighlighted ? '#B8432F' : 'var(--text-primary)';
+            const renderIcon = BADGE_ICONS[tier.id] || BADGE_ICONS.visiteur;
 
             return (
               <FadeIn key={tier.id} delay={0.08 * i} style={{ display: 'flex', flexDirection: 'column', height: '100%', minHeight: '100%' }}>
@@ -324,7 +225,7 @@ export default function BadgePage() {
                         justifyContent: 'center',
                         flexShrink: 0
                       }}>
-                        {tier.icon(iconColor)}
+                        {renderIcon(iconColor)}
                       </div>
                       <div>
                         <h3 className="feature-title" style={{ fontSize: '15.5px', color: isSelected || tier.highlight ? '#B8432F' : 'var(--text-primary)', margin: 0, fontWeight: 700 }}>
@@ -350,7 +251,7 @@ export default function BadgePage() {
                         fontWeight: 700,
                         lineHeight: 1
                       }}>
-                        Sélectionné
+                        {bp.selectedBadge}
                       </span>
                     )}
                   </div>
@@ -385,7 +286,7 @@ export default function BadgePage() {
                         borderRadius: '8px'
                       }}
                     >
-                      {isSelected ? "Formule Sélectionnée" : tier.btnText}
+                      {isSelected ? bp.selectedBadge : tier.btnText}
                     </button>
                   </div>
                 </div>
@@ -399,12 +300,9 @@ export default function BadgePage() {
       <section id="badge-registration-form" className="form-section-container relative z-10" style={{ maxWidth: '780px' }}>
         <FadeIn style={{ width: '100%' }}>
           <div style={{ textAlign: 'center', marginBottom: '28px', width: '100%' }}>
-            <div className="label-badge" style={{ marginBottom: '10px', display: 'inline-block' }}>
-              Étape 2 sur 2
-            </div>
-            <h2 className="section-title">Formulaire d'Enregistrement</h2>
+            <h2 className="section-title">{bp.formSectionTitle}</h2>
             <p className="body-text" style={{ maxWidth: '520px', margin: '6px auto 0', color: 'var(--text-secondary)', fontSize: '12.5px' }}>
-              Complétez vos coordonnées pour valider votre demande. Vous recevrez une confirmation officielle par email.
+              {bp.formSectionSubtitle}
             </p>
           </div>
         </FadeIn>
@@ -431,7 +329,7 @@ export default function BadgePage() {
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
                 <div>
-                  <strong style={{ display: 'block', marginBottom: '2px' }}>Demande enregistrée avec succès</strong>
+                  <strong style={{ display: 'block', marginBottom: '2px' }}>{bp.formSuccess}</strong>
                   {submitMessage}
                 </div>
               </div>
@@ -457,7 +355,7 @@ export default function BadgePage() {
                   <line x1="12" y1="16" x2="12.01" y2="16"/>
                 </svg>
                 <div>
-                  <strong style={{ display: 'block', marginBottom: '2px' }}>Erreur de soumission</strong>
+                  <strong style={{ display: 'block', marginBottom: '2px' }}>Erreur</strong>
                   {submitMessage}
                 </div>
               </div>
@@ -469,24 +367,24 @@ export default function BadgePage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%' }}>
                 <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
                   <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>
-                    01. Organisation & Identité
+                    {bp.formS1}
                   </span>
                 </div>
                 
                 <div className="form-row-2">
                   <div className="form-group">
                     <label className="form-label">
-                      <span>Nom de l'Organisation</span>
+                      <span>{bp.formOrg}</span>
                       <span style={{ color: '#B8432F' }}>*</span>
                     </label>
-                    <input name="organisation" type="text" className="input-field" placeholder="ex. Atlas Cinema Studios" required />
+                    <input name="organisation" type="text" className="input-field" placeholder={bp.formOrgPlaceholder} required />
                   </div>
                   <div className="form-group">
                     <label className="form-label">
-                      <span>Fonction / Titre Professionnel</span>
+                      <span>{bp.formJob}</span>
                       <span style={{ color: '#B8432F' }}>*</span>
                     </label>
-                    <input name="jobTitle" type="text" className="input-field" placeholder="ex. Directrice Technique / Producteur" required />
+                    <input name="jobTitle" type="text" className="input-field" placeholder={bp.formJobPlaceholder} required />
                   </div>
                 </div>
               </div>
@@ -495,33 +393,33 @@ export default function BadgePage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%' }}>
                 <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
                   <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>
-                    02. Coordonnées du Contact
+                    {bp.formS2}
                   </span>
                 </div>
 
                 <div className="form-row-2">
                   <div className="form-group">
                     <label className="form-label">
-                      <span>Nom & Prénom</span>
+                      <span>{bp.formFullName}</span>
                       <span style={{ color: '#B8432F' }}>*</span>
                     </label>
-                    <input name="fullName" type="text" className="input-field" placeholder="ex. Sophia Bennani" required />
+                    <input name="fullName" type="text" className="input-field" placeholder={bp.formFullNamePlaceholder} required />
                   </div>
                   <div className="form-group">
                     <label className="form-label">
-                      <span>Email Professionnel</span>
+                      <span>{bp.formEmail}</span>
                       <span style={{ color: '#B8432F' }}>*</span>
                     </label>
-                    <input name="email" type="email" className="input-field" placeholder="ex. sophia@production.com" required />
+                    <input name="email" type="email" className="input-field" placeholder={bp.formEmailPlaceholder} required />
                   </div>
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">
-                    <span>Numéro de Téléphone</span>
+                    <span>{bp.formPhone}</span>
                     <span style={{ color: '#B8432F' }}>*</span>
                   </label>
-                  <input name="phone" type="tel" className="input-field" placeholder="ex. +212 6 00 00 00 00" required />
+                  <input name="phone" type="tel" className="input-field" placeholder={bp.formPhonePlaceholder} required />
                 </div>
               </div>
 
@@ -529,13 +427,13 @@ export default function BadgePage() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%' }}>
                 <div style={{ borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
                   <span className="mono-title" style={{ fontSize: '9.5px', color: '#B8432F', textTransform: 'uppercase', letterSpacing: '0.8px', fontWeight: 700 }}>
-                    03. Formule & Précisions
+                    {bp.formS3}
                   </span>
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">
-                    <span>Formule Sélectionnée</span>
+                    <span>{bp.formBadgeSelect}</span>
                     <span style={{ color: '#B8432F' }}>*</span>
                   </label>
                   <select 
@@ -546,7 +444,7 @@ export default function BadgePage() {
                     required
                     style={{ fontWeight: 500 }}
                   >
-                    {BADGE_TIERS.map(tier => (
+                    {bp.tiers.map(tier => (
                       <option key={tier.id} value={tier.id}>
                         {tier.title} — {tier.price}
                       </option>
@@ -556,14 +454,13 @@ export default function BadgePage() {
 
                 <div className="form-group">
                   <label className="form-label">
-                    <span>Message / Remarques complémentaires</span>
-                    <span style={{ fontSize: '11px', color: '#9CA3AF', fontWeight: 400 }}>(Optionnel)</span>
+                    <span>{bp.formMessage}</span>
                   </label>
                   <textarea 
                     name="message" 
                     rows={4} 
                     className="input-field" 
-                    placeholder="Précisez vos besoins logistiques, vos thématiques d'intérêt ou toute information utile pour l'organisation..." 
+                    placeholder={bp.formMessagePlaceholder} 
                   />
                 </div>
               </div>
@@ -595,11 +492,11 @@ export default function BadgePage() {
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ animation: 'spin 1s linear infinite', flexShrink: 0 }}>
                         <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
                       </svg>
-                      <span>Envoi en cours...</span>
+                      <span>{bp.formSubmitting}</span>
                     </>
                   ) : (
                     <>
-                      <span>Valider et Soumettre ma Demande d'Accréditation</span>
+                      <span>{bp.formSubmit}</span>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ flexShrink: 0 }}>
                         <line x1="5" y1="12" x2="19" y2="12"/>
                         <polyline points="12 5 19 12 12 19"/>
@@ -608,7 +505,7 @@ export default function BadgePage() {
                   )}
                 </button>
                 <p style={{ textAlign: 'center', fontSize: '11px', color: 'var(--text-secondary)', marginTop: '10px', marginBottom: 0 }}>
-                  Vos données sont traitées de manière confidentielle conformément au règlement du FICIAI 2026.
+                  {bp.formDisclaimer}
                 </p>
               </div>
 
