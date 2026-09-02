@@ -539,15 +539,15 @@ export const translations = {
     },
     speakersPage: {
       heroBadge: "Distinguished Speakers • 110+ Visionaries & Experts",
-      heroTitle: "Meet the Speakers & Leaders",
+      heroTitle: "Meet the Speakers",
       heroSubtitle: "Explore the filmmakers, AI engineers, studio chiefs, and global dignitaries taking the stage at FICIAI 2026.",
       categoriesTitle: "Thematic Speaker Tracks",
       categories: [
         { title: "Cinema & Directing", count: "35+ Speakers", desc: "Internationally acclaimed directors, cinematographers, and line producers." },
         { title: "AI & Virtual Production", count: "40+ Experts", desc: "AI researchers, Unreal Engine artists, and VFX studio leaders." },
-        { title: "Institutions & Investment", count: "35+ Leaders", desc: "Ministers, UN ECOSOC delegates, film fund executives, and smart city architects." }
+        { title: "Institutions & Investment", count: "35+ Experts", desc: "Ministers, UN ECOSOC delegates, film fund executives, and smart city architects." }
       ],
-      featuredTitle: "Organizing Leadership & Visionaries",
+      featuredTitle: "Featured Speakers & Visionaries",
       guestHonourTitle: "Guest of Honour Delegation",
       guestHonourDesc: "India — Celebrating international creative exchanges, Bollywood-Ouarzazate co-productions, and next-gen VFX collaboration.",
       callTitle: "Call for Speakers & Panelists",
@@ -1092,16 +1092,16 @@ export const translations = {
       ctaBtn: "Réserver mon Badge"
     },
     speakersPage: {
-      heroBadge: "Intervenants Confirmés • +110 Visionnaires & Experts",
-      heroTitle: "Intervenants & Visionnaires",
+      heroBadge: "Intervenants Confirmés • +110 Experts & Personnalités",
+      heroTitle: "Les Intervenants",
       heroSubtitle: "Découvrez les cinéastes, chercheurs en IA, dirigeants de studios et personnalités institutionnelles qui interviennent au FICIAI 2026.",
       categoriesTitle: "Pôles thématiques des intervenants",
       categories: [
         { title: "Cinéma & Réalisation", count: "+35 Intervenants", desc: "Réalisateurs internationaux, directeurs de la photographie et producteurs de renom." },
         { title: "IA & Production Virtuelle", count: "+40 Experts", desc: "Chercheurs en intelligence artificielle, créateurs Unreal Engine et superviseurs VFX." },
-        { title: "Institutions & Économie", count: "+35 Décideurs", desc: "Ministères, délégués ONU ECOSOC, fonds de soutien et architectes de smart cities." }
+        { title: "Institutions & Économie", count: "+35 Experts", desc: "Ministères, délégués ONU ECOSOC, fonds de soutien et architectes de smart cities." }
       ],
-      featuredTitle: "Conseil de Direction & Visionnaires",
+      featuredTitle: "Intervenants & Invités d'Honneur",
       guestHonourTitle: "Délégation Invité d'Honneur",
       guestHonourDesc: "Inde — Mise à l'honneur des coopérations cinématographiques internationales, co-productions et technologies VFX de pointe.",
       callTitle: "Appel à Interventions & Conférenciers",

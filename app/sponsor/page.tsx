@@ -414,18 +414,22 @@ export default function SponsorPage() {
             {/* Logo Grid */}
             <div style={{ 
               display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fill, minmax(90px, 1fr))', 
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(130px, 100%), 1fr))', 
               gap: '16px', 
               alignItems: 'center', 
               justifyItems: 'center',
               background: '#FFFFFF',
               border: '1px solid var(--border)',
-              borderRadius: '12px',
+              borderRadius: '16px',
               padding: '24px',
               boxShadow: '0 2px 10px rgba(0,0,0,0.02)'
             }}>
               {[
-                "/gov_logos/maroc.png", "/gov_logos/province.png", "/gov_logos/region.png",
+                "/gov_logos/maroc.png", 
+                "/gov_logos/region.png", 
+                "/gov_logos/province.png", 
+                "/gov_logos/conseil.jpeg", 
+                "/gov_logos/commune.jpeg",
                 "/sponsoring_logos/1.png", "/sponsoring_logos/2.png", "/sponsoring_logos/3.jpg", "/sponsoring_logos/4.png", "/sponsoring_logos/5.png", "/sponsoring_logos/6.jpg", "/sponsoring_logos/7.png", "/sponsoring_logos/8.jpg", "/sponsoring_logos/9.jpg",
                 "/sponsoring_logos/10.jpg", "/sponsoring_logos/11.png", "/sponsoring_logos/12.jpg", "/sponsoring_logos/13.jpg", "/sponsoring_logos/14.jpg", "/sponsoring_logos/15.jpg", "/sponsoring_logos/16.png", "/sponsoring_logos/17.jpg", "/sponsoring_logos/18.png", "/sponsoring_logos/19.png",
                 "/sponsoring_logos/20.jpg", "/sponsoring_logos/21.jpg", "/sponsoring_logos/22.jpg", "/sponsoring_logos/23.jpg", "/sponsoring_logos/24.jpg", "/sponsoring_logos/25.jpg", "/sponsoring_logos/26.png", "/sponsoring_logos/27.jpg", "/sponsoring_logos/28.jpg", "/sponsoring_logos/29.png",
@@ -434,23 +438,42 @@ export default function SponsorPage() {
               ].map((logoPath, i) => (
                 <div key={i} style={{ 
                   width: '100%', 
+                  height: '80px',
                   display: 'flex', 
+                  alignItems: 'center',
                   justifyContent: 'center',
-                  opacity: 1,
-                  transition: 'transform 0.2s ease',
+                  padding: '10px 14px',
+                  background: '#FAFAF9',
+                  border: '1px solid rgba(0, 0, 0, 0.05)',
+                  borderRadius: '10px',
+                  boxSizing: 'border-box',
+                  transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)',
                   cursor: 'pointer'
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
+                onMouseEnter={(e) => { 
+                  e.currentTarget.style.transform = 'translateY(-2px)'; 
+                  e.currentTarget.style.background = '#FFFFFF';
+                  e.currentTarget.style.borderColor = 'rgba(184, 67, 47, 0.25)';
+                  e.currentTarget.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.06)';
+                }}
+                onMouseLeave={(e) => { 
+                  e.currentTarget.style.transform = 'none'; 
+                  e.currentTarget.style.background = '#FAFAF9';
+                  e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.05)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
                 >
                   <img 
                     src={`${logoPath}?v=3`} 
                     alt={`Sponsor ${i + 1}`} 
                     style={{ 
                       maxWidth: '100%', 
-                      maxHeight: '40px', 
+                      maxHeight: '60px', 
+                      width: 'auto',
+                      height: 'auto',
                       objectFit: 'contain',
-                      borderRadius: '6px'
+                      borderRadius: '4px',
+                      display: 'block'
                     }} 
                     loading="lazy"
                   />

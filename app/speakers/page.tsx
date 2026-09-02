@@ -16,15 +16,17 @@ interface Speaker {
   isKeynote?: boolean;
   country?: string;
   highlight?: boolean;
+  image?: string;
+  imagePosition?: string;
 }
 
 const SPEAKERS_LIST: Speaker[] = [
-  { id: "1", name: "Nisrine Aouzdagh", role: "Journaliste Senior, Rédactrice / Présentatrice", organization: "SNRT (Al Oula TV)", category: "media", isModerator: true },
-  { id: "2", name: "Aurélia Khazan", role: "Réalisatrice", organization: "FICIAI", category: "cinema" },
-  { id: "3", name: "Mariya Spartalis", role: "Fondatrice & CEO / Intervenante UHNWI", organization: "Spartalis Capital (Zurich)", category: "finance", country: "Suisse", isKeynote: true },
-  { id: "4", name: "Melinda Mrini", role: "Journaliste, Présentatrice (Les Matins Luxe)", organization: "Luxe Radio", category: "media", isModerator: true },
+  { id: "1", name: "Nisrine Aouzdagh", role: "Journaliste Senior, Rédactrice / Présentatrice", organization: "SNRT (Al Oula TV)", category: "media", isModerator: true, image: "/assets/speakers/Nisrine.jpg" },
+  { id: "2", name: "Aurélia Khazan", role: "Réalisatrice", organization: "FICIAI", category: "cinema", image: "/assets/speakers/aurelia.jpg" },
+  { id: "3", name: "Mariya Spartalis", role: "Fondatrice & CEO / Intervenante UHNWI", organization: "Spartalis Capital (Zurich)", category: "finance", country: "Suisse", isKeynote: true, image: "/assets/speakers/Mariya.jpeg", imagePosition: "center 20%" },
+  { id: "4", name: "Melinda Mrini", role: "Journaliste, Présentatrice (Les Matins Luxe)", organization: "Luxe Radio", category: "media", isModerator: true, image: "/assets/speakers/melinda.jpeg" },
   { id: "5", name: "Dr Rohit Gupta", role: "Global Chairman", organization: "Eurasia Afro Chamber of Commerce", category: "institutions", country: "Inde" },
-  { id: "6", name: "Najib Bredaa", role: "Ambassadeur, Directeur des Relations Diplomatiques", organization: "Chambre Eurasie Afrique", category: "institutions" },
+  { id: "6", name: "Najib Bredaa", role: "Ambassadeur, Directeur des Relations Diplomatiques", organization: "Chambre Eurasie Afrique", category: "institutions", image: "/assets/team/najib.png" },
   { id: "7", name: "C. V. Rao", role: "CEO", organization: "Annapurna Studios", category: "cinema", country: "Inde", highlight: true },
   { id: "8", name: "Rishabh Chopra", role: "CEO / VP – Production", organization: "Yash Raj Films", category: "cinema", country: "Inde", highlight: true },
   { id: "9", name: "Jake Seal", role: "Fondateur", organization: "ORWO Studios", category: "cinema", country: "International", highlight: true },
@@ -340,34 +342,59 @@ export default function SpeakersPage() {
                     </div>
 
                     {/* Speaker Header Info */}
-                    <div style={{ display: "flex", gap: "14px", alignItems: "flex-start", marginBottom: "12px" }}>
-                      {/* Monogram Avatar */}
-                      <div style={{
-                        width: "48px",
-                        height: "48px",
-                        borderRadius: "12px",
-                        background: speaker.highlight 
-                          ? "linear-gradient(135deg, #B8432F 0%, #D97706 100%)" 
-                          : "linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%)",
-                        color: speaker.highlight ? "#FFFFFF" : "#374151",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        fontSize: "16px",
-                        fontWeight: 700,
-                        fontFamily: "var(--font-jetbrains)",
-                        flexShrink: 0,
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-                        border: speaker.highlight ? "none" : "1px solid var(--border)"
-                      }}>
-                        {initials}
-                      </div>
+                    <div style={{ display: "flex", gap: "16px", alignItems: "flex-start", marginBottom: "14px" }}>
+                      {/* Avatar Photo or Monogram */}
+                      {speaker.image ? (
+                        <div style={{
+                          width: "80px",
+                          height: "80px",
+                          borderRadius: "16px",
+                          overflow: "hidden",
+                          flexShrink: 0,
+                          border: speaker.highlight ? "2px solid #B8432F" : "1.5px solid rgba(0, 0, 0, 0.08)",
+                          boxShadow: "0 4px 16px rgba(0, 0, 0, 0.08)",
+                          background: "#F3F4F6"
+                        }}>
+                          <img 
+                            src={speaker.image} 
+                            alt={speaker.name}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              objectPosition: speaker.imagePosition || "top center",
+                              display: "block"
+                            }}
+                          />
+                        </div>
+                      ) : (
+                        <div style={{
+                          width: "80px",
+                          height: "80px",
+                          borderRadius: "16px",
+                          background: speaker.highlight 
+                            ? "linear-gradient(135deg, #B8432F 0%, #D97706 100%)" 
+                            : "linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%)",
+                          color: speaker.highlight ? "#FFFFFF" : "#374151",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "22px",
+                          fontWeight: 700,
+                          fontFamily: "var(--font-jetbrains)",
+                          flexShrink: 0,
+                          boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+                          border: speaker.highlight ? "none" : "1px solid var(--border)"
+                        }}>
+                          {initials}
+                        </div>
+                      )}
 
-                      <div style={{ flex: 1 }}>
-                        <h3 className="feature-title" style={{ fontSize: "16px", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 4px 0", lineHeight: 1.25 }}>
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <h3 className="feature-title" style={{ fontSize: "16.5px", fontWeight: 700, color: "var(--text-primary)", margin: "0 0 4px 0", lineHeight: 1.25 }}>
                           {speaker.name}
                         </h3>
-                        <p style={{ fontSize: "12px", color: "var(--text-secondary)", margin: 0, lineHeight: 1.35 }}>
+                        <p style={{ fontSize: "12.5px", color: "var(--text-secondary)", margin: 0, lineHeight: 1.4 }}>
                           {speaker.role}
                         </p>
                       </div>
