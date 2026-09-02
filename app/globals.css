@@ -6,6 +6,12 @@
 
 @layer properties;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-playfair: 'Playfair Display', Georgia, Cambria, "Times New Roman", serif;
@@ -773,21 +779,26 @@ body {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px 24px;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
 }
 
@@ -865,18 +876,19 @@ body {
     padding: 36px 20px;
   }
   .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .features-section {
     padding: 32px 16px;
   }
   .features-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    width: 100% !important;
   }
   .section-title {
     font-size: 24px;
@@ -963,6 +975,7 @@ body {
   position: relative;
   z-index: 10;
   width: 100%;
+  box-sizing: border-box;
   background: radial-gradient(circle at 50% -10%, rgba(184, 67, 47, 0.28) 0%, rgba(15, 23, 42, 0.98) 60%), #0F172A;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1002,6 +1015,8 @@ body {
   position: relative;
   overflow: hidden;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -1299,6 +1314,33 @@ select.input-field {
   .header-logo-img {
     transform: scale(1.0) !important;
   }
+  .dark-showcase-section {
+    padding: 44px 16px !important;
+    margin: 36px 0 32px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .dark-feature-card {
+    padding: 24px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+  .dark-banner-strip {
+    padding: 16px 16px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    text-align: left !important;
+    margin-top: 24px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .dark-banner-strip .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1315,6 +1357,13 @@ select.input-field {
   }
   .form-card-container {
     padding: 20px 16px !important;
+    border-radius: 12px !important;
+  }
+  .dark-showcase-section {
+    padding: 36px 12px !important;
+  }
+  .dark-feature-card {
+    padding: 20px 14px !important;
     border-radius: 12px !important;
   }
 }

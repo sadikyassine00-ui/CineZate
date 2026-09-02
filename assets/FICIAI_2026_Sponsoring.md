@@ -54,9 +54,9 @@ FICIAI 2026 converges global studio executives, leading AI researchers, and inst
 
 A dedicated 2,000 m² grand pavilion marquee located adjacent to the Palais des Congrès:
 
-* **Start-Up Booth (9 m²):** Starting from **9,000 MAD HT** *(For tech startups, software solutions, and emerging AI creators)*
-* **Standard Booth (12 m²):** Starting from **12,000 MAD HT** *(For SMEs, production services, cultural organizations, and schools)*
-* **Premium Booth (18 m²):** Starting from **18,000 MAD HT** *(For major industry brands, equipment suppliers, and institutional hubs)*
+* **Start-Up Booth (9 m²):** Starting from **18,000 MAD HT** *(For tech startups, software solutions, and emerging AI creators)*
+* **Standard Booth (12 m²):** Starting from **24,000 MAD HT** *(For SMEs, production services, cultural organizations, and schools)*
+* **Premium Booth (18 m²):** Starting from **36,000 MAD HT** *(For major industry brands, equipment suppliers, and institutional hubs)*
 
 *All booths include modular partitions, carpeted floor, LED lighting, electrical outlets, and standard branded signage.*
 

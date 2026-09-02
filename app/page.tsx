@@ -197,7 +197,7 @@ export default function Home() {
       <section id="experience" className="dark-showcase-section">
         <div className="dark-showcase-grid-bg" />
         
-        <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
+        <div style={{ maxWidth: '1140px', margin: '0 auto', position: 'relative', zIndex: 2, width: '100%', boxSizing: 'border-box' }}>
           <FadeIn>
             <div style={{ textAlign: 'center', marginBottom: '44px' }}>
               <div 
@@ -229,8 +229,8 @@ export default function Home() {
             </div>
           </FadeIn>
           
-          <div className="features-grid relative" style={{ maxWidth: '1080px', margin: '0 auto' }}>
-            <FadeIn delay={0.1} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+          <div className="features-grid relative" style={{ maxWidth: '1080px', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
+            <FadeIn delay={0.1} style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', minWidth: 0, boxSizing: 'border-box' }}>
               <div className="dark-feature-card">
                 <div className="dark-feature-icon">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -254,13 +254,16 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.2} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <FadeIn delay={0.2} style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', minWidth: 0, boxSizing: 'border-box' }}>
               <div 
                 className="dark-feature-card" 
                 style={{ 
                   border: '1.5px solid rgba(184, 67, 47, 0.45)', 
                   background: 'rgba(184, 67, 47, 0.06)',
-                  boxShadow: '0 20px 48px rgba(184, 67, 47, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2)' 
+                  boxShadow: '0 20px 48px rgba(184, 67, 47, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2)',
+                  width: '100%',
+                  maxWidth: '100%',
+                  boxSizing: 'border-box'
                 }}
               >
                 <div className="dark-feature-icon" style={{ background: '#B8432F', color: '#FFFFFF', border: 'none' }}>
@@ -287,7 +290,7 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.3} style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <FadeIn delay={0.3} style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%', minWidth: 0, boxSizing: 'border-box' }}>
               <div className="dark-feature-card">
                 <div className="dark-feature-icon">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

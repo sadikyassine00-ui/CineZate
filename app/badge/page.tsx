@@ -132,19 +132,19 @@ export default function BadgePage() {
     }
     if (selectedTier === 'exposant_9m') {
       return {
-        amount: includeHeritageTour ? '10 500,00 MAD HT' : '9 000,00 MAD HT',
+        amount: includeHeritageTour ? '19 500,00 MAD HT' : '18 000,00 MAD HT',
         badge: includeHeritageTour ? 'Stand 9 m² + Option Tour VIP' : 'Stand 9 m²'
       };
     }
     if (selectedTier === 'exposant_12m') {
       return {
-        amount: includeHeritageTour ? '13 500,00 MAD HT' : '12 000,00 MAD HT',
+        amount: includeHeritageTour ? '25 500,00 MAD HT' : '24 000,00 MAD HT',
         badge: includeHeritageTour ? 'Stand 12 m² + Option Tour VIP' : 'Stand 12 m²'
       };
     }
     if (selectedTier === 'exposant_18m') {
       return {
-        amount: includeHeritageTour ? '19 500,00 MAD HT' : '18 000,00 MAD HT',
+        amount: includeHeritageTour ? '37 500,00 MAD HT' : '36 000,00 MAD HT',
         badge: includeHeritageTour ? 'Stand 18 m² + Option Tour VIP' : 'Stand 18 m²'
       };
     }
