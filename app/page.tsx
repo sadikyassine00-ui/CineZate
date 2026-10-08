@@ -19,7 +19,7 @@ export default function Home() {
   const cardRef = useRef(null);
 
   useEffect(() => {
-    const targetDate = new Date("2026-11-06T09:00:00+01:00").getTime();
+    const targetDate = new Date("2027-04-02T09:00:00+01:00").getTime();
     const startDate = new Date("2026-01-01T00:00:00+01:00").getTime();
 
     const updateTimer = () => {
@@ -98,7 +98,7 @@ export default function Home() {
                     </svg>
                   </span>
                   <span className="mono-title" style={{ fontWeight: 700, letterSpacing: '0.6px', color: 'var(--text-primary)' }}>
-                    FICIAI 2026
+                    FICIAI 2027
                   </span>
                 </div>
                 <div className="status-indicator">
@@ -135,7 +135,7 @@ export default function Home() {
                 </div>
                 <div className="progress-text">
                   <span>{Math.round(progress)}% {t.progress}</span>
-                  <span>6–8 Nov 2026</span>
+                  <span>{t.date}</span>
                 </div>
 
                 <div className="countdown-cta-strip">
@@ -209,7 +209,7 @@ export default function Home() {
                   marginBottom: '16px' 
                 }}
               >
-                <span>FICIAI 2026 • 3 PARCOURS D'ENGAGEMENT</span>
+                <span>FICIAI 2027 • 3 PARCOURS D'ENGAGEMENT</span>
               </div>
               <h2 
                 className="section-title" 

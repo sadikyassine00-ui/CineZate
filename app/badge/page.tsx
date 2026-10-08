@@ -150,7 +150,7 @@ export default function BadgePage() {
     }
     return {
       amount: includeHeritageTour ? '1 500,00 MAD' : '0,00 MAD',
-      badge: 'Badge FICIAI 2026'
+      badge: 'Badge FICIAI 2027'
     };
   };
 

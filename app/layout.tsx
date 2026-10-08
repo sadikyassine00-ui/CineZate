@@ -21,8 +21,8 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "FICIAI 2026",
-  description: "Join the world's leading minds at FICIAI 2026.",
+  title: "FICIAI 2027",
+  description: "Join the world's leading minds at FICIAI 2027.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

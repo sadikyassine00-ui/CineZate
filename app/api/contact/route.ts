@@ -45,11 +45,11 @@ export async function POST(request: Request) {
     else if (type === 'sponsor') typeLabel = 'Demande de Sponsoring & Partenariat';
     else if (type === 'stand') typeLabel = 'Demande d\'Espace Exposant (Stand)';
 
-    const requestSubject = `[FICIAI 2026] ${typeLabel} — ${applicantName} (${applicantOrg})`;
+    const requestSubject = `[FICIAI 2027] ${typeLabel} — ${applicantName} (${applicantOrg})`;
 
     // 1. Send Notification Email to Event Organizers (contact@cinezate.com)
     const { data: emailData, error } = await resend.emails.send({
-      from: 'FICIAI 2026 <website@cinezate.com>',
+      from: 'FICIAI 2027 <website@cinezate.com>',
       to: ['contact@cinezate.com'],
       replyTo: applicantEmail,
       subject: requestSubject,
@@ -78,7 +78,7 @@ export async function POST(request: Request) {
           <div class="card">
             <div class="header">
               <h1>${typeLabel}</h1>
-              <p>Festival International du Cinéma & de l'IA (FICIAI 2026) • Ouarzazate</p>
+              <p>Festival International du Cinéma & de l'IA (FICIAI 2027) • Ouarzazate</p>
             </div>
             
             <div class="content">
@@ -141,9 +141,9 @@ export async function POST(request: Request) {
     // 2. Also send an automated acknowledgment confirmation email to the applicant!
     try {
       await resend.emails.send({
-        from: 'FICIAI 2026 <website@cinezate.com>',
+        from: 'FICIAI 2027 <website@cinezate.com>',
         to: [applicantEmail],
-        subject: `Confirmation de votre demande : ${typeLabel} — FICIAI 2026`,
+        subject: `Confirmation de votre demande : ${typeLabel} — FICIAI 2027`,
         html: `
           <!DOCTYPE html>
           <html>
@@ -163,13 +163,13 @@ export async function POST(request: Request) {
           <body>
             <div class="card">
               <div class="header">
-                <h1>FICIAI 2026</h1>
+                <h1>FICIAI 2027</h1>
                 <p>Festival International du Cinéma & de l'IA • Ouarzazate, Maroc</p>
               </div>
               
               <div class="content">
                 <p>Bonjour <strong>${applicantName}</strong>,</p>
-                <p>Nous avons bien reçu votre <strong>${typeLabel}</strong> pour l'événement <strong>FICIAI 2026</strong> qui se tiendra à Ouarzazate du 6 au 8 novembre 2026.</p>
+                <p>Nous avons bien reçu votre <strong>${typeLabel}</strong> pour l'événement <strong>FICIAI 2027</strong> qui se tiendra à Ouarzazate du 2 au 4 avril 2027.</p>
                 
                 <div class="summary">
                   <p style="margin: 0 0 8px;"><strong>Récapitulatif de votre enregistrement :</strong></p>
@@ -186,13 +186,13 @@ export async function POST(request: Request) {
                 
                 <p style="margin-top: 24px; color: #111827;">
                   Bien cordialement,<br/>
-                  <strong>Le Comité d'Organisation FICIAI 2026</strong><br/>
+                  <strong>Le Comité d'Organisation FICIAI 2027</strong><br/>
                   <span style="color: #6B7280; font-size: 12px;">CineZate Studios • Ouarzazate, Maroc</span>
                 </p>
               </div>
               
               <div class="footer">
-                FICIAI 2026 • Ouarzazate, Maroc • <a href="https://cinezate.com" style="color: #6B7280;">cinezate.com</a>
+                FICIAI 2027 • Ouarzazate, Maroc • <a href="https://cinezate.com" style="color: #6B7280;">cinezate.com</a>
               </div>
             </div>
           </body>

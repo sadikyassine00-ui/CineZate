@@ -13,7 +13,7 @@ export const translations = {
       breadcrumbHome: "Home" 
     },
     register: "Register Interest",
-    date: "November 6-8, 2026",
+    date: "April 2-4, 2027",
     location: "Ouarzazate, Morocco",
     heroTitle1: "OUARZAZATE 2030,",
     heroTitle2: "CINEMA AT THE HEART OF A CREATIVE & SMART CITY",
@@ -38,11 +38,11 @@ export const translations = {
     track3Sub: "Get your exclusive pass to attend all conferences and workshops.",
     track3Btn: "Request my Badge",
     teamTitle: "Meet the Visionaries",
-    teamSub: "The driving forces behind CineZate and FICIAI 2026.",
+    teamSub: "The driving forces behind CineZate and FICIAI 2027.",
     team1Role: "Founder of CineZate & FICIAI",
     team2Role: "High Representative of CineZate, Head of Partnerships, & Advisory Board Member",
     team3Role: "Tech Lead / Digital Systems Specialist",
-    footerCopy: "© 2026 FICIAI Event. All rights reserved.",
+    footerCopy: "© 2027 FICIAI Event. All rights reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
     contact: "Contact Us",
@@ -67,7 +67,7 @@ export const translations = {
     about: {
       title: "What is FICIAI?",
       subtitle: "International Forum on Cinema, AI & Investment",
-      desc1: "Scheduled for November 6-8, 2026 in Ouarzazate, Morocco, FICIAI serves as the flagship event of the broader \"Ouarzazate Smart City of Cinema 2030\" program.",
+      desc1: "Scheduled for April 2-4, 2027 in Ouarzazate, Morocco, FICIAI serves as the flagship event of the broader \"Ouarzazate Smart City of Cinema 2030\" program.",
       desc2: "Our vision is to transition Ouarzazate into an integrated creative and technological hub. We position AI as a catalyst to augment human creativity, leveraging clean energy and local talent to build Africa's first cinematic smart city.",
       axesTitle: "Strategic Pillars",
       axesSubtitle: "The core foundations shaping the future of Ouarzazate.",
@@ -95,8 +95,8 @@ export const translations = {
       stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
-      badge: "Ouarzazate Smart City of Cinema 2030 • Nov 6–8, 2026 • Ouarzazate, Morocco",
-      title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2026)",
+      badge: "Ouarzazate Smart City of Cinema 2030 • April 2–4, 2027 • Ouarzazate, Morocco",
+      title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2027)",
       subtitle: "A global rendez-vous at the intersection of cinema, artificial intelligence, investment, cultural diplomacy, tourism, and innovation.",
       btnSponsor: "Become a Sponsor",
       btnDossier: "Download Sponsorship Dossier (PDF)",
@@ -107,7 +107,7 @@ export const translations = {
         { val: "+110", label: "Confirmed VIPs/Speakers" },
         { val: "UN Status", label: "ECOSOC (via UNACCC + GPEN)" }
       ],
-      whyTitle: "Why Sponsor FICIAI 2026?",
+      whyTitle: "Why Sponsor FICIAI 2027?",
       vpCards: [
         { title: "360° International Visibility", desc: "Brand display across digital platforms, stage screens, red carpet photocall, media kits, and post-forum deliverables (White Paper)." },
         { title: "Deal Flow & B2B Matchmaking", desc: "Direct contact with film funds like CineNow, studios, and investors." },
@@ -215,7 +215,7 @@ export const translations = {
       workflowSteps: [
         { step: "1", title: "Tier Selection" }, { step: "2", title: "Convention Signing" }, { step: "3", title: "Brand Kit & Proofs" }, { step: "4", title: "Production & Staging" }, { step: "5", title: "Event Execution" }, { step: "6", title: "Post-Event White Paper & Impact Report" }
       ],
-      formTitle: "Partner with FICIAI 2026",
+      formTitle: "Partner with FICIAI 2027",
       formDesc: "Complete the application form below to register your organization's interest. Our partnerships team will contact you to finalize your tier selection.",
       formAppTitle: "Partnership Application",
       formAppReq: "All fields marked with an asterisk (*) are required.",
@@ -237,7 +237,7 @@ export const translations = {
       formGoals: "Message / Strategic Goals",
       formGoalsPlaceholder: "Specify your partnership goals, requirements, or relevant event details...",
       formSubmit: "Submit Application",
-      formDisclaimer: "Your data is handled confidentially in accordance with FICIAI 2026 regulations.",
+      formDisclaimer: "Your data is handled confidentially in accordance with FICIAI 2027 regulations.",
       formSuccess: "Application submitted successfully!",
       adminOrgTitle: "Official Organizer",
       adminOrgVal: "Association CineZate",
@@ -248,8 +248,8 @@ export const translations = {
       adminRib: "RIB"
     },
     badgePage: {
-      heroBadge: "Official Accreditation & Ticketing • FICIAI 2026 • Nov 6–8, 2026 • Ouarzazate, Morocco",
-      heroTitle: "Reserve your Badge & Accreditation for FICIAI 2026",
+      heroBadge: "Official Accreditation & Ticketing • FICIAI 2027 • April 2–4, 2027 • Ouarzazate, Morocco",
+      heroTitle: "Reserve your Badge & Accreditation for FICIAI 2027",
       heroSubtitle: "Access cutting-edge conferences, international masterclasses, the Cinema Village, and high-level B2B networking in Ouarzazate.",
       btnChoose: "Choose my Pass",
       btnForm: "Registration Form",
@@ -281,13 +281,13 @@ export const translations = {
           highlight: true,
           tag: "Recommended",
           perks: [
-            "VIP Cinema Heritage Tour on Nov 6 included (1,500 MAD value)",
+            "VIP Cinema Heritage Tour on April 2 included (1,500 MAD value)",
             "Priority access to all keynotes and masterclasses",
             "Access to the VIP Lounge & exclusive networking room",
-            "Networking lunches included (Nov 7 & 8)",
+            "Networking lunches included (April 3 & 4)",
             "Invitation to Gala Dinner & Cinema Legacy Awards",
             "Reserved front-row seating across all auditoriums",
-            "Direct B2B Matchmaking on the FICIAI 2026 mobile app"
+            "Direct B2B Matchmaking on the FICIAI 2027 mobile app"
           ],
           btnText: "Book my VIP Pass"
         },
@@ -363,7 +363,7 @@ export const translations = {
       formPhonePlaceholder: "e.g. +212 6 00 00 00 00",
       formS3: "03. Pass Selection & Options",
       formBadgeSelect: "Selected Pass / Badge",
-      formTourAddonTitle: "Exclusive Option • VIP Cinema Heritage & Culture Tour (Nov 6)",
+      formTourAddonTitle: "Exclusive Option • VIP Cinema Heritage & Culture Tour (April 2)",
       formTourIncludedVip: "✅ Included automatically with your VIP Pass (1,500 MAD Value — No extra cost)",
       formTourAddonLabel: "Add the VIP Cinema Heritage & Culture Tour (+1,500 MAD)",
       formTourAddonSub: "Full-day VIP guided journey: Atlas Studios, CLA Studios, Kasbah Taourirt, Aït Ben Haddou (UNESCO), traditional lunch & private VIP transfers.",
@@ -372,14 +372,14 @@ export const translations = {
       formMessagePlaceholder: "Special assistance, networking goals, press credentials...",
       formSubmit: "Submit my Registration",
       formSubmitting: "Registering...",
-      formDisclaimer: "Your information is treated confidentially and used solely for issuing your FICIAI 2026 accreditation.",
+      formDisclaimer: "Your information is treated confidentially and used solely for issuing your FICIAI 2027 accreditation.",
       formSuccess: "Your badge request has been successfully submitted! A confirmation receipt has been sent to your email.",
       vipHeritageProgram: {
-        badge: "Exclusive VIP Experience • Nov 6, 2026",
+        badge: "Exclusive VIP Experience • April 2, 2027",
         title: "VIP Program — Cinema Heritage & Culture",
         subtitle: "An immersive journey across Ouarzazate's legendary movie studios, historic kasbahs, and UNESCO World Heritage sites.",
         dateLabel: "Date",
-        dateVal: "November 6, 2026",
+        dateVal: "April 2, 2027",
         priceLabel: "Tariff",
         priceVal: "1,500 MAD",
         priceNote: "Included for VIP Pass holders • Optional at 1,500 MAD for Visitor & Speaker passes",
@@ -419,7 +419,7 @@ export const translations = {
       }
     },
     standPage: {
-      heroBadge: "Cinema Village • FICIAI 2026 • Nov 6–8, 2026 • Palais des Congrès, Ouarzazate",
+      heroBadge: "Cinema Village • FICIAI 2027 • April 2–4, 2027 • Palais des Congrès, Ouarzazate",
       heroTitle: "Book your Exhibition Space at the Cinema Village",
       heroSubtitle: "Showcase your innovations, products, and services at the premier international gathering of cinema, artificial intelligence, and investment in Africa.",
       btnChoose: "Choose my Booth",
@@ -506,17 +506,17 @@ export const translations = {
       formMessagePlaceholder: "Custom power wattage, screen installations, virtual production gear...",
       formSubmit: "Submit Exhibition Request",
       formSubmitting: "Submitting...",
-      formDisclaimer: "Your reservation request will be validated by the FICIAI 2026 organizing committee. An official placement agreement will be issued.",
+      formDisclaimer: "Your reservation request will be validated by the FICIAI 2027 organizing committee. An official placement agreement will be issued.",
       formSuccess: "Your booth reservation has been registered successfully! Our team will contact you shortly to confirm your location."
     },
     programPage: {
-      heroBadge: "Official Schedule • FICIAI 2026 • Nov 6–8, 2026",
+      heroBadge: "Official Schedule • FICIAI 2027 • April 2–4, 2027",
       heroTitle: "Forum Program & Master Schedule",
       heroSubtitle: "Discover the 3-day schedule blending international high-level keynotes, AI masterclasses, Cinema Village showcases, and the exclusive Heritage & Studios tour.",
       daysTab: [
-        { id: "day1", title: "Day 1 — Nov 6", subtitle: "Heritage, Studios & VIP Welcome", badge: "Special Heritage Day" },
-        { id: "day2", title: "Day 2 — Nov 7", subtitle: "Conferences, GenAI & Masterclasses", badge: "Innovation & Tech" },
-        { id: "day3", title: "Day 3 — Nov 8", subtitle: "Cinema Village, Pitch Sessions & Closing Gala", badge: "Business & Gala" }
+        { id: "day1", title: "Day 1 — April 2", subtitle: "Heritage, Studios & VIP Welcome", badge: "Special Heritage Day" },
+        { id: "day2", title: "Day 2 — April 3", subtitle: "Conferences, GenAI & Masterclasses", badge: "Innovation & Tech" },
+        { id: "day3", title: "Day 3 — April 4", subtitle: "Cinema Village, Pitch Sessions & Closing Gala", badge: "Business & Gala" }
       ],
       day2Schedule: [
         { time: "09:00", title: "Official Opening Ceremony", desc: "Keynote speeches by institutional partners, UNESCO delegates, and CineZate board." },
@@ -540,7 +540,7 @@ export const translations = {
     speakersPage: {
       heroBadge: "Distinguished Speakers • 110+ Visionaries & Experts",
       heroTitle: "Meet the Speakers",
-      heroSubtitle: "Explore the filmmakers, AI engineers, studio chiefs, and global dignitaries taking the stage at FICIAI 2026.",
+      heroSubtitle: "Explore the filmmakers, AI engineers, studio chiefs, and global dignitaries taking the stage at FICIAI 2027.",
       categoriesTitle: "Thematic Speaker Tracks",
       categories: [
         { title: "Cinema & Directing", count: "35+ Speakers", desc: "Internationally acclaimed directors, cinematographers, and line producers." },
@@ -551,7 +551,7 @@ export const translations = {
       guestHonourTitle: "Guest of Honour Delegation",
       guestHonourDesc: "India — Celebrating international creative exchanges, Bollywood-Ouarzazate co-productions, and next-gen VFX collaboration.",
       callTitle: "Call for Speakers & Panelists",
-      callSub: "Are you a filmmaker, researcher, or tech innovator eager to present at FICIAI 2026?",
+      callSub: "Are you a filmmaker, researcher, or tech innovator eager to present at FICIAI 2027?",
       callBtn: "Apply for Speaker Accreditation"
     }
   },
@@ -567,7 +567,7 @@ export const translations = {
       breadcrumbHome: "Accueil" 
     },
     register: "Manifester son intérêt",
-    date: "6-8 Novembre, 2026",
+    date: "2-4 Avril, 2027",
     location: "Ouarzazate, Maroc",
     heroTitle1: "OUARZAZATE 2030,",
     heroTitle2: "LE CINÉMA AU CŒUR D’UNE VILLE CRÉATIVE ET INTELLIGENTE",
@@ -592,11 +592,11 @@ export const translations = {
     track3Sub: "Obtenez votre pass exclusif pour participer aux conférences et ateliers.",
     track3Btn: "Demander mon Badge",
     teamTitle: "Rencontrez les Visionnaires",
-    teamSub: "La force motrice derrière CineZate et FICIAI 2026.",
+    teamSub: "La force motrice derrière CineZate et FICIAI 2027.",
     team1Role: "Fondateur de CineZate & FICIAI",
     team2Role: "Haut Représentant de l'Association CineZate, Chargé des Partenariats, Membre du Conseil d'Orientation",
     team3Role: "Tech Lead / Spécialiste des Systèmes Numériques",
-    footerCopy: "© 2026 Événement FICIAI. Tous droits réservés.",
+    footerCopy: "© 2027 Événement FICIAI. Tous droits réservés.",
     privacy: "Politique de Confidentialité",
     terms: "Conditions d'Utilisation",
     contact: "Nous Contacter",
@@ -621,7 +621,7 @@ export const translations = {
     about: {
       title: "Qu'est-ce que le FICIAI ?",
       subtitle: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement",
-      desc1: "Prévu du 6 au 8 novembre 2026 à Ouarzazate, au Maroc, le FICIAI est l'événement phare du grand programme \"Ouarzazate Smart City of Cinema 2030\".",
+      desc1: "Prévu du 2 au 4 avril 2027 à Ouarzazate, au Maroc, le FICIAI est l'événement phare du grand programme \"Ouarzazate Smart City of Cinema 2030\".",
       desc2: "Notre vision est de transformer Ouarzazate en un hub créatif et technologique intégré. L'IA y est positionnée comme un catalyseur pour augmenter la créativité humaine, en s'appuyant sur l'énergie propre et les talents locaux pour bâtir la première smart city cinématographique d'Afrique.",
       axesTitle: "Piliers Stratégiques",
       axesSubtitle: "Les fondations au cœur de l'avenir d'Ouarzazate.",
@@ -649,8 +649,8 @@ export const translations = {
       stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
-      badge: "Ouarzazate Smart City of Cinema 2030 • 6–8 Nov, 2026 • Ouarzazate, Maroc",
-      title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2026)",
+      badge: "Ouarzazate Smart City of Cinema 2030 • 2–4 Avril, 2027 • Ouarzazate, Maroc",
+      title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2027)",
       subtitle: "Un rendez-vous mondial au croisement du cinéma, de l'intelligence artificielle, de l'investissement, de la diplomatie culturelle, du tourisme et de l'innovation.",
       btnSponsor: "Devenir Sponsor",
       btnDossier: "Télécharger le Dossier de Sponsoring (PDF)",
@@ -661,7 +661,7 @@ export const translations = {
         { val: "+110", label: "VIPs/Intervenants Confirmés" },
         { val: "Statut ONU", label: "ECOSOC (via UNACCC + GPEN)" }
       ],
-      whyTitle: "Pourquoi Sponsoriser le FICIAI 2026 ?",
+      whyTitle: "Pourquoi Sponsoriser le FICIAI 2027 ?",
       vpCards: [
         { title: "Visibilité Internationale 360°", desc: "Affichage de la marque sur les plateformes numériques, écrans de scène, photocall tapis rouge, kits médias et livrables post-forum (Livre Blanc)." },
         { title: "Deal Flow & Matchmaking B2B", desc: "Contact direct avec des fonds cinématographiques comme CineNow, studios et investisseurs." },
@@ -769,7 +769,7 @@ export const translations = {
       workflowSteps: [
         { step: "1", title: "Sélection du Pack" }, { step: "2", title: "Signature de Convention" }, { step: "3", title: "Kit Marque & Épreuves" }, { step: "4", title: "Production & Mise en Scène" }, { step: "5", title: "Exécution de l'Événement" }, { step: "6", title: "Livre Blanc Post-Événement & Rapport d'Impact" }
       ],
-      formTitle: "Devenez Partenaire du FICIAI 2026",
+      formTitle: "Devenez Partenaire du FICIAI 2027",
       formDesc: "Remplissez le formulaire de demande ci-dessous pour enregistrer l'intérêt de votre organisation. Notre équipe des partenariats vous contactera pour finaliser la sélection de votre pack.",
       formAppTitle: "Demande de Partenariat",
       formAppReq: "Tous les champs marqués d'un astérisque (*) sont obligatoires.",
@@ -791,7 +791,7 @@ export const translations = {
       formGoals: "Message / Remarques complémentaires",
       formGoalsPlaceholder: "Précisez vos objectifs de partenariat, besoins logistiques ou informations utiles...",
       formSubmit: "Soumettre ma Demande",
-      formDisclaimer: "Vos données sont traitées de manière confidentielle conformément au règlement du FICIAI 2026.",
+      formDisclaimer: "Vos données sont traitées de manière confidentielle conformément au règlement du FICIAI 2027.",
       formSuccess: "Demande enregistrée avec succès !",
       adminOrgTitle: "Organisateur Officiel",
       adminOrgVal: "Association CineZate",
@@ -802,8 +802,8 @@ export const translations = {
       adminRib: "RIB"
     },
     badgePage: {
-      heroBadge: "Accréditations & Billetterie Officielle • FICIAI 2026 • 6–8 Nov 2026 • Ouarzazate, Maroc",
-      heroTitle: "Réservez votre Badge & Accréditation FICIAI 2026",
+      heroBadge: "Accréditations & Billetterie Officielle • FICIAI 2027 • 2–4 Avril 2027 • Ouarzazate, Maroc",
+      heroTitle: "Réservez votre Badge & Accréditation FICIAI 2027",
       heroSubtitle: "Accédez aux conférences de pointe, masterclasses internationales, au Village du Cinéma et aux opportunités de networking B2B à Ouarzazate.",
       btnChoose: "Choisir ma Formule",
       btnForm: "Formulaire d'Enregistrement",
@@ -835,13 +835,13 @@ export const translations = {
           highlight: true,
           tag: "Recommandé",
           perks: [
-            "Programme VIP Patrimoine & Studios du 6 nov. inclus (valeur 1 500 MAD)",
+            "Programme VIP Patrimoine & Studios du 2 avril inclus (valeur 1 500 MAD)",
             "Accès prioritaire à toutes les conférences et masterclasses",
             "Accès à l'Espace VIP & salon de networking exclusif",
-            "Déjeuners networking inclus (7 & 8 novembre)",
+            "Déjeuners networking inclus (3 & 4 avril)",
             "Invitation à la Soirée de Gala & Cinema Legacy Awards",
             "Placement réservé aux premiers rangs des auditoriums",
-            "Matchmaking B2B via l'application mobile FICIAI 2026"
+            "Matchmaking B2B via l'application mobile FICIAI 2027"
           ],
           btnText: "Réserver mon Pass VIP"
         },
@@ -917,7 +917,7 @@ export const translations = {
       formPhonePlaceholder: "ex. +212 6 00 00 00 00",
       formS3: "03. Choix du Badge & Options",
       formBadgeSelect: "Pass / Badge Sélectionné",
-      formTourAddonTitle: "Option Exclusive • Programme VIP Patrimoine Cinéma & Culture (6 Nov)",
+      formTourAddonTitle: "Option Exclusive • Programme VIP Patrimoine Cinéma & Culture (2 Avril)",
       formTourIncludedVip: "✅ Inclus d'office avec votre Pass VIP (Valeur 1 500 MAD — Sans supplément)",
       formTourAddonLabel: "Ajouter le Programme VIP Patrimoine Cinéma & Culture (+1 500 MAD)",
       formTourAddonSub: "Journée VIP guidée : Studios Atlas, Studios CLA, Kasbah Taourirt, Aït Ben Haddou (UNESCO), déjeuner gastronomique & transferts privés VIP.",
@@ -926,14 +926,14 @@ export const translations = {
       formMessagePlaceholder: "Besoins spécifiques, objectifs de networking, accréditation presse...",
       formSubmit: "Valider mon Inscription",
       formSubmitting: "Enregistrement en cours...",
-      formDisclaimer: "Vos informations sont traitées de manière confidentielle et utilisées uniquement dans le cadre de l'organisation du FICIAI 2026.",
+      formDisclaimer: "Vos informations sont traitées de manière confidentielle et utilisées uniquement dans le cadre de l'organisation du FICIAI 2027.",
       formSuccess: "Votre demande de badge a été enregistrée avec succès ! Un récapitulatif a été envoyé à votre adresse email.",
       vipHeritageProgram: {
-        badge: "Expérience Exclusive • 6 Nov 2026",
+        badge: "Expérience Exclusive • 2 Avril 2027",
         title: "Programme VIP — Patrimoine Cinéma & Culture",
         subtitle: "Une immersion VIP d'exception au cœur des studios mythiques, kasbahs historiques et sites classés UNESCO de Ouarzazate.",
         dateLabel: "Date",
-        dateVal: "6 Novembre 2026",
+        dateVal: "2 Avril 2027",
         priceLabel: "Tarif",
         priceVal: "1 500 MAD",
         priceNote: "Inclus d'office avec le Pass VIP • Optionnel à 1 500 MAD pour les Pass Visiteurs & Intervenants",
@@ -973,7 +973,7 @@ export const translations = {
       }
     },
     standPage: {
-      heroBadge: "Village du Cinéma • FICIAI 2026 • 6–8 Nov 2026 • Palais des Congrès, Ouarzazate",
+      heroBadge: "Village du Cinéma • FICIAI 2027 • 2–4 Avril 2027 • Palais des Congrès, Ouarzazate",
       heroTitle: "Réservez votre Espace d'Exposition au Village du Cinéma",
       heroSubtitle: "Exposez vos innovations, produits et services au cœur du plus grand rassemblement international du cinéma, de l'intelligence artificielle et de l'investissement en Afrique.",
       btnChoose: "Choisir mon Stand",
@@ -1007,7 +1007,7 @@ export const translations = {
           highlight: true,
           tag: "Recommandé",
           equipment: "Cloisons modulaires, sol moquetté, éclairage LED, prises électriques, enseigne standard",
-          access: "3 Badges exposants inclus + référencement catalogue & app FICIAI 2026",
+          access: "3 Badges exposants inclus + référencement catalogue & app FICIAI 2027",
           btnText: "Sélectionner la Formule 12 m²"
         },
         {
@@ -1060,17 +1060,17 @@ export const translations = {
       formMessagePlaceholder: "Puissance électrique supplémentaire, installation d'écrans, matériel spécifique...",
       formSubmit: "Envoyer ma Demande de Stand",
       formSubmitting: "Envoi en cours...",
-      formDisclaimer: "Votre demande sera instruite par le comité d'organisation du FICIAI 2026. Une convention d'emplacement vous sera transmise après validation.",
+      formDisclaimer: "Votre demande sera instruite par le comité d'organisation du FICIAI 2027. Une convention d'emplacement vous sera transmise après validation.",
       formSuccess: "Votre demande d'espace d'exposition a été enregistrée avec succès ! Notre équipe vous contactera très rapidement pour valider votre emplacement."
     },
     programPage: {
-      heroBadge: "Programme Officiel • FICIAI 2026 • 6–8 Nov 2026",
+      heroBadge: "Programme Officiel • FICIAI 2027 • 2–4 Avril 2027",
       heroTitle: "Programme & Déroulé du Forum",
       heroSubtitle: "Découvrez le planning complet des 3 journées mêlant conférences internationales, masterclasses IA, Village du Cinéma et parcours d'exception Patrimoine & Studios.",
       daysTab: [
-        { id: "day1", title: "Jour 1 — 6 Nov", subtitle: "Patrimoine, Studios & Accueil VIP", badge: "Journée Patrimoine" },
-        { id: "day2", title: "Jour 2 — 7 Nov", subtitle: "Conférences, IA Générative & Masterclasses", badge: "Innovation & Tech" },
-        { id: "day3", title: "Jour 3 — 8 Nov", subtitle: "Village du Cinéma, Pitching & Soirée de Clôture", badge: "Business & Gala" }
+        { id: "day1", title: "Jour 1 — 2 Avril", subtitle: "Patrimoine, Studios & Accueil VIP", badge: "Journée Patrimoine" },
+        { id: "day2", title: "Jour 2 — 3 Avril", subtitle: "Conférences, IA Générative & Masterclasses", badge: "Innovation & Tech" },
+        { id: "day3", title: "Jour 3 — 4 Avril", subtitle: "Village du Cinéma, Pitching & Soirée de Clôture", badge: "Business & Gala" }
       ],
       day2Schedule: [
         { time: "09h00", title: "Cérémonie d'Ouverture Officielle", desc: "Allocutions inaugurales des partenaires institutionnels, délégués UNESCO et du conseil CineZate." },
@@ -1094,7 +1094,7 @@ export const translations = {
     speakersPage: {
       heroBadge: "Intervenants Confirmés • +110 Experts & Personnalités",
       heroTitle: "Les Intervenants",
-      heroSubtitle: "Découvrez les cinéastes, chercheurs en IA, dirigeants de studios et personnalités institutionnelles qui interviennent au FICIAI 2026.",
+      heroSubtitle: "Découvrez les cinéastes, chercheurs en IA, dirigeants de studios et personnalités institutionnelles qui interviennent au FICIAI 2027.",
       categoriesTitle: "Pôles thématiques des intervenants",
       categories: [
         { title: "Cinéma & Réalisation", count: "+35 Intervenants", desc: "Réalisateurs internationaux, directeurs de la photographie et producteurs de renom." },
@@ -1105,7 +1105,7 @@ export const translations = {
       guestHonourTitle: "Délégation Invité d'Honneur",
       guestHonourDesc: "Inde — Mise à l'honneur des coopérations cinématographiques internationales, co-productions et technologies VFX de pointe.",
       callTitle: "Appel à Interventions & Conférenciers",
-      callSub: "Vous êtes cinéaste, chercheur, entrepreneur ou innovateur tech et souhaitez intervenir au FICIAI 2026 ?",
+      callSub: "Vous êtes cinéaste, chercheur, entrepreneur ou innovateur tech et souhaitez intervenir au FICIAI 2027 ?",
       callBtn: "Demander une accréditation Intervenant"
     }
   }

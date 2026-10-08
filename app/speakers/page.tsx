@@ -451,7 +451,7 @@ export default function SpeakersPage() {
             boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
           }}>
             <div className="label-badge" style={{ background: "rgba(184, 67, 47, 0.2)", borderColor: "rgba(184, 67, 47, 0.4)", color: "#F87171", marginBottom: "14px" }}>
-              <span>FICIAI 2026 • ACCRÉDITATION OFFICIELLE</span>
+              <span>FICIAI 2027 • ACCRÉDITATION OFFICIELLE</span>
             </div>
             <h3 style={{ fontSize: "clamp(20px, 2.6vw, 28px)", fontWeight: 700, margin: "0 0 10px 0" }}>
               {sp.callTitle}

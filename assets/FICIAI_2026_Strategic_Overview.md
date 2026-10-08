@@ -1,10 +1,10 @@
-# FICIAI 2026: Executive Overview & Strategic Synthesis
+# FICIAI 2027: Executive Overview & Strategic Synthesis
 
 ## 1. What is FICIAI?
 
 **FICIAI** stands for the **Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement** (*International Forum on Cinema, AI and Investment*).
 
-It is an international forum scheduled to take place from **November 6 to November 8, 2026**, in **Ouarzazate, Morocco**. FICIAI serves as the annual flagship event of the broader territorial transformation program: **"Ouarzazate Smart City of Cinema 2030" (OSC 2030)**.
+It is an international forum scheduled to take place from **April 2 to April 4, 2027**, in **Ouarzazate, Morocco**. FICIAI serves as the annual flagship event of the broader territorial transformation program: **"Ouarzazate Smart City of Cinema 2030" (OSC 2030)**.
 
 ---
 
@@ -39,7 +39,7 @@ The initiative is designed to transition Ouarzazate from being solely an iconic 
 
 ## 5. Expected Outcomes & Deliverables
 
-* **Déclaration de Ouarzazate 2026:** Adoption of the foundational charter for OSC 2030.
+* **Déclaration de Ouarzazate 2027:** Adoption of the foundational charter for OSC 2030.
 * **Operational Roadmap 2026–2030:** Execution framework across 22 structural projects (urban scenography, smart city technology, talent academies, industrial production hubs, lifestyle appeal).
 * **Livre Blanc Ouarzazate 2030:** A post-forum strategic white paper for stakeholders and policymakers.
 * **Cinema Legacy Awards & Recognition:** Official honors dedicated to behind-the-scenes film workers (*"Héros de l’Ombre"*).
@@ -47,7 +47,7 @@ The initiative is designed to transition Ouarzazate from being solely an iconic 
 
 ---
 
-## 6. Official Program Highlights (Nov 7–8, 2026)
+## 6. Official Program Highlights (April 3–4, 2027)
 
 ### Main Plenary Panels
 * **P1:** Soft Power & Cultural Diplomacy

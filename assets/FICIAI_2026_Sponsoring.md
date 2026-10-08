@@ -1,17 +1,17 @@
-# FICIAI 2026 — Sponsoring & Partnership Landing Page
+# FICIAI 2027 — Sponsoring & Partnership Landing Page
 
 ---
 
 ## Hero Section
 
 ### Ouarzazate Smart City of Cinema 2030
-# Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2026)
+# Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2027)
 
-> **November 6–8, 2026 • Palais des Congrès & Musée du Cinéma — Ouarzazate, Morocco**  
+> **April 2–4, 2027 • Palais des Congrès & Musée du Cinéma — Ouarzazate, Morocco**  
 > *Under the High Patronage of International Cultural, Diplomatic, and Cinematic Institutions*
 
 #### **Empowering Human Storytelling Through Artificial Intelligence & Global Capital**
-FICIAI 2026 converges global studio executives, leading AI researchers, and institutional investors to establish Africa’s first cinematic smart city. Hosted by Association CineZate, the forum bridges Ouarzazate's historic filmmaking legacy with next-generation virtual production, ethical AI workflows, and cross-border co-production funding.
+FICIAI 2027 converges global studio executives, leading AI researchers, and institutional investors to establish Africa’s first cinematic smart city. Hosted by Association CineZate, the forum bridges Ouarzazate's historic filmmaking legacy with next-generation virtual production, ethical AI workflows, and cross-border co-production funding.
 
 **[ Download Sponsorship Dossier ]** &nbsp;&nbsp;&nbsp;&nbsp; **[ Become a Sponsor ]** &nbsp;&nbsp;&nbsp;&nbsp; **[ Book an Exhibition Booth ]**
 
@@ -25,7 +25,7 @@ FICIAI 2026 converges global studio executives, leading AI researchers, and inst
 
 ---
 
-## Why Sponsor FICIAI 2026?
+## Why Sponsor FICIAI 2027?
 
 * **360° International Visibility:** Brand display across digital platforms, stage screens, red carpet photocall, press collaterals, and post-forum deliverables (*Livre Blanc 2030*).
 * **Exclusive Strategic Access:** Direct one-on-one B2B matchmaking with international film funds (e.g., CineNow $150M fund), studio heads, and venture investors.
@@ -98,7 +98,7 @@ A dedicated 2,000 m² grand pavilion marquee located adjacent to the Palais des 
 * **Phone / WhatsApp:** +212 6 65 65 89 59 / +212 6 11 35 80 61
 * **Email:** contact@cinezate.com
 * **Official Website:** [www.cinezate.com](http://www.cinezate.com)
-* **Official App:** *FICIAI 2026* (App Store & Google Play)
+* **Official App:** *FICIAI 2027* (App Store & Google Play)
 
 ### Banking Details (Al Barid Bank)
 * **Account N°:** `0/00013832270`

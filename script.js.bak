@@ -1,5 +1,5 @@
-// Countdown Logic for November 6, 2026
-const targetDate = new Date('2026-11-06T00:00:00').getTime();
+// Countdown Logic for April 2, 2027
+const targetDate = new Date('2027-04-02T00:00:00').getTime();
 const startDate = new Date('2024-01-01T00:00:00').getTime(); // Using a fixed start date to calculate progress
 
 function updateCountdown() {
