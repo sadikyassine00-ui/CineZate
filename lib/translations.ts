@@ -512,10 +512,11 @@ export const translations = {
     programPage: {
       heroBadge: "Official Schedule • FICIAI 2027 • April 3–4, 2027",
       heroTitle: "Forum Program & Master Schedule",
-      heroSubtitle: "Discover the official 2-day schedule for the FICIAI 2027 forum in Ouarzazate.",
+      heroSubtitle: "Discover the official 2-day schedule and parallel activities for the FICIAI 2027 forum in Ouarzazate.",
       daysTab: [
         { id: "day1", title: "Saturday, April 3, 2027", subtitle: "Day 1", badge: "Day 1" },
-        { id: "day2", title: "Sunday, April 4, 2027", subtitle: "Day 2", badge: "Day 2" }
+        { id: "day2", title: "Sunday, April 4, 2027", subtitle: "Day 2", badge: "Day 2" },
+        { id: "parallel", title: "Parallel Activities", subtitle: "Masterclasses, Workshops & Competitions", badge: "Ongoing" }
       ],
       day1Schedule: [
         { time: "08:00–09:00", title: "Official Welcome" },
@@ -538,6 +539,52 @@ export const translations = {
         { time: "16:15–17:15", title: "Strategic Roundtable" },
         { time: "17:15–18:00", title: "Declaration of Ouarzazate 2027" },
         { time: "18:00–19:00", title: "Cinema Legacy Awards" }
+      ],
+      parallelActivities: [
+        {
+          badge: "Hybrid Stage & Competition",
+          title: "Competition, Hybrid Stage: Classic Cinema & Artificial Intelligence",
+          desc: "From live shooting to augmented cinema by Mustapha Zaouini and Brahim Chkiri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « Producing International Films in Morocco »",
+          desc: "With Éric Atlan"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « From Scriptwriting to Production »",
+          desc: "With Brahim Chkiri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « Cinema, Life Journey & Transmission to New Generations »",
+          desc: "With Samy Naceri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « True or False in the Age of AI »",
+          desc: "With Samira El Gadir"
+        },
+        {
+          badge: "Keynote",
+          title: "Keynote « The Audacity of Optimism »",
+          desc: "By Michel Poulaert"
+        },
+        {
+          badge: "Challenge & Jury",
+          title: "Hybrid Cinema & AI Challenge",
+          desc: "Jury: Jake Seal, Mini Sarma, Éric Atlan, Brahim Chkiri, Mustapha Zaouini and Nasser Kettani"
+        },
+        {
+          badge: "Innovation Hub",
+          title: "Entrepreneurship and Innovation Hub",
+          desc: "Coordinated by Mohamed Atta"
+        },
+        {
+          badge: "Contest",
+          title: "TIKI Influencer Contest"
+        }
       ],
       ctaTitle: "Join us at the Forefront of Cinema & Technology",
       ctaSub: "Book your pass or turnkey exhibition space to participate in the forum.",
@@ -1072,10 +1119,11 @@ export const translations = {
     programPage: {
       heroBadge: "Programme Officiel • FICIAI 2027 • 3–4 Avril 2027",
       heroTitle: "Programme & Déroulé du Forum",
-      heroSubtitle: "Découvrez le planning officiel des 2 journées du forum FICIAI 2027 à Ouarzazate.",
+      heroSubtitle: "Découvrez le planning officiel des 2 journées et les activités parallèles du forum FICIAI 2027 à Ouarzazate.",
       daysTab: [
         { id: "day1", title: "Samedi 3 avril 2027", subtitle: "Jour 1", badge: "Jour 1" },
-        { id: "day2", title: "Dimanche 4 avril 2027", subtitle: "Jour 2", badge: "Jour 2" }
+        { id: "day2", title: "Dimanche 4 avril 2027", subtitle: "Jour 2", badge: "Jour 2" },
+        { id: "parallel", title: "Activités Parallèles", subtitle: "Masterclasses, Ateliers & Compétitions", badge: "En Continu" }
       ],
       day1Schedule: [
         { time: "08:00–09:00", title: "Accueil officiel" },
@@ -1098,6 +1146,52 @@ export const translations = {
         { time: "16:15–17:15", title: "Table ronde stratégique" },
         { time: "17:15–18:00", title: "Déclaration de Ouarzazate 2027" },
         { time: "18:00–19:00", title: "Cinema Legacy Awards" }
+      ],
+      parallelActivities: [
+        {
+          badge: "Plateau Hybride & Compétition",
+          title: "Compétition, Plateau Hybride : Cinéma classique & Intelligence artificielle",
+          desc: "Du tournage réel au cinéma augmenté par Mustapha Zaouini et Brahim Chkiri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « Produire des films internationaux au Maroc »",
+          desc: "Avec Éric Atlan"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « De l’écriture à la production »",
+          desc: "Avec Brahim Chkiri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « Le cinéma, le parcours de vie et la transmission aux nouvelles générations »",
+          desc: "Avec Samy Naceri"
+        },
+        {
+          badge: "Masterclass",
+          title: "Masterclass « Vrai ou faux à l’ère de l’IA »",
+          desc: "Avec Samira El Gadir"
+        },
+        {
+          badge: "Conférence",
+          title: "Conférence « L’audace de l’optimisme »",
+          desc: "Par Michel Poulaert"
+        },
+        {
+          badge: "Challenge & Jury",
+          title: "Hybrid Cinema & AI Challenge",
+          desc: "Jury : Jake Seal, Mini Sarma, Éric Atlan, Brahim Chkiri, Mustapha Zaouini et Nasser Kettani"
+        },
+        {
+          badge: "Espace Innovation",
+          title: "Espace entrepreneuriat et innovation",
+          desc: "Coordonné par Mohamed Atta"
+        },
+        {
+          badge: "Concours",
+          title: "Concours d’influenceurs TIKI"
+        }
       ],
       ctaTitle: "Participez au Grand Rendez-vous du Cinéma & de la Tech",
       ctaSub: "Réservez votre pass visiteur, pass VIP ou stand d'exposition dès aujourd'hui.",

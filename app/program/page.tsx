@@ -11,7 +11,7 @@ export default function ProgramPage() {
   const pp = t.programPage;
   const [activeTab, setActiveTab] = useState<string>("day1");
 
-  const currentSchedule = activeTab === "day1" ? pp.day1Schedule : pp.day2Schedule;
+  const currentSchedule = activeTab === "day2" ? pp.day2Schedule : pp.day1Schedule;
   const currentDay = pp.daysTab.find((d) => d.id === activeTab) || pp.daysTab[0];
 
   return (
@@ -37,8 +37,8 @@ export default function ProgramPage() {
         </FadeIn>
       </section>
 
-      {/* 2. DAY SELECTOR TABS */}
-      <section className="relative z-10" style={{ maxWidth: "980px", margin: "24px auto 0", padding: "0 16px" }}>
+      {/* 2. DAY & ACTIVITIES SELECTOR TABS */}
+      <section className="relative z-10" style={{ maxWidth: "1080px", margin: "24px auto 0", padding: "0 16px" }}>
         <FadeIn delay={0.1}>
           <div style={{ 
             display: "grid", 
@@ -94,7 +94,7 @@ export default function ProgramPage() {
           </div>
         </FadeIn>
 
-        {/* 3. TIMELINE FOR ACTIVE DAY */}
+        {/* 3. CONTENT AREA */}
         <FadeIn key={activeTab} delay={0.15}>
           <div className="feature-card" style={{ padding: "32px 28px", background: "rgba(255, 255, 255, 0.95)" }}>
             <div style={{ borderBottom: "1px solid var(--border)", paddingBottom: "16px", marginBottom: "26px" }}>
@@ -116,72 +116,136 @@ export default function ProgramPage() {
                 </span>
               </div>
               <p style={{ fontSize: "12.5px", color: "var(--text-secondary)", margin: "6px 0 0" }}>
-                Palais des Congrès de Ouarzazate • FICIAI 2027
+                {activeTab === "parallel" 
+                  ? "Palais des Congrès & Espaces Partenaires • Ouarzazate" 
+                  : "Palais des Congrès de Ouarzazate • FICIAI 2027"}
               </p>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "0", position: "relative" }}>
-              {currentSchedule.map((item, idx) => (
-                <div 
-                  key={idx} 
-                  style={{ 
-                    display: "grid", 
-                    gridTemplateColumns: "115px 1fr", 
-                    gap: "16px", 
-                    position: "relative",
-                    paddingBottom: idx === currentSchedule.length - 1 ? "0" : "24px"
-                  }}
-                >
-                  {/* Vertical connector line */}
-                  {idx !== currentSchedule.length - 1 && (
-                    <div style={{
-                      position: "absolute",
-                      left: "4px",
-                      top: "20px",
-                      bottom: "0",
-                      width: "2px",
-                      background: "linear-gradient(to bottom, #B8432F 0%, rgba(184, 67, 47, 0.15) 100%)",
-                      zIndex: 0
-                    }} />
-                  )}
+            {activeTab === "parallel" ? (
+              <div style={{ 
+                display: "grid", 
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
+                gap: "16px" 
+              }}>
+                {pp.parallelActivities.map((act, idx) => (
+                  <div 
+                    key={idx} 
+                    style={{ 
+                      padding: "20px 22px", 
+                      borderRadius: "12px", 
+                      border: "1px solid var(--border)", 
+                      background: "var(--surface)",
+                      display: "flex", 
+                      flexDirection: "column", 
+                      gap: "10px",
+                      transition: "all 0.2s ease"
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                      <span style={{ 
+                        fontSize: "10.5px", 
+                        fontFamily: "var(--font-jetbrains)", 
+                        fontWeight: 700, 
+                        textTransform: "uppercase", 
+                        letterSpacing: "0.8px", 
+                        color: "#B8432F", 
+                        background: "#FFF8F6", 
+                        border: "1px solid rgba(184, 67, 47, 0.25)", 
+                        padding: "3px 9px", 
+                        borderRadius: "6px" 
+                      }}>
+                        {act.badge}
+                      </span>
+                    </div>
 
-                  {/* Time + Dot */}
-                  <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", zIndex: 1 }}>
-                    <span style={{ 
-                      width: "10px", 
-                      height: "10px", 
-                      borderRadius: "50%", 
-                      background: "#B8432F", 
-                      marginTop: "4px", 
-                      flexShrink: 0,
-                      boxShadow: "0 0 0 3px #FDECE7"
-                    }} />
-                    <span style={{ 
-                      fontFamily: "var(--font-jetbrains)", 
-                      fontSize: "11.5px", 
-                      fontWeight: 700, 
-                      color: "#B8432F", 
-                      whiteSpace: "nowrap" 
-                    }}>
-                      {item.time}
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <div style={{ paddingLeft: "4px" }}>
                     <h3 style={{ 
-                      fontSize: "15px", 
+                      fontSize: "14.5px", 
                       fontWeight: 700, 
                       color: "var(--text-primary)", 
-                      margin: 0,
-                      lineHeight: 1.35
+                      margin: 0, 
+                      lineHeight: 1.4 
                     }}>
-                      {item.title}
+                      {act.title}
                     </h3>
+
+                    {act.desc && (
+                      <p style={{ 
+                        fontSize: "12.5px", 
+                        color: "var(--text-secondary)", 
+                        margin: 0, 
+                        lineHeight: 1.5 
+                      }}>
+                        {act.desc}
+                      </p>
+                    )}
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{ display: "flex", flexDirection: "column", gap: "0", position: "relative" }}>
+                {currentSchedule.map((item, idx) => (
+                  <div 
+                    key={idx} 
+                    style={{ 
+                      display: "grid", 
+                      gridTemplateColumns: "115px 1fr", 
+                      gap: "16px", 
+                      position: "relative",
+                      paddingBottom: idx === currentSchedule.length - 1 ? "0" : "24px"
+                    }}
+                  >
+                    {/* Vertical connector line */}
+                    {idx !== currentSchedule.length - 1 && (
+                      <div style={{
+                        position: "absolute",
+                        left: "4px",
+                        top: "20px",
+                        bottom: "0",
+                        width: "2px",
+                        background: "linear-gradient(to bottom, #B8432F 0%, rgba(184, 67, 47, 0.15) 100%)",
+                        zIndex: 0
+                      }} />
+                    )}
+
+                    {/* Time + Dot */}
+                    <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", zIndex: 1 }}>
+                      <span style={{ 
+                        width: "10px", 
+                        height: "10px", 
+                        borderRadius: "50%", 
+                        background: "#B8432F", 
+                        marginTop: "4px", 
+                        flexShrink: 0,
+                        boxShadow: "0 0 0 3px #FDECE7"
+                      }} />
+                      <span style={{ 
+                        fontFamily: "var(--font-jetbrains)", 
+                        fontSize: "11.5px", 
+                        fontWeight: 700, 
+                        color: "#B8432F", 
+                        whiteSpace: "nowrap" 
+                      }}>
+                        {item.time}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <div style={{ paddingLeft: "4px" }}>
+                      <h3 style={{ 
+                        fontSize: "15px", 
+                        fontWeight: 700, 
+                        color: "var(--text-primary)", 
+                        margin: 0,
+                        lineHeight: 1.35
+                      }}>
+                        {item.title}
+                      </h3>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </FadeIn>
 
