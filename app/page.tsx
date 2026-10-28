@@ -19,7 +19,7 @@ export default function Home() {
   const cardRef = useRef(null);
 
   useEffect(() => {
-    const targetDate = new Date("2027-04-02T09:00:00+01:00").getTime();
+    const targetDate = new Date("2027-04-03T08:00:00+01:00").getTime();
     const startDate = new Date("2026-01-01T00:00:00+01:00").getTime();
 
     const updateTimer = () => {

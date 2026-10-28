@@ -13,7 +13,7 @@ export const translations = {
       breadcrumbHome: "Home" 
     },
     register: "Register Interest",
-    date: "April 2-4, 2027",
+    date: "April 3-4, 2027",
     location: "Ouarzazate, Morocco",
     heroTitle1: "OUARZAZATE 2030,",
     heroTitle2: "CINEMA AT THE HEART OF A CREATIVE & SMART CITY",
@@ -67,7 +67,7 @@ export const translations = {
     about: {
       title: "What is FICIAI?",
       subtitle: "International Forum on Cinema, AI & Investment",
-      desc1: "Scheduled for April 2-4, 2027 in Ouarzazate, Morocco, FICIAI serves as the flagship event of the broader \"Ouarzazate Smart City of Cinema 2030\" program.",
+      desc1: "Scheduled for April 3-4, 2027 in Ouarzazate, Morocco, FICIAI serves as the flagship event of the broader \"Ouarzazate Smart City of Cinema 2030\" program.",
       desc2: "Our vision is to transition Ouarzazate into an integrated creative and technological hub. We position AI as a catalyst to augment human creativity, leveraging clean energy and local talent to build Africa's first cinematic smart city.",
       axesTitle: "Strategic Pillars",
       axesSubtitle: "The core foundations shaping the future of Ouarzazate.",
@@ -95,7 +95,7 @@ export const translations = {
       stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
-      badge: "Ouarzazate Smart City of Cinema 2030 • April 2–4, 2027 • Ouarzazate, Morocco",
+      badge: "Ouarzazate Smart City of Cinema 2030 • April 3–4, 2027 • Ouarzazate, Morocco",
       title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2027)",
       subtitle: "A global rendez-vous at the intersection of cinema, artificial intelligence, investment, cultural diplomacy, tourism, and innovation.",
       btnSponsor: "Become a Sponsor",
@@ -248,7 +248,7 @@ export const translations = {
       adminRib: "RIB"
     },
     badgePage: {
-      heroBadge: "Official Accreditation & Ticketing • FICIAI 2027 • April 2–4, 2027 • Ouarzazate, Morocco",
+      heroBadge: "Official Accreditation & Ticketing • FICIAI 2027 • April 3–4, 2027 • Ouarzazate, Morocco",
       heroTitle: "Reserve your Badge & Accreditation for FICIAI 2027",
       heroSubtitle: "Access cutting-edge conferences, international masterclasses, the Cinema Village, and high-level B2B networking in Ouarzazate.",
       btnChoose: "Choose my Pass",
@@ -419,7 +419,7 @@ export const translations = {
       }
     },
     standPage: {
-      heroBadge: "Cinema Village • FICIAI 2027 • April 2–4, 2027 • Palais des Congrès, Ouarzazate",
+      heroBadge: "Cinema Village • FICIAI 2027 • April 3–4, 2027 • Palais des Congrès, Ouarzazate",
       heroTitle: "Book your Exhibition Space at the Cinema Village",
       heroSubtitle: "Showcase your innovations, products, and services at the premier international gathering of cinema, artificial intelligence, and investment in Africa.",
       btnChoose: "Choose my Booth",
@@ -510,31 +510,37 @@ export const translations = {
       formSuccess: "Your booth reservation has been registered successfully! Our team will contact you shortly to confirm your location."
     },
     programPage: {
-      heroBadge: "Official Schedule • FICIAI 2027 • April 2–4, 2027",
+      heroBadge: "Official Schedule • FICIAI 2027 • April 3–4, 2027",
       heroTitle: "Forum Program & Master Schedule",
-      heroSubtitle: "Discover the 3-day schedule blending international high-level keynotes, AI masterclasses, Cinema Village showcases, and the exclusive Heritage & Studios tour.",
+      heroSubtitle: "Discover the official 2-day schedule for the FICIAI 2027 forum in Ouarzazate.",
       daysTab: [
-        { id: "day1", title: "Day 1 — April 2", subtitle: "Heritage, Studios & VIP Welcome", badge: "Special Heritage Day" },
-        { id: "day2", title: "Day 2 — April 3", subtitle: "Conferences, GenAI & Masterclasses", badge: "Innovation & Tech" },
-        { id: "day3", title: "Day 3 — April 4", subtitle: "Cinema Village, Pitch Sessions & Closing Gala", badge: "Business & Gala" }
+        { id: "day1", title: "Saturday, April 3, 2027", subtitle: "Day 1", badge: "Day 1" },
+        { id: "day2", title: "Sunday, April 4, 2027", subtitle: "Day 2", badge: "Day 2" }
+      ],
+      day1Schedule: [
+        { time: "08:00–09:00", title: "Official Welcome" },
+        { time: "09:00–10:15", title: "Opening Ceremony" },
+        { time: "10:30–11:45", title: "P1 – Soft Power & Diplomacy" },
+        { time: "12:00–13:15", title: "P2 – CSO 2030 : Vision Ouarzazate Smart City Of Cinema" },
+        { time: "13:15–14:45", title: "Networking Lunch" },
+        { time: "14:45–16:00", title: "P3 – AI and Cinema" },
+        { time: "16:15–17:30", title: "P4 – New Co-production Pathways" },
+        { time: "20:00–23:00", title: "Gala Evening" }
       ],
       day2Schedule: [
-        { time: "09:00", title: "Official Opening Ceremony", desc: "Keynote speeches by institutional partners, UNESCO delegates, and CineZate board." },
-        { time: "10:30", title: "Panel 1: Artificial Intelligence in Filmmaking", desc: "Generative AI, procedural worlds, and real-time virtual production revolution." },
-        { time: "12:30", title: "Networking Lunch & B2B Matchmaking", desc: "Business meetings between investors, studio executives, and tech startups." },
-        { time: "14:30", title: "Masterclass: Virtual Production & VFX", desc: "Hands-on demonstration of next-generation camera tracking and LED volume pipelines." },
-        { time: "16:30", title: "Panel 2: Cinema Smart Cities & African Investment", desc: "Financing modern infrastructure and creative clusters across Africa and MENA." },
-        { time: "18:30", title: "Evening Networking Cocktail", desc: "Informal exchange with international delegations and producers." }
-      ],
-      day3Schedule: [
-        { time: "09:30", title: "Cinema Village Open Exhibition & Demos", desc: "Public and professional access to 2,000 m² of technological and cinematic booths." },
-        { time: "11:00", title: "Startup Pitch Arena", desc: "Emerging startups presenting AI tools, creative software, and immersive media solutions." },
-        { time: "13:00", title: "VIP Networking Lunch", desc: "Curated networking in dedicated VIP lounges with industry leaders." },
-        { time: "15:00", title: "Policy Roundtables & Declaration of Ouarzazate", desc: "Signing of strategic memorandums and recommendations for digital cinema." },
-        { time: "19:00", title: "Official Closing Gala & Awards Ceremony", desc: "Celebration dinner, artistic performances, and honorary awards." }
+        { time: "08:30–09:00", title: "Welcome" },
+        { time: "09:00–10:15", title: "P5 – Finance & Web3" },
+        { time: "10:30–11:45", title: "P6 – Women's Leadership" },
+        { time: "12:00–13:15", title: "P7 – Cinema, Tourism & Green Economy" },
+        { time: "13:15–14:45", title: "B2B Lunch" },
+        { time: "14:45–16:00", title: "P8 – AI Generation" },
+        { time: "16:00–16:15", title: "Fast Pitch – AI Challenge : Winning Teams of the Hybrid Cinema & AI Challenge" },
+        { time: "16:15–17:15", title: "Strategic Roundtable" },
+        { time: "17:15–18:00", title: "Declaration of Ouarzazate 2027" },
+        { time: "18:00–19:00", title: "Cinema Legacy Awards" }
       ],
       ctaTitle: "Join us at the Forefront of Cinema & Technology",
-      ctaSub: "Book your pass or turnkey exhibition space to participate in all three days.",
+      ctaSub: "Book your pass or turnkey exhibition space to participate in the forum.",
       ctaBtn: "Book my Badge"
     },
     speakersPage: {
@@ -567,7 +573,7 @@ export const translations = {
       breadcrumbHome: "Accueil" 
     },
     register: "Manifester son intérêt",
-    date: "2-4 Avril, 2027",
+    date: "3-4 Avril, 2027",
     location: "Ouarzazate, Maroc",
     heroTitle1: "OUARZAZATE 2030,",
     heroTitle2: "LE CINÉMA AU CŒUR D’UNE VILLE CRÉATIVE ET INTELLIGENTE",
@@ -621,7 +627,7 @@ export const translations = {
     about: {
       title: "Qu'est-ce que le FICIAI ?",
       subtitle: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement",
-      desc1: "Prévu du 2 au 4 avril 2027 à Ouarzazate, au Maroc, le FICIAI est l'événement phare du grand programme \"Ouarzazate Smart City of Cinema 2030\".",
+      desc1: "Prévu les 3 et 4 avril 2027 à Ouarzazate, au Maroc, le FICIAI est l'événement phare du grand programme \"Ouarzazate Smart City of Cinema 2030\".",
       desc2: "Notre vision est de transformer Ouarzazate en un hub créatif et technologique intégré. L'IA y est positionnée comme un catalyseur pour augmenter la créativité humaine, en s'appuyant sur l'énergie propre et les talents locaux pour bâtir la première smart city cinématographique d'Afrique.",
       axesTitle: "Piliers Stratégiques",
       axesSubtitle: "Les fondations au cœur de l'avenir d'Ouarzazate.",
@@ -649,7 +655,7 @@ export const translations = {
       stat4Label: "ECOSOC (via UNACCC + GPEN)"
     },
     sponsor: {
-      badge: "Ouarzazate Smart City of Cinema 2030 • 2–4 Avril, 2027 • Ouarzazate, Maroc",
+      badge: "Ouarzazate Smart City of Cinema 2030 • 3–4 Avril, 2027 • Ouarzazate, Maroc",
       title: "Forum International du Cinéma, de l'Intelligence Artificielle et de l'Investissement (FICIAI 2027)",
       subtitle: "Un rendez-vous mondial au croisement du cinéma, de l'intelligence artificielle, de l'investissement, de la diplomatie culturelle, du tourisme et de l'innovation.",
       btnSponsor: "Devenir Sponsor",
@@ -802,7 +808,7 @@ export const translations = {
       adminRib: "RIB"
     },
     badgePage: {
-      heroBadge: "Accréditations & Billetterie Officielle • FICIAI 2027 • 2–4 Avril 2027 • Ouarzazate, Maroc",
+      heroBadge: "Accréditations & Billetterie Officielle • FICIAI 2027 • 3–4 Avril 2027 • Ouarzazate, Maroc",
       heroTitle: "Réservez votre Badge & Accréditation FICIAI 2027",
       heroSubtitle: "Accédez aux conférences de pointe, masterclasses internationales, au Village du Cinéma et aux opportunités de networking B2B à Ouarzazate.",
       btnChoose: "Choisir ma Formule",
@@ -973,7 +979,7 @@ export const translations = {
       }
     },
     standPage: {
-      heroBadge: "Village du Cinéma • FICIAI 2027 • 2–4 Avril 2027 • Palais des Congrès, Ouarzazate",
+      heroBadge: "Village du Cinéma • FICIAI 2027 • 3–4 Avril 2027 • Palais des Congrès, Ouarzazate",
       heroTitle: "Réservez votre Espace d'Exposition au Village du Cinéma",
       heroSubtitle: "Exposez vos innovations, produits et services au cœur du plus grand rassemblement international du cinéma, de l'intelligence artificielle et de l'investissement en Afrique.",
       btnChoose: "Choisir mon Stand",
@@ -1064,28 +1070,34 @@ export const translations = {
       formSuccess: "Votre demande d'espace d'exposition a été enregistrée avec succès ! Notre équipe vous contactera très rapidement pour valider votre emplacement."
     },
     programPage: {
-      heroBadge: "Programme Officiel • FICIAI 2027 • 2–4 Avril 2027",
+      heroBadge: "Programme Officiel • FICIAI 2027 • 3–4 Avril 2027",
       heroTitle: "Programme & Déroulé du Forum",
-      heroSubtitle: "Découvrez le planning complet des 3 journées mêlant conférences internationales, masterclasses IA, Village du Cinéma et parcours d'exception Patrimoine & Studios.",
+      heroSubtitle: "Découvrez le planning officiel des 2 journées du forum FICIAI 2027 à Ouarzazate.",
       daysTab: [
-        { id: "day1", title: "Jour 1 — 2 Avril", subtitle: "Patrimoine, Studios & Accueil VIP", badge: "Journée Patrimoine" },
-        { id: "day2", title: "Jour 2 — 3 Avril", subtitle: "Conférences, IA Générative & Masterclasses", badge: "Innovation & Tech" },
-        { id: "day3", title: "Jour 3 — 4 Avril", subtitle: "Village du Cinéma, Pitching & Soirée de Clôture", badge: "Business & Gala" }
+        { id: "day1", title: "Samedi 3 avril 2027", subtitle: "Jour 1", badge: "Jour 1" },
+        { id: "day2", title: "Dimanche 4 avril 2027", subtitle: "Jour 2", badge: "Jour 2" }
+      ],
+      day1Schedule: [
+        { time: "08:00–09:00", title: "Accueil officiel" },
+        { time: "09:00–10:15", title: "Cérémonie d’ouverture" },
+        { time: "10:30–11:45", title: "P1 – Soft Power & Diplomacy" },
+        { time: "12:00–13:15", title: "P2 – CSO 2030 : Vision Ouarzazate Smart City Of Cinema" },
+        { time: "13:15–14:45", title: "Déjeuner de réseautage" },
+        { time: "14:45–16:00", title: "P3 – IA et cinéma" },
+        { time: "16:15–17:30", title: "P4 – Nouvelles voies de coproduction" },
+        { time: "20:00–23:00", title: "Soirée de gala" }
       ],
       day2Schedule: [
-        { time: "09h00", title: "Cérémonie d'Ouverture Officielle", desc: "Allocutions inaugurales des partenaires institutionnels, délégués UNESCO et du conseil CineZate." },
-        { time: "10h30", title: "Panel 1 : L'Intelligence Artificielle au Service du Cinéma", desc: "Génération procédurale, scénarisation assistée par IA et production virtuelle temps réel." },
-        { time: "12h30", title: "Déjeuner Networking & Rencontres B2B", desc: "Échanges ciblés entre investisseurs, producteurs de cinéma et startups technologiques." },
-        { time: "14h30", title: "Masterclass : Production Virtuelle & VFX", desc: "Démonstrations pratiques sur les nouveaux pipelines de tournage sur écrans LED et caméra tracking." },
-        { time: "16h30", title: "Panel 2 : Smart Cities Cinématographiques & Investissement Africain", desc: "Financement des infrastructures modernes et écosystèmes créatifs en Afrique et région MENA." },
-        { time: "18h30", title: "Cocktail Networking du Soir", desc: "Moments d'échange conviviaux avec les délégations internationales et producteurs." }
-      ],
-      day3Schedule: [
-        { time: "09h30", title: "Ouverture de l'Espace Exposition & Village du Cinéma", desc: "Accès public et professionnel aux 2 000 m² de stands technologiques et cinéma." },
-        { time: "11h00", title: "Pitch Sessions des Startups Tech & Cinéma", desc: "Présentations de projets novateurs devant un jury d'investisseurs et de producteurs mondiaux." },
-        { time: "13h00", title: "Déjeuner VIP Networking", desc: "Networking exclusif dans les espaces VIP avec les intervenants et délégations." },
-        { time: "15h00", title: "Tables Rondes Stratégiques & Déclaration de Ouarzazate", desc: "Signature de protocoles d'accord et publication des recommandations pour le cinéma numérique." },
-        { time: "19h00", title: "Dîner de Gala de Clôture & Remise des Prix", desc: "Dîner officiel, performances artistiques et remise des distinctions honorifiques." }
+        { time: "08:30–09:00", title: "Accueil" },
+        { time: "09:00–10:15", title: "P5 – Finance et Web3" },
+        { time: "10:30–11:45", title: "P6 – Leadership féminin" },
+        { time: "12:00–13:15", title: "P7 – Cinéma, tourisme et économie verte" },
+        { time: "13:15–14:45", title: "Déjeuner B2B" },
+        { time: "14:45–16:00", title: "P8 – Génération IA" },
+        { time: "16:00–16:15", title: "Fast Pitch – AI Challenge : Équipes gagnantes du Hybrid Cinema & AI Challenge" },
+        { time: "16:15–17:15", title: "Table ronde stratégique" },
+        { time: "17:15–18:00", title: "Déclaration de Ouarzazate 2027" },
+        { time: "18:00–19:00", title: "Cinema Legacy Awards" }
       ],
       ctaTitle: "Participez au Grand Rendez-vous du Cinéma & de la Tech",
       ctaSub: "Réservez votre pass visiteur, pass VIP ou stand d'exposition dès aujourd'hui.",
