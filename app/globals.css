@@ -1380,3 +1380,166 @@ select.input-field {
   transform: translateX(-2px);
 }
 
+/* About Association Section */
+.about-association-section {
+  padding: 56px 24px 32px;
+  position: relative;
+  z-index: 10;
+}
+
+.about-association-card {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 44px 40px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.about-association-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.about-association-logo {
+  height: 84px;
+  width: auto;
+  object-fit: contain;
+  margin-top: 18px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+}
+
+.about-association-grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) 180px;
+  gap: 36px;
+  align-items: center;
+  width: 100%;
+}
+
+.about-leader-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-leader-left {
+  order: 1;
+}
+
+.about-association-text {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #374151;
+  font-family: var(--font-inter);
+  font-size: 14.5px;
+  line-height: 1.72;
+  text-align: left;
+}
+
+.about-association-text p {
+  margin: 0;
+}
+
+.about-leader-right {
+  order: 3;
+}
+
+.about-leader-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid #B8432F;
+  box-shadow: 0 8px 20px rgba(184, 67, 47, 0.14);
+  background: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.about-leader-name {
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.about-leader-role {
+  font-family: var(--font-inter);
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+  max-width: 170px;
+}
+
+@media (max-width: 900px) {
+  .about-association-section {
+    padding: 40px 20px 24px;
+  }
+  .about-association-card {
+    padding: 32px 24px;
+  }
+  .about-association-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
+    align-items: start;
+  }
+  .about-leader-left {
+    order: 1;
+  }
+  .about-leader-right {
+    order: 2;
+  }
+  .about-association-text {
+    order: 3;
+    grid-column: 1 / -1;
+    font-size: 14px;
+    line-height: 1.68;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-association-section {
+    padding: 32px 14px 20px;
+  }
+  .about-association-card {
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+  .about-association-header {
+    margin-bottom: 24px;
+  }
+  .about-association-logo {
+    height: 68px;
+    margin-top: 14px;
+  }
+  .about-leader-avatar {
+    width: 88px;
+    height: 88px;
+  }
+  .about-leader-name {
+    font-size: 13px;
+  }
+  .about-leader-role {
+    font-size: 11px;
+  }
+  .about-association-text {
+    font-size: 13.5px;
+    line-height: 1.65;
+  }
+}
+

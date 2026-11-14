@@ -81,7 +81,17 @@ export const translations = {
       networkTitle: "Global Network & Governance",
       promoter: "Promoted by Association CineZate (Pres. Abderrafia Souhali).",
       honor: "Guest of Honor Country: India.",
-      partners: "Endorsed by UNESCO, UNFPA Morocco, UNACCC, and major global studios."
+      partners: "Endorsed by UNESCO, UNFPA Morocco, UNACCC, and major global studios.",
+      association: {
+        eyebrow: "About the Association",
+        title: "About the CineZate Association",
+        p1: "Chaired by Mr. Abderafia Souhali, alongside Ambassador Doctor Najib BREDAA, High Representative of the CineZate Association, Head of Partnerships and Advisory Board Member, the CineZate Association leads the Ouarzazate Smart Cinema City 2030 program and FICIAI 2027. Its mission is to establish Ouarzazate as an international hub for cinema, artificial intelligence, and creative investment, serving the global outreach of the Kingdom of Morocco and the African continent.",
+        p2: "Its vision is to preserve Ouarzazate's cinematographic DNA while guiding its transformation through emerging technologies and artificial intelligence. The Association also shines a spotlight on cinema's unsung heroes and promotes local talent, aiming to build a thriving ecosystem and foster narrative and creative sovereignty for Morocco and Africa.",
+        leftName: "Abderafia SOUHALI",
+        leftRole: "President of the CineZate Association",
+        rightName: "Najib BREDAA",
+        rightRole: "Euroasis Africa Chamber"
+      }
     },
     stats: {
       title: "Global Impact at a Glance",
@@ -688,7 +698,17 @@ export const translations = {
       networkTitle: "Réseau Global & Gouvernance",
       promoter: "Promu par l'Association CineZate (Président Abderrafia Souhali).",
       honor: "Invité d'Honneur : Inde.",
-      partners: "Soutenu par l'UNESCO, UNFPA Maroc, UNACCC, et de grands studios mondiaux."
+      partners: "Soutenu par l'UNESCO, UNFPA Maroc, UNACCC, et de grands studios mondiaux.",
+      association: {
+        eyebrow: "À propos de l'Association",
+        title: "À propos de l'Association CineZate",
+        p1: "Présidée par M. Abderafia Souhali, aux côtés de l'Ambassadeur Docteur Najib BREDAA, Haut Représentant de l'Association CineZate, Chargé des Partenariats et Membre du Conseil d'Orientation, l'Association CineZate porte le programme Ouarzazate Smart Cinema City 2030 et le FICIAI 2027. Elle a pour objectif de faire de Ouarzazate un pôle international du cinéma, de l'intelligence artificielle et de l'investissement créatif, au service du rayonnement du Royaume du Maroc et du continent africain.",
+        p2: "Sa vision est de préserver l'ADN cinématographique de Ouarzazate, en accompagnant ses transformations par les nouvelles technologies et l'intelligence artificielle. L'Association met également en lumière les soldats de l'ombre du cinéma et promeut les talents locaux, avec pour objectif la création d'un écosystème et la construction d'une souveraineté narrative et créative pour le Maroc et le continent africain.",
+        leftName: "Abderafia SOUHALI",
+        leftRole: "Président de l'association CineZate",
+        rightName: "Najib BREDAA",
+        rightRole: "Chambre Euroasis Afrique"
+      }
     },
     stats: {
       title: "Impact Global en un Coup d'Œil",

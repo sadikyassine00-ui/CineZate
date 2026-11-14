@@ -378,6 +378,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 5. ABOUT US / ASSOCIATION CINEZATE SECTION */}
+      <section id="about-us" className="about-association-section">
+        <FadeIn>
+          <div className="about-association-card">
+            <div className="about-association-header">
+              <span className="label-badge" style={{ marginBottom: '12px' }}>
+                {t.about.association.eyebrow}
+              </span>
+              <h2 className="section-title text-center" style={{ marginBottom: 0 }}>
+                {t.about.association.title}
+              </h2>
+              <img
+                src="/assets/logo/CinezateLogo.png"
+                alt="CineZate Association Logo"
+                className="about-association-logo"
+              />
+            </div>
+
+            <div className="about-association-grid">
+              <div className="about-leader-card about-leader-left">
+                <img
+                  src="/assets/team/abdouPic.png"
+                  alt={t.about.association.leftName}
+                  className="about-leader-avatar"
+                />
+                <h3 className="about-leader-name">{t.about.association.leftName}</h3>
+                <p className="about-leader-role">{t.about.association.leftRole}</p>
+              </div>
+
+              <div className="about-association-text">
+                <p>{t.about.association.p1}</p>
+                <p>{t.about.association.p2}</p>
+              </div>
+
+              <div className="about-leader-card about-leader-right">
+                <img
+                  src="/assets/team/najib.png"
+                  alt={t.about.association.rightName}
+                  className="about-leader-avatar"
+                />
+                <h3 className="about-leader-name">{t.about.association.rightName}</h3>
+                <p className="about-leader-role">{t.about.association.rightRole}</p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
       <section id="about" className="about-section relative z-10" style={{ padding: '40px 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         
         <FadeIn>
