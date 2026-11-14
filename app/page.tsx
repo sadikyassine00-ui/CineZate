@@ -480,10 +480,10 @@ export default function Home() {
           <div className="feature-card relative z-10" style={{ padding: '28px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', maxWidth: '280px' }}>
             <img 
               src="/assets/team/najib.png" 
-              alt="Najib Bredaa" 
+              alt="Dr. BREDAA Najib" 
               style={{ width: '88px', height: '88px', borderRadius: '50%', objectFit: 'cover', marginBottom: '16px', border: '2px solid rgba(0,0,0,0.08)' }} 
             />
-            <h3 className="feature-title" style={{ fontSize: '18px', marginBottom: '4px' }}>Najib Bredaa</h3>
+            <h3 className="feature-title" style={{ fontSize: '18px', marginBottom: '4px' }}>Dr. BREDAA Najib</h3>
             <p className="feature-subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '16px', textAlign: 'center', fontSize: '13px', lineHeight: '1.35' }}>{t.team2Role}</p>
             
             <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '42px', height: '42px', borderRadius: '50%', background: '#F3F4F6', color: 'var(--text-primary)', border: '1px solid rgba(0,0,0,0.08)', transition: 'background 0.25s ease' }}>

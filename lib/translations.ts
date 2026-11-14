@@ -40,7 +40,7 @@ export const translations = {
     teamTitle: "Meet the Visionaries",
     teamSub: "The driving forces behind CineZate and FICIAI 2027.",
     team1Role: "Founder of CineZate & FICIAI",
-    team2Role: "High Representative of CineZate, Head of Partnerships, & Advisory Board Member",
+    team2Role: "Director France — Eurasia Afro Chamber of Commerce (EACC)",
     team3Role: "Tech Lead / Digital Systems Specialist",
     footerCopy: "© 2027 FICIAI Event. All rights reserved.",
     privacy: "Privacy Policy",
@@ -89,8 +89,8 @@ export const translations = {
         p2: "Its vision is to preserve Ouarzazate's cinematographic DNA while guiding its transformation through emerging technologies and artificial intelligence. The Association also shines a spotlight on cinema's unsung heroes and promotes local talent, aiming to build a thriving ecosystem and foster narrative and creative sovereignty for Morocco and Africa.",
         leftName: "Abderafia SOUHALI",
         leftRole: "President of the CineZate Association",
-        rightName: "Najib BREDAA",
-        rightRole: "Euroasis Africa Chamber"
+        rightName: "Dr. BREDAA Najib",
+        rightRole: "Director France — Eurasia Afro Chamber of Commerce (EACC)"
       }
     },
     stats: {
@@ -657,7 +657,7 @@ export const translations = {
     teamTitle: "Rencontrez les Visionnaires",
     teamSub: "La force motrice derrière CineZate et FICIAI 2027.",
     team1Role: "Fondateur de CineZate & FICIAI",
-    team2Role: "Haut Représentant de l'Association CineZate, Chargé des Partenariats, Membre du Conseil d'Orientation",
+    team2Role: "Directeur France — Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)",
     team3Role: "Tech Lead / Spécialiste des Systèmes Numériques",
     footerCopy: "© 2027 Événement FICIAI. Tous droits réservés.",
     privacy: "Politique de Confidentialité",
@@ -706,8 +706,8 @@ export const translations = {
         p2: "Sa vision est de préserver l'ADN cinématographique de Ouarzazate, en accompagnant ses transformations par les nouvelles technologies et l'intelligence artificielle. L'Association met également en lumière les soldats de l'ombre du cinéma et promeut les talents locaux, avec pour objectif la création d'un écosystème et la construction d'une souveraineté narrative et créative pour le Maroc et le continent africain.",
         leftName: "Abderafia SOUHALI",
         leftRole: "Président de l'association CineZate",
-        rightName: "Najib BREDAA",
-        rightRole: "Chambre Euroasis Afrique"
+        rightName: "Dr. BREDAA Najib",
+        rightRole: "Directeur France — Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)"
       }
     },
     stats: {
