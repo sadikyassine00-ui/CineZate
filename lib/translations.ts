@@ -40,7 +40,7 @@ export const translations = {
     teamTitle: "Meet the Visionaries",
     teamSub: "The driving forces behind CineZate and FICIAI 2027.",
     team1Role: "Founder of CineZate & FICIAI",
-    team2Role: "Director France — Eurasia Afro Chamber of Commerce (EACC)",
+    team2Role: "Director France, Eurasia Afro Chamber of Commerce (EACC)",
     team3Role: "Tech Lead / Digital Systems Specialist",
     footerCopy: "© 2027 FICIAI Event. All rights reserved.",
     privacy: "Privacy Policy",
@@ -53,7 +53,7 @@ export const translations = {
     },
     footerInfo: {
       associationName: "ASSOCIATION CINEZATE",
-      authorization: "Authorization: 19-02-2026 — Ministry of the Interior",
+      authorization: "Authorization: 19-02-2026, Ministry of the Interior",
       address: "La Maison des Jeunes, Avenue Hassan II, Ouarzazate (45010), Kingdom of Morocco",
       bankTitle: "AL BARID BANK",
       accountLabel: "Account No.:",
@@ -61,7 +61,6 @@ export const translations = {
       ribLabel: "RIB:",
       ribNumber: "350810000000001383227060",
       website: "www.cinezate.com",
-      mobileApp: "FICIAI 2027 Mobile App — Available on App Store & Google Play",
     },
     // Form labels
     nameLabel: "Full Name",
@@ -102,7 +101,7 @@ export const translations = {
         leftName: "Abderafia SOUHALI",
         leftRole: "President of the CineZate Association",
         rightName: "Dr. BREDAA Najib",
-        rightRole: "Director France — Eurasia Afro Chamber of Commerce (EACC)"
+        rightRole: "Director France, Eurasia Afro Chamber of Commerce (EACC)"
       }
     },
     stats: {
@@ -220,12 +219,12 @@ export const translations = {
       matrixDesc: "A detailed breakdown of all premium benefits and deliverables included across our official partnership tiers.",
       matrixDeliverable: "Deliverable",
       matrixRows: [
-        { row: "Stand Village du Cinéma", vals: ["18 m²", "12 m²", "9 m²", "—"] },
+        { row: "Stand Village du Cinéma", vals: ["18 m²", "12 m²", "9 m²", "-"] },
         { row: "Main Logo Placement", vals: ["Dominant", "1st row", "Gold", "Silver"] },
         { row: "Stage & Main Screen Display", vals: ["Reinforced", "Yes", "Selective", "Partners"] },
         { row: "Red Carpet Backdrop & Event Catalogue", vals: ["Premium", "Premium", "Yes", "Yes"] },
-        { row: "Brand Video Broadcast", vals: ["Yes", "Yes", "Option", "—"] },
-        { row: "Speaking Opportunities", vals: ["Opening Ceremony", "Panel / Short Talk", "Sponsorship attribution", "—"] },
+        { row: "Brand Video Broadcast", vals: ["Yes", "Yes", "Option", "-"] },
+        { row: "Speaking Opportunities", vals: ["Opening Ceremony", "Panel / Short Talk", "Sponsorship attribution", "-"] },
         { row: "VIP Invitations", vals: ["8", "6", "4", "2"] },
         { row: "Forum Delegate Passes", vals: ["16", "12", "8", "4"] },
         { row: "Targeted B2B Matchmaking", vals: ["Priority", "Yes", "Yes", "Networking"] },
@@ -386,7 +385,7 @@ export const translations = {
       formS3: "03. Pass Selection & Options",
       formBadgeSelect: "Selected Pass / Badge",
       formTourAddonTitle: "Exclusive Option • VIP Cinema Heritage & Culture Tour (April 2)",
-      formTourIncludedVip: "✅ Included automatically with your VIP Pass (1,500 MAD Value — No extra cost)",
+      formTourIncludedVip: "✅ Included automatically with your VIP Pass (1,500 MAD Value, no extra cost)",
       formTourAddonLabel: "Add the VIP Cinema Heritage & Culture Tour (+1,500 MAD)",
       formTourAddonSub: "Full-day VIP guided journey: Atlas Studios, CLA Studios, Kasbah Taourirt, Aït Ben Haddou (UNESCO), traditional lunch & private VIP transfers.",
       formTotalPriceLabel: "Total Calculated Rate:",
@@ -398,14 +397,14 @@ export const translations = {
       formSuccess: "Your badge request has been successfully submitted! A confirmation receipt has been sent to your email.",
       vipHeritageProgram: {
         badge: "Exclusive VIP Experience • April 2, 2027",
-        title: "VIP Program — Cinema Heritage & Culture",
+        title: "VIP Program: Cinema Heritage & Culture",
         subtitle: "An immersive journey across Ouarzazate's legendary movie studios, historic kasbahs, and UNESCO World Heritage sites.",
         dateLabel: "Date",
         dateVal: "April 2, 2027",
         priceLabel: "Tariff",
         priceVal: "1,500 MAD",
         priceNote: "Included for VIP Pass holders • Optional at 1,500 MAD for Visitor & Speaker passes",
-        bookVipAllInclusive: "Book Full VIP Pass (2,000 MAD — All Included)",
+        bookVipAllInclusive: "Book Full VIP Pass (2,000 MAD, All Included)",
         bookVisitorWithTour: "Book Visitor Pass + VIP Tour (1,500 MAD)",
         locationLabel: "Location",
         locationVal: "Ouarzazate, City of Studios",
@@ -507,7 +506,7 @@ export const translations = {
         { id: "peninsula", title: "Peninsula (Head)", badge: "3 Open Aisles", desc: "End-of-row booth open on 3 sides. Excellent 270° traffic flow for interactive demos." },
         { id: "island", title: "Island (Island)", badge: "4 Open Aisles", desc: "Freestanding island open on all 4 aisles. Maximum prestigious impact (Reserved for 18m²+)." }
       ],
-      formSectionTitle: "Exhibition Space Booking — Cinema Village",
+      formSectionTitle: "Exhibition Space Booking: Cinema Village",
       formSectionSubtitle: "Submit your reservation request. Our technical team will review your dossier and confirm your location.",
       formS1: "01. Organization & Company",
       formOrg: "Company / Organization Name",
@@ -624,7 +623,7 @@ export const translations = {
       ],
       featuredTitle: "Featured Speakers & Visionaries",
       guestHonourTitle: "Guest of Honour Delegation",
-      guestHonourDesc: "India — Celebrating international creative exchanges, Bollywood-Ouarzazate co-productions, and next-gen VFX collaboration.",
+      guestHonourDesc: "India: celebrating international creative exchanges, Bollywood-Ouarzazate co-productions, and next-gen VFX collaboration.",
       callTitle: "Call for Speakers & Panelists",
       callSub: "Are you a filmmaker, researcher, or tech innovator eager to present at FICIAI 2027?",
       callBtn: "Apply for Speaker Accreditation"
@@ -669,7 +668,7 @@ export const translations = {
     teamTitle: "Rencontrez les Visionnaires",
     teamSub: "La force motrice derrière CineZate et FICIAI 2027.",
     team1Role: "Fondateur de CineZate & FICIAI",
-    team2Role: "Directeur France — Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)",
+    team2Role: "Directeur France, Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)",
     team3Role: "Tech Lead / Spécialiste des Systèmes Numériques",
     footerCopy: "© 2027 Événement FICIAI. Tous droits réservés.",
     privacy: "Politique de Confidentialité",
@@ -682,7 +681,7 @@ export const translations = {
     },
     footerInfo: {
       associationName: "ASSOCIATION CINEZATE",
-      authorization: "Autorisation : 19-02-2026 — Ministère de l'Intérieur",
+      authorization: "Autorisation : 19-02-2026, Ministère de l'Intérieur",
       address: "La Maison des Jeunes, Avenue Hassan II, Ouarzazate (45010), Royaume du Maroc",
       bankTitle: "AL BARID BANK",
       accountLabel: "N° de Compte :",
@@ -690,7 +689,6 @@ export const translations = {
       ribLabel: "RIB :",
       ribNumber: "350810000000001383227060",
       website: "www.cinezate.com",
-      mobileApp: "Application Mobile FICIAI 2027 — Disponible sur App Store & Google Play",
     },
     // Form labels
     nameLabel: "Nom Complet",
@@ -731,7 +729,7 @@ export const translations = {
         leftName: "Abderafia SOUHALI",
         leftRole: "Président de l'association CineZate",
         rightName: "Dr. BREDAA Najib",
-        rightRole: "Directeur France — Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)"
+        rightRole: "Directeur France, Chambre de Commerce Eurasie-Afrique (Eurasia Afro Chamber of Commerce EACC)"
       }
     },
     stats: {
@@ -849,12 +847,12 @@ export const translations = {
       matrixDesc: "Une répartition détaillée de tous les avantages premium et livrables inclus dans nos niveaux de partenariat officiels.",
       matrixDeliverable: "Détail des contreparties",
       matrixRows: [
-        { row: "Stand Village du Cinéma", vals: ["18 m²", "12 m²", "9 m²", "—"] },
+        { row: "Stand Village du Cinéma", vals: ["18 m²", "12 m²", "9 m²", "-"] },
         { row: "Logo supports principaux", vals: ["Dominant", "1er rang", "Gold", "Silver"] },
         { row: "Scène / écrans", vals: ["Renforcé", "Oui", "Sélectif", "Partenaires"] },
         { row: "Photocall & catalogue", vals: ["Premium", "Premium", "Oui", "Oui"] },
-        { row: "Vidéo de marque", vals: ["Oui", "Oui", "Option", "—"] },
-        { row: "Prise de parole*", vals: ["Ouverture", "Panel / courte", "Parrainage", "—"] },
+        { row: "Vidéo de marque", vals: ["Oui", "Oui", "Option", "-"] },
+        { row: "Prise de parole*", vals: ["Ouverture", "Panel / courte", "Parrainage", "-"] },
         { row: "Invitations VIP", vals: ["8", "6", "4", "2"] },
         { row: "Accès Forum", vals: ["16", "12", "8", "4"] },
         { row: "B2B ciblé", vals: ["Prioritaire", "Oui", "Oui", "Networking"] },
@@ -1015,7 +1013,7 @@ export const translations = {
       formS3: "03. Choix du Badge & Options",
       formBadgeSelect: "Pass / Badge Sélectionné",
       formTourAddonTitle: "Option Exclusive • Programme VIP Patrimoine Cinéma & Culture (2 Avril)",
-      formTourIncludedVip: "✅ Inclus d'office avec votre Pass VIP (Valeur 1 500 MAD — Sans supplément)",
+      formTourIncludedVip: "✅ Inclus d'office avec votre Pass VIP (Valeur 1 500 MAD, sans supplément)",
       formTourAddonLabel: "Ajouter le Programme VIP Patrimoine Cinéma & Culture (+1 500 MAD)",
       formTourAddonSub: "Journée VIP guidée : Studios Atlas, Studios CLA, Kasbah Taourirt, Aït Ben Haddou (UNESCO), déjeuner gastronomique & transferts privés VIP.",
       formTotalPriceLabel: "Montant Total Estimé :",
@@ -1027,14 +1025,14 @@ export const translations = {
       formSuccess: "Votre demande de badge a été enregistrée avec succès ! Un récapitulatif a été envoyé à votre adresse email.",
       vipHeritageProgram: {
         badge: "Expérience Exclusive • 2 Avril 2027",
-        title: "Programme VIP — Patrimoine Cinéma & Culture",
+        title: "Programme VIP : Patrimoine Cinéma & Culture",
         subtitle: "Une immersion VIP d'exception au cœur des studios mythiques, kasbahs historiques et sites classés UNESCO de Ouarzazate.",
         dateLabel: "Date",
         dateVal: "2 Avril 2027",
         priceLabel: "Tarif",
         priceVal: "1 500 MAD",
         priceNote: "Inclus d'office avec le Pass VIP • Optionnel à 1 500 MAD pour les Pass Visiteurs & Intervenants",
-        bookVipAllInclusive: "Réserver le Pass VIP Complet (2 000 MAD — Tout Inclus)",
+        bookVipAllInclusive: "Réserver le Pass VIP Complet (2 000 MAD, Tout Inclus)",
         bookVisitorWithTour: "Prendre le Pass Visiteur + Option Tour (1 500 MAD)",
         locationLabel: "Localisation",
         locationVal: "Ouarzazate, Ville des Studios",
@@ -1136,7 +1134,7 @@ export const translations = {
         { id: "peninsula", title: "Peninsula (Tête d'îlot)", badge: "3 Allées", desc: "Stand en tête d'îlot ouvert sur 3 côtés. Idéal pour des présentations et démonstrations immersives." },
         { id: "island", title: "Island (Îlot complet)", badge: "4 Allées", desc: "Stand îlot totalement ouvert sur 4 allées. Impact visuel et prestige maximal (Réservé 18m²+)." }
       ],
-      formSectionTitle: "Réservation d'Espace Exposant — Village du Cinéma",
+      formSectionTitle: "Réservation d'Espace Exposant : Village du Cinéma",
       formSectionSubtitle: "Soumettez votre demande d'emplacement. Notre équipe technique examinera votre dossier et vous contactera pour valider votre plan.",
       formS1: "01. Organisation & Entreprise",
       formOrg: "Nom de l'Entreprise / Organisation",
@@ -1253,7 +1251,7 @@ export const translations = {
       ],
       featuredTitle: "Intervenants & Invités d'Honneur",
       guestHonourTitle: "Délégation Invité d'Honneur",
-      guestHonourDesc: "Inde — Mise à l'honneur des coopérations cinématographiques internationales, co-productions et technologies VFX de pointe.",
+      guestHonourDesc: "Inde : mise à l'honneur des coopérations cinématographiques internationales, co-productions et technologies VFX de pointe.",
       callTitle: "Appel à Interventions & Conférenciers",
       callSub: "Vous êtes cinéaste, chercheur, entrepreneur ou innovateur tech et souhaitez intervenir au FICIAI 2027 ?",
       callBtn: "Demander une accréditation Intervenant"

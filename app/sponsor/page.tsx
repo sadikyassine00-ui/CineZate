@@ -392,7 +392,7 @@ export default function SponsorPage() {
                         fontWeight: j === 0 ? 600 : 400,
                         fontSize: '12px'
                       }}>
-                        {v === '—' ? <span style={{ opacity: 0.3 }}>—</span> : v}
+                        {v === '-' ? <span style={{ opacity: 0.3 }}>-</span> : v}
                       </td>
                     ))}
                   </tr>

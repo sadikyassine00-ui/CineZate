@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     else if (type === 'sponsor') typeLabel = 'Demande de Sponsoring & Partenariat';
     else if (type === 'stand') typeLabel = 'Demande d\'Espace Exposant (Stand)';
 
-    const requestSubject = `[FICIAI 2027] ${typeLabel} — ${applicantName} (${applicantOrg})`;
+    const requestSubject = `[FICIAI 2027] ${typeLabel} - ${applicantName} (${applicantOrg})`;
 
     // 1. Send Notification Email to Event Organizers (contact@cinezate.com)
     const { data: emailData, error } = await resend.emails.send({
@@ -143,7 +143,7 @@ export async function POST(request: Request) {
       await resend.emails.send({
         from: 'FICIAI 2027 <website@cinezate.com>',
         to: [applicantEmail],
-        subject: `Confirmation de votre demande : ${typeLabel} — FICIAI 2027`,
+        subject: `Confirmation de votre demande : ${typeLabel} (FICIAI 2027)`,
         html: `
           <!DOCTYPE html>
           <html>

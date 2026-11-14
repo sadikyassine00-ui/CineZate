@@ -168,7 +168,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ marginBottom: '14px', display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center' }}>
+      <div style={{ marginBottom: '14px', display: 'flex', justifyContent: 'center' }}>
         <a
           href="https://www.cinezate.com"
           target="_blank"
@@ -178,9 +178,6 @@ export default function Footer() {
         >
           {t.footerInfo.website}
         </a>
-        <p className="mono-title" style={{ fontSize: '9.5px', color: 'var(--text-secondary)', margin: 0, letterSpacing: '0.4px', textTransform: 'uppercase' }}>
-          {t.footerInfo.mobileApp}
-        </p>
       </div>
 
       <p className="mono-title" style={{ fontSize: '9.5px', color: 'var(--text-secondary)', margin: '0 0 12px 0', letterSpacing: '0.4px' }}>
