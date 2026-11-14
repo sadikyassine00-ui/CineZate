@@ -434,7 +434,7 @@ export default function SponsorPage() {
                 "/sponsoring_logos/10.jpg", "/sponsoring_logos/11.png", "/sponsoring_logos/12.jpg", "/sponsoring_logos/13.jpg", "/sponsoring_logos/14.jpg", "/sponsoring_logos/15.jpg", "/sponsoring_logos/16.png", "/sponsoring_logos/17.jpg", "/sponsoring_logos/18.png", "/sponsoring_logos/19.png",
                 "/sponsoring_logos/20.jpg", "/sponsoring_logos/21.jpg", "/sponsoring_logos/22.jpg", "/sponsoring_logos/23.jpg", "/sponsoring_logos/24.jpg", "/sponsoring_logos/25.jpg", "/sponsoring_logos/26.png", "/sponsoring_logos/27.jpg", "/sponsoring_logos/28.jpg", "/sponsoring_logos/29.png",
                 "/sponsoring_logos/30.png", "/sponsoring_logos/31.jpg", "/sponsoring_logos/32.jpg", "/sponsoring_logos/33.png", "/sponsoring_logos/34.jpg", "/sponsoring_logos/35.jpg", "/sponsoring_logos/36.jpg", "/sponsoring_logos/37.png", "/sponsoring_logos/38.jpg", "/sponsoring_logos/39.jpg",
-                "/sponsoring_logos/40.jpg", "/sponsoring_logos/41.png", "/sponsoring_logos/42.png", "/sponsoring_logos/43.jpg", "/sponsoring_logos/44.jpg", "/sponsoring_logos/45.png", "/sponsoring_logos/46.jpg", "/sponsoring_logos/47.png"
+                "/sponsoring_logos/40.jpg", "/sponsoring_logos/41.png", "/sponsoring_logos/42.png", "/sponsoring_logos/43.jpg", "/sponsoring_logos/44.jpg", "/sponsoring_logos/45.png", "/sponsoring_logos/46.jpg", "/sponsoring_logos/47.png", "/sponsoring_logos/palm-car-logo.jpeg"
               ].map((logoPath, i) => (
                 <div key={i} style={{ 
                   width: '100%', 

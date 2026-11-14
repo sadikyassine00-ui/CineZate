@@ -180,6 +180,7 @@ export default function Home() {
             <img src="/assets/logo bar/logo6.jpg" alt="Partner 6" className="marquee-logo" />
             <img src="/assets/logo bar/logo7.jpg" alt="Partner 7" className="marquee-logo" />
             <img src="/assets/logo bar/logo8.png" alt="Partner 8" className="marquee-logo" />
+            <img src="/assets/logo bar/palm-car-logo.jpeg" alt="Palm Car" className="marquee-logo" />
             {/* Duplicated for smooth loop */}
             <img src="/assets/logo bar/logo1.png" alt="Partner 1" className="marquee-logo" />
             <img src="/assets/logo bar/logo2.png" alt="Partner 2" className="marquee-logo" />
@@ -189,6 +190,7 @@ export default function Home() {
             <img src="/assets/logo bar/logo6.jpg" alt="Partner 6" className="marquee-logo" />
             <img src="/assets/logo bar/logo7.jpg" alt="Partner 7" className="marquee-logo" />
             <img src="/assets/logo bar/logo8.png" alt="Partner 8" className="marquee-logo" />
+            <img src="/assets/logo bar/palm-car-logo.jpeg" alt="Palm Car" className="marquee-logo" />
           </div>
         </div>
       </section>
